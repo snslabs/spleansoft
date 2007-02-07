@@ -300,7 +300,7 @@
        This simply allows struts to include the validateUtilities into a page, it should
        not be used as a validation rule.
      -->
-
+<!--
      <validator name="includeJavaScriptUtilities"
             classname=""
                method=""
@@ -308,7 +308,7 @@
               depends=""
                   msg=""
            jsFunction="org.apache.commons.validator.javascript.validateUtilities"/>
-
+-->
    </global>
 
 </form-validation>
