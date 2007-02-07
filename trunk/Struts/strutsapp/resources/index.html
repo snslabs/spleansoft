@@ -3,6 +3,7 @@
 <html>
 <head><title>Циник</title>
     <link rel="stylesheet" type="text/css" src="css/styles.css">
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
     <style>
         body {
             background-color: black;
@@ -13,10 +14,51 @@
             color: #80FF80;
             font-weight:bold;
         }
+        a.toolbar{
+            color: #80FF80;
+            font-size: x-small;
+        }
     </style>
     <script language="javascript" src="script/scripts.js"></script>
+
+    <script language="JavaScript">
+        // AJAX functions
+        var xmlReq = null;
+        function getHTTPRequest(){
+            return new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        function stateHandler(){
+            if(xmlReq.readyState == 4){
+                // loaded
+                showLoadingIndicator(false);
+                xmlReq.responseText();
+            }
+        }
+        function loadPage(pageName){
+            xmlReq = getHTTPRequest();
+            if(xmlReq == null){
+                alert("Cannot create XMLRequest");
+            }
+            xmlReq.onreadystatechange=stateHandler;
+            xmlReq.open("GET", "pages/"+pageName+".html");
+            xmlReq.send(null);
+            showLoadingIndicator(true);
+        }
+        function showLoadingIndicator(toShow){
+            
+        }
+
+    </script>
 </head>
-<body onload="printText('spantitle','srcSpanId')">Циник Неисправимый <a href="#" onClick="fast()">(быстро)</a>
+<body onload="printText('spantitle','srcSpanId')">
+<table border="0" width="100%">
+    <tr>
+        <td><h3>Циник Неисправимый</h3></td>
+        <td valign="top" align="right">
+            <a class="toolbar" href="#" onClick="loadPage('mainmenu')">[menu]</a>
+            <a class="toolbar" href="#" onClick="speed(1)">[быстро/</a><a class="toolbar" href="#" onClick="speed(125)">медленно]</a></td>
+    </tr>
+</table>
 
 
 <br/><br/><span id="spantitle"></span>

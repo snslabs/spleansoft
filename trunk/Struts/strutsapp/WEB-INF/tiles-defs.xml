@@ -6,4 +6,7 @@
 
 <tiles-definitions>
   <definition name="example"/>
+    <definition name="main">
+        <display-name>bla</display-name>
+    </definition>
 </tiles-definitions>

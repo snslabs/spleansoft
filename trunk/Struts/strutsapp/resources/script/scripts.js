@@ -17,6 +17,8 @@ function pct(){
     var ch = str.charAt(chIndex);
     if(chIndex > str.length){
         window.clearInterval(intervalId);
+        // always add linebreak at the end of page
+        oSpan.innerHTML = oSpan.innerHTML + "<br/>";
         return;
     }
     if(ch=='<' ){
@@ -48,8 +50,8 @@ function extractSymbol(str, startIndex){
     return str.substring(startIndex, endIndex);
 }
 
-function fast(){
+function speed(millis){
     window.clearInterval(intervalId)
-    intervalId = window.setInterval(pct,1);
+    intervalId = window.setInterval(pct,millis);
 }
 
