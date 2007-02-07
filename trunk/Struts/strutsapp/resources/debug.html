@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>Циник</title>
+    <link rel="stylesheet" type="text/css" src="css/styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: #00B000;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body onload="printText('spantitle','srcSpanId')">Циник Неисправимый<br/><br/><span id="spantitle">XXX</span>
+
+<script language="javascript">
+    function pch(ch, oSpan) {
+        if(oSpan==null){ alert("span is null"); }
+        oSpan.innerHTML = oSpan.innerHTML + ch;
+    }
+    var str = null;
+    var chIndex = 0;
+    var oSpan = null;
+    var intervalId = null;
+    function printText(dstSpanId, srcSpanId) {
+        str = document.getElementById(srcSpanId).innerHTML;
+        oSpan = document.getElementById(dstSpanId);
+        chIndex = 0;
+        for(chIndex = 0; chIndex < str.length; chIndex++){
+            if(str.charAt(chIndex) == "<" ){
+                tagStr = extractTag(str, chIndex);
+                alert("TAG:\n"+tagStr);
+                chIndex = chIndex + tagStr.length;
+            }
+        }
+    }
+
+    function extractTag(str, startIndex){
+        var str2 = str.substring(startIndex);
+        alert("String started with '<'\n"+str);
+        var endIndex = str2.search("<\\/\\w>");
+        endIndex = str2.indexOf(">",endIndex)+1+startIndex;
+        return str.substring(startIndex, endIndex);
+    }
+
+
+
+</script>
+<span style="visibility:hidden;" id="srcSpanId">Ссылка <a href="#">Главное меню</a> конец <br/>Новости Гостевая Блог Музыка Друзья Враги
+
+тщете и бренности всего сущего, о безысходности и фатализме,
+бессмысленности и бесполезности
+</span>
+</body>
+</html>
