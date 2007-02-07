@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <!--
+    <filter>
+        <filter-name>security</filter-name>
+        <filter-class>ru.snslabs.icq.servlet.ICQGateFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>security</filter-name>
+        <url-pattern>/gw/*.*</url-pattern>
+    </filter-mapping> -->
+    <servlet>
+        <servlet-name>icqGate</servlet-name>
+        <servlet-class>ru.snslabs.icq.servlet.ICQGateServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>icqGate</servlet-name>
+        <url-pattern>*.gw</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

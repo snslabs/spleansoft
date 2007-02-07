@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.snslabs.com/schemas/test"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.snslabs.com/schemas/test test-schema.xsd"
+    targetNamespace="http://www.snslabs.com/schemas/test"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+    <xsd:element name="map" type="xsd:anyType">
+    </xsd:element>
+    
+    <xsd:element name="irsMappingEntry">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="mappingEntryType">
+                    <xsd:attribute name="productTypes" type="xsd:string"
+                                   default="InterestSwap,InterestSwaption"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="creditMappingEntry">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="mappingEntryType">
+                    <xsd:attribute name="productTypes" type="xsd:string"
+                                   default="CreditDefaultSwapShort,CreditDefaultSwapIndex,CreditDefaultSwapIndexTranche"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="mappingEntry">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="mappingEntryType"/>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="mappingEntryType">
+        <xsd:complexContent>
+            <xsd:extension base="xsd:anyType">
+                <xsd:attribute name="property" type="xsd:string" use="required"/>
+                <xsd:attribute name="table" type="xsd:string" use="required"/>
+                <xsd:attribute name="column" type="xsd:string" use="required"/>
+                <!--<xsd:attribute name="productTypes" type="xsd:string"/>-->
+                <xsd:attribute name="transactionTypes" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+</xsd:schema>

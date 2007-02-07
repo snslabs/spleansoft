@@ -1,0 +1,127 @@
+	UL.sidemenu{
+		margin-left: 0px;
+		list-style-type: none;
+	}
+	UL.sidesubmenu{
+		margin-left: 0px;
+		list-style-type: disc;
+	}
+	.sidesubmenu A{
+		color: navy;
+		font-weight: bold;
+		font-size: 8pt;
+		text-decoration: none;
+	}
+	
+	HR{
+		border: 1 dotted Navy;
+	}
+	.side_menu{
+		font-family: Verdana;
+		font-size: 10pt;
+		color: black;
+		margin-left: 10px; 
+		margin-top: 5px;
+		margin-bottom: 25px;
+	}
+	.footer{
+		font-family: Tahoma;
+		font-size: 8 pt;
+		color: white;
+	}
+	.content{
+		font-family: Verdana;
+		font-size: 10pt;
+		color: black;
+	}
+	.content TD{
+		font-family: Verdana;
+		font-size: 10pt;
+		color: black;
+	}
+
+	A{
+		color: #7374C4;
+		font-weight: bold;
+	}
+	.menutitle{
+		color: #00038A;
+		font-family: Verdana;
+		font-weight: bold;
+		font-size: 10pt;
+	}
+	.title{
+		color: #00038A;
+		font-family: Verdana;
+		font-weight: bold;
+		font-size: 12pt;
+	}
+	BODY{
+		background: url(images/bg-bw.jpg) no-repeat right bottom;
+		font-family: Verdana;
+		font-size: 10pt;
+		color: black;
+	}
+
+
+	TABLE.price{
+		font-family: tahoma; 
+		font-size: 10pt;
+		border-right: solid 1px black;
+		border-top: solid 1px black;
+	}
+	.price TH{
+		font-family: tahoma;
+		font-weight: bold;
+		background-color: #AEB2E0;
+		font-size: 10pt;
+		color: white;
+		border-left: solid 1px black;
+	}
+	.price TD{
+		font-family: tahoma;
+		font-weight: normal;
+		font-size: 8pt;
+		color: navy;
+		border-left: solid 1px black;
+		padding: 2px;
+		border-bottom: solid 1px black;		
+	}
+	.price_section{
+		color: navy;
+		font-size: 10pt;
+		font-weight: bold;
+	}
+	h2{
+		color: #7374C4;
+		font-size: 12pt;
+	}
+	h3{
+		color: navy;
+		font-size: 10pt;
+	}
+	h4{
+		color: navy;
+		font-size: 10pt;
+	}
+
+
+	img.banner{
+		border-color: #f5f7f5;
+	}
+	div.brief{
+	}
+	.brief_title{
+		font-family: tahoma;
+		font-weight: bold;
+		font-size: 8pt;
+		color: #navy;
+	}
+	.brief_body{
+		margin-right: 50px;
+		font-family: tahoma;
+		font-weight: normal;
+		font-size: 8pt;
+		color: #7374C4;
+	}
+	
