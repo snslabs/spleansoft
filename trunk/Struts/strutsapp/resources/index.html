@@ -20,56 +20,21 @@
         }
     </style>
     <script language="javascript" src="script/scripts.js"></script>
-
-    <script language="JavaScript">
-        // AJAX functions
-        var xmlReq = null;
-        function getHTTPRequest(){
-            return new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        function stateHandler(){
-            if(xmlReq.readyState == 4){
-                // loaded
-                showLoadingIndicator(false);
-                xmlReq.responseText();
-            }
-        }
-        function loadPage(pageName){
-            xmlReq = getHTTPRequest();
-            if(xmlReq == null){
-                alert("Cannot create XMLRequest");
-            }
-            xmlReq.onreadystatechange=stateHandler;
-            xmlReq.open("GET", "pages/"+pageName+".html");
-            xmlReq.send(null);
-            showLoadingIndicator(true);
-        }
-        function showLoadingIndicator(toShow){
-            
-        }
-
-    </script>
 </head>
-<body onload="printText('spantitle','srcSpanId')">
+<body onload="loadPage('mainmenu')">
 <table border="0" width="100%">
     <tr>
         <td><h3>Циник Неисправимый</h3></td>
         <td valign="top" align="right">
             <a class="toolbar" href="#" onClick="loadPage('mainmenu')">[menu]</a>
             <a class="toolbar" href="#" onClick="speed(1)">[быстро/</a><a class="toolbar" href="#" onClick="speed(125)">медленно]</a></td>
+        <td width="80"><div id="loaderIndicator" style="font-size: xx-small; background-color:#80FF80; color: black; display: none;">Загрузка</div>&nbsp;</td>
     </tr>
 </table>
+<br/><br/><span id="contentSpan"></span>
 
-
-<br/><br/><span id="spantitle"></span>
-
-
-<span style="visibility:hidden;" id="srcSpanId">О тщете и бренности всего сущего, о безысходности и фатализме,
-бессмысленности и бесполезности... Смысл... в его поисках проходит жизнь...
-<br><a href="#">[Главное меню]</a>
-<br/><a href="#">[Новости]</a>&nbsp;<a href="#">[Гостинная]</a>&nbsp;<a href="#">[Блог]</a>&nbsp;<a href="#">[Музыка]</a>&nbsp;<a href="#">[Друзья]</a>&nbsp;<a href="#">[Враги]</a>&nbsp;<a href="#">[...]</a>
-
-
+<span style="visibility:hidden;" id="srcSpanId">
 </span>
+<span id="logSpan"></span>
 </body>
 </html>
