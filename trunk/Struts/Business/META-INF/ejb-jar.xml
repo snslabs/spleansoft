@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+<ejb-jar>
+  <enterprise-beans>
+      <session>
+          <display-name>Booking CMT</display-name>
+          <ejb-name>SessionBookingCMTEJB</ejb-name>
+          <home>com.sns.booking.ejb.SessionBookingCMTHome</home>
+          <remote>com.sns.booking.ejb.SessionBookingCMT</remote>
+          <local-home>com.sns.booking.ejb.LocalSessionBookingCMTHome</local-home>
+          <local>com.sns.booking.ejb.LocalSessionBookingCMT</local>
+          <ejb-class>com.sns.booking.ejb.SessionBookingCMTBean</ejb-class>
+          <session-type>Stateless</session-type>
+          <transaction-type>Container</transaction-type>
+      </session>
+      <session>
+          <display-name>Booking</display-name>
+          <ejb-name>SessionBookingBMTEJB</ejb-name>
+          <home>com.sns.booking.ejb.SessionBookingBMTHome</home>
+          <remote>com.sns.booking.ejb.SessionBookingBMT</remote>
+          <local-home>com.sns.booking.ejb.LocalSessionBookingBMTHome</local-home>
+          <local>com.sns.booking.ejb.LocalSessionBookingBMT</local>
+          <ejb-class>com.sns.booking.ejb.SessionBookingBMTBean</ejb-class>
+          <session-type>Stateless</session-type>
+          <transaction-type>Bean</transaction-type>
+      </session>
+  </enterprise-beans>
+</ejb-jar>

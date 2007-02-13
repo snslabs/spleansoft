@@ -2,10 +2,16 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="Motd" table="Motd">
+    <class name="com.sns.model.Category" table="Category">
         <id name="id" type="int" column="id">
             <generator class="native"/>
         </id>
-        <property name="message" column="message" type="string"/>
+        <property name="title" column="property" type="string"/>
+        <set name="adverts" table="link_category_advert">
+            <key column="id"/>
+            <many-to-many class="com.sns.model.Advert" column="advert"/>
+
+        </set>
+            
     </class>
 </hibernate-mapping>
