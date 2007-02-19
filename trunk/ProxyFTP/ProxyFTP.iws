@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4" relativePaths="false">
+<project version="4" relativePaths="true">
   <component name="BookmarkManager" />
   <component name="ChangeBrowserSettings">
     <option name="MAIN_SPLITTER_PROPORTION" value="0.3" />
@@ -17,33 +17,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/forms/Login.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/pages/panel.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/file/FileBrowserException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-mailreader-dao-1.3.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/standard-1.0.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/jstl-1.0.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/commons-validator-1.3.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lib/header.jsp" afterPath="$PROJECT_DIR$/resources/lib/header.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProxyFTP.iml" afterPath="$PROJECT_DIR$/ProxyFTP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/splean/FileBrowserConfig.java" afterPath="$PROJECT_DIR$/src/com/splean/FileBrowserConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/WEB-INF/struts-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lib/header.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/file/FilesFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/splean/web/WebConstants.java" afterPath="$PROJECT_DIR$/src/com/splean/web/WebConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/splean/web/actions/LoginAction.java" afterPath="$PROJECT_DIR$/src/com/splean/web/actions/LoginAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/model/FileBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProxyFTP.ipr" afterPath="$PROJECT_DIR$/ProxyFTP.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/model/FilePanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/dwr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/welcome.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/model/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/commons-digester-1.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/oro-2.0.8.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-core-1.3.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/antlr-2.7.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-extras-1.3.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/bsf-2.3.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/commons-beanutils-1.7.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/forms/Upload.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/actions/UploadAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/commons-chain-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-el-1.3.5.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/pages/panel.jsp" afterPath="$PROJECT_DIR$/resources/pages/panel.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-faces-1.3.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/dwr.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-tiles-1.3.5.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProxyFTP.iws" afterPath="$PROJECT_DIR$/ProxyFTP.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/file" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/pages/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/forms" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/model/FileModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/dwr/DWRExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/dwr.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/splean/web/model" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/index.jsp" afterPath="$PROJECT_DIR$/resources/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/splean/web/model/FileBuilder.java" afterPath="$PROJECT_DIR$/src/com/splean/web/model/FileBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/commons-io-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-scripting-1.3.5.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/WEB-INF/struts-config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/struts-taglib-1.3.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/commons-fileupload-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/lib/commons-logging-1.0.4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProxyFTP.ipr" afterPath="$PROJECT_DIR$/ProxyFTP.ipr" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -171,7 +175,7 @@
       <file leaf-file-name="header.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lib/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="5" selection-start="829" selection-end="829" vertical-scroll-proportion="0.35915494">
+            <state line="21" column="35" selection-start="977" selection-end="977" vertical-scroll-proportion="0.54172987">
               <folding />
             </state>
           </provider>
@@ -191,7 +195,7 @@
       <file leaf-file-name="FilesFacade.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/splean/web/file/FilesFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="27" selection-start="625" selection-end="625" vertical-scroll-proportion="0.35915494">
+            <state line="17" column="54" selection-start="582" selection-end="582" vertical-scroll-proportion="0.4287834">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,10 +203,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileModel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FileBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splean/web/model/FileBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="43" selection-start="780" selection-end="780" vertical-scroll-proportion="0.64491653">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/splean/web/model/FileModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="49" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.45070422">
+            <state line="24" column="32" selection-start="693" selection-end="693" vertical-scroll-proportion="0.5296736">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -213,8 +228,53 @@
       <file leaf-file-name="panel.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/pages/panel.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="58" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.5105634">
+            <state line="139" column="23" selection-start="5011" selection-end="5011" vertical-scroll-proportion="0.7162367">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/struts-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="49" selection-start="427" selection-end="427" vertical-scroll-proportion="0.2681388">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadAction.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/splean/web/actions/UploadAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="29" selection-start="891" selection-end="891" vertical-scroll-proportion="0.5675266">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Upload.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splean/web/forms/Upload.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="4" selection-start="363" selection-end="363" vertical-scroll-proportion="0.35311574">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/splean/web/actions/LoginAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="39" selection-start="446" selection-end="452" vertical-scroll-proportion="0.3323217">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -312,7 +372,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -326,33 +386,11 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\WEB-INF" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ProxyFTP.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ProxyFTP" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\WEB-INF" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -366,19 +404,15 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean\web" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -392,23 +426,19 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean\web\model" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean\web" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -422,41 +452,23 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean\web" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean\web" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\src\com\splean\web\file" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ProxyFTP.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ProxyFTP" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\resources" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean\web\forms" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -470,15 +482,23 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\resources" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\resources\pages" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean\web" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\src\com\splean\web\actions" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -492,22 +512,62 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\resources" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\resources" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ProxyFTP.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ProxyFTP" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\ProxyFTP\resources\lib" />
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\resources" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\resources\pages" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ProxyFTP.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ProxyFTP" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\resources" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:E:\SVNRoot\ProxyFTP\resources\images" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="0.16666667" version="1" splitterProportion="0.5">
@@ -543,13 +603,6 @@
   </component>
   <component name="RestoreUpdateTree" />
   <component name="RunManager" selected="Tomcat Server.Tomcat">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -579,17 +632,12 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <module name="" />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <option name="WORKING_DIRECTORY" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
-      <option name="PORT" value="8080" />
-      <option name="LOCAL" value="true" />
-      <option name="OPEN_IN_BROWSER" value="true" />
-      <option name="OPEN_IN_BROWSER_URL" value="/" />
-      <option name="COMMON_VM_ARGUMENTS" value="" />
-      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
-      <option name="BASE_DIRECTORY_NAME" value="" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
@@ -602,6 +650,18 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <option name="WORKING_DIRECTORY" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8080" />
+      <option name="LOCAL" value="true" />
+      <option name="OPEN_IN_BROWSER" value="true" />
+      <option name="OPEN_IN_BROWSER_URL" value="/" />
+      <option name="COMMON_VM_ARGUMENTS" value="" />
+      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
+      <option name="BASE_DIRECTORY_NAME" value="" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
     </configuration>
     <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat">
       <option name="WORKING_DIRECTORY" />
@@ -720,7 +780,7 @@
     <option name="UPDATE_RUN_STATUS" value="false" />
     <option name="UPDATE_RECURSIVELY" value="true" />
     <option name="MERGE_DRY_RUN" value="false" />
-    <configuration useDefault="true">C:\Documents and Settings\slubimov\Application Data\Subversion</configuration>
+    <configuration useDefault="true">C:\Documents and Settings\Serge\Application Data\Subversion</configuration>
     <checkoutURL>https://sentinel2.luxoft.com/svn/repos/MARKIT/DTCCRELAY</checkoutURL>
     <checkoutURL>https://sentinel2.luxoft.com/svn/repos/MARKIT/DTCCRELAY/sm-deployed</checkoutURL>
     <checkoutURL>https://sentinel2.luxoft.com/svn/repos/MARKIT/DTCCRELAY/sm-project</checkoutURL>
@@ -740,26 +800,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1004" extended-state="6" />
+    <frame x="-4" y="-4" width="1160" height="844" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.298374" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23411979" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="8" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" order="8" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
-      <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" order="3" />
+      <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32849365" order="3" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="4" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
@@ -843,64 +903,17 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
-  <component name="com.intellij.ide.util.scopeChooser.ScopeChooserConfigurable" proportions="" version="1">
-    <option name="myLastEditedConfigurable" />
+  <component name="com.intellij.ide.util.scopeChooser.ScopeChooserConfigurable" proportions="0.16666667" version="1">
+    <option name="myLastEditedConfigurable" value="Local Scopes" />
   </component>
   <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667,0.5" version="1">
     <option name="myPlainMode" value="false" />
     <option name="myLastEditedConfigurable" value="ProxyFTP" />
   </component>
-  <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="" version="1">
-    <option name="myLastEditedConfigurable" />
+  <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="0.16666667" version="1">
+    <option name="myLastEditedConfigurable" value="IDE Profiles" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/splean/web/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.25373134">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/splean/web/WebConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="47" selection-start="169" selection-end="169" vertical-scroll-proportion="0.12686567">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="19" selection-start="839" selection-end="839" vertical-scroll-proportion="0.41514042">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/splean/web/actions/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="52" selection-start="1127" selection-end="1127" vertical-scroll-proportion="1.0115163">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/struts-config.xml">
-      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="417" selection-end="417" vertical-scroll-proportion="0.36594912">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.15858209">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/dwr.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="64" selection-start="675" selection-end="675" vertical-scroll-proportion="0.47574627">
@@ -912,15 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="3" selection-start="24" selection-end="24" vertical-scroll-proportion="0.063432835">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/splean/web/model/FileBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="589" selection-end="589" vertical-scroll-proportion="0.63432837">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -940,9 +944,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/open-dir.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/dir.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splean/web/model/FileModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="32" selection-start="693" selection-end="693" vertical-scroll-proportion="0.5296736">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/splean/web/file/FilesFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="625" selection-end="625" vertical-scroll-proportion="0.35915494">
+        <state line="17" column="54" selection-start="582" selection-end="582" vertical-scroll-proportion="0.4287834">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -951,21 +974,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lib/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="829" selection-end="829" vertical-scroll-proportion="0.35915494">
+        <state line="21" column="35" selection-start="977" selection-end="977" vertical-scroll-proportion="0.54172987">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splean/web/model/FileBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="43" selection-start="780" selection-end="780" vertical-scroll-proportion="0.64491653">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splean/web/actions/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="446" selection-end="452" vertical-scroll-proportion="0.3323217">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/pages/panel.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="58" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.5105634">
+        <state line="139" column="23" selection-start="5011" selection-end="5011" vertical-scroll-proportion="0.7162367">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/splean/web/model/FileModel.java">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/struts-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="49" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.45070422">
+        <state line="10" column="49" selection-start="427" selection-end="427" vertical-scroll-proportion="0.2681388">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splean/web/forms/Upload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="4" selection-start="363" selection-end="363" vertical-scroll-proportion="0.35311574">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/splean/web/actions/UploadAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="891" selection-end="891" vertical-scroll-proportion="0.5675266">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

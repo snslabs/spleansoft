@@ -2,7 +2,7 @@
 <module version="4" relativePaths="true" type="J2EE_WEB_MODULE">
   <component name="AppServerSpecificValidatorsManager" />
   <component name="ModuleRootManager" />
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="true">
     <exclude-output />
     <exploded url="file://$MODULE_DIR$/exploded" />
     <exclude-exploded />
@@ -40,12 +40,8 @@
       <attribute name="URI" value="&lt;N/A&gt;" />
       <url>jar://$APPLICATION_HOME_DIR$/lib/javaee.jar!/</url>
     </containerElement>
-    <containerElement type="library" name="dwr" level="project">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib" />
-    </containerElement>
     <containerElement type="library" name="struts" level="project">
-      <attribute name="method" value="1" />
+      <attribute name="method" value="0" />
       <attribute name="URI" value="/WEB-INF/lib" />
     </containerElement>
     <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/WEB-INF/web.xml" optional="false" version="2.4" />

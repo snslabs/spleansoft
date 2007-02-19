@@ -8,13 +8,16 @@
     <form-beans>
         <form-bean name="loginForm" type="com.splean.web.forms.Login"/>
         <form-bean name="filePanel" type="com.splean.web.model.FilePanel"/>
+        <form-bean type="com.splean.web.forms.Upload" name="uploadForm"/>
     </form-beans>
     <global-forwards>
         <forward name="login" path="/login.do"/>
         <forward name="welcome" path="/welcome.do"/>
         <forward name="panel" path="/panel.do"/>
+        <forward name="upload" path="/upload.do"/>
     </global-forwards>
     <action-mappings>
+        <action path="/upload"  forward="/pages/panel.jsp" type="com.splean.web.actions.UploadAction" name="uploadForm"/>
         <action path="/welcome" forward="/welcome.jsp"/>
         <action path="/login" name="loginForm" forward="/pages/login.jsp"/>
         <action path="/loginSubimt" name="loginForm" type="com.splean.web.actions.LoginAction"/>

@@ -12,16 +12,24 @@
     <%@ include file="../lib/header.jsp" %>
 </head>
 <body>
-<b>Dir:</b><span id="dirSpan"></span>
+<img src="/images/open-dir.gif" alt="dir"/>&nbsp;
+<select id="drive" onchange="changeDrive()">
+    <option value="C:/">C</option>
+    <option value="D:/">D</option>
+    <option value="E:/">E</option>
+    <option value="F:/">F</option>
+</select>
+<span id="dirSpan"></span>
 <bean:write name="panel" property="path"/>
-<br>
-<table class="panel" cellspacing="1" cellpadding="1">
+<br><br>
+<table class="panel" cellspacing="1" cellpadding="2">
     <thead>
         <tr>
             <th width="16">&nbsp;</th>
             <th width="80">Name</th>
             <th width="30">Ext</th>
-            <th width="52">Size</th>
+            <th width="60">Size</th>
+            <th width="60">Actions</th>
             <th width="120">Date</th>
         </tr>
     </thead>
@@ -47,16 +55,20 @@
         DWRUtil.addRows("panel1", res,
                 [
                         function(data) {
-                            return " ";
+                            return null;
                         },
                         function(data) {
-                            return null; // data["name"];
+                            return null;
+                            // data["name"];
                         },
                         function(data) {
                             return data["extension"];
                         },
                         function(data) {
                             return data["size"];
+                        },
+                        function(data) {
+                            return null;
                         },
                         function(data) {
                             return data["date"];
@@ -69,20 +81,37 @@
             cellCreator:function(options) {
                 var td = document.createElement("td");
                 var data = options['rowData']['name'];
-                var dirPath = options['rowData']['fullPath'];
-                if(options['cellNum'] == 3){
-                    td.align = "right";
+                var fullPath = options['rowData']['fullPath'];
+                if (options['cellNum'] == 0) {
+                    if (options['rowData']['directory']) {
+                        var img = document.createElement("img");
+                        img.src = '/images/dir.gif';
+                        //                        img.alt = 'folder pic';
+                        td.appendChild(img);
+                    }
                 }
-                if(options['cellNum'] == 1){
-                    if(options['rowData']['directory']){
+                else if (options['cellNum'] == 1) {
+                    if (options['rowData']['directory']) {
                         var a = document.createElement("a");
-                        a.href = "javascript:navigate(\""+dirPath+"\")";
-                        a.appendChild( document.createTextNode(data) );
+                        a.href = "javascript:navigate(\"" + fullPath + "\")";
+                        a.appendChild(document.createTextNode(data));
                         td.appendChild(a);
                     }
-                    else{
-                        td.appendChild( document.createTextNode(data) )
+                    else {
+                        td.appendChild(document.createTextNode(data))
                     }
+                }
+                else if (options['cellNum'] == 3) {
+                    td.align = "right";
+                }
+                else if ((options['cellNum'] == 4)&& !options['rowData']['directory']) {
+                    var a = document.createElement("a");
+                    a.href = 'javascript:download("' + fullPath + '")';
+                    var img = document.createElement("img");
+                    img.src = '/images/download.gif';
+                    img.border = 0;
+                    a.appendChild(img);
+                    td.appendChild(a);
                 }
                 return td;
             }
@@ -92,7 +121,7 @@
 
     }
 
-    function navigate(dir){
+    function navigate(dir) {
         updatePanel(dir);
     }
 
@@ -100,8 +129,18 @@
         $("dirSpan").innerText = dirPath;
         FilesFacade.dir(dirPath, panelUpdated);
     }
+    function changeDrive() {
+        // alert(DWRUtil.getValue("drive"));
+        updatePanel(DWRUtil.getValue("drive"));
+    }
 
 </script>
-<button onclick="updatePanel('c:/Serge')">Refresh C:\</button>
+<br><br>
+<button onclick="updatePanel('c:/')">Refresh C:\</button><br><br>
+<html:form action="/upload" method="post" enctype="multipart/form-data" >
+    <html:hidden property="currentDir"/>
+    <html:file property="uploadedFile"/><br>
+    <html:submit/><html:reset/>
+</html:form>
 </body>
 </html>

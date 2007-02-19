@@ -20,7 +20,13 @@ public class FileBuilder {
         for (File file : filez) {
             fileModelz.add(new FileModel(file));
         }
-        System.out.println(fileModelz);
+        File dirFile = new File(dir);
+        final File parentFile = dirFile.getParentFile();
+        if(parentFile != null){
+            FileModel model = new FileModel(parentFile);
+            model.setName("..");
+            fileModelz.add(model);
+        }
         return fileModelz;
     }
 
