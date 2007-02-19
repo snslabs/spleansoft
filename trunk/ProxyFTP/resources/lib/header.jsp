@@ -1,0 +1,29 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script src='/dwr/interface/DWRExample.js'></script>
+<script src='/dwr/interface/FilesFacade.js'></script>
+<script src='/dwr/engine.js'></script>
+<script src='/dwr/util.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
+<style>
+    body{
+        font-family:verdana;
+        font-size: x-small;
+        color: <jsp:getProperty name="filebrowserConfig" property="defaultTextColor"/>;
+        background-color: <jsp:getProperty name="filebrowserConfig" property="defaultBgColor"/>;
+    }
+    table{
+        font-family:verdana;
+        font-size: x-small;
+        color: <jsp:getProperty name="filebrowserConfig" property="panelTextColor"/>;
+        background-color: <jsp:getProperty name="filebrowserConfig" property="panelBgColor"/>;
+    }
+    TABLE.panel{
+        background-color: black;
+    }
+    .panel TD{
+        background-color:white;
+    }
+    .panel TH{
+        background-color:white;
+    }
+</style>

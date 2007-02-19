@@ -21,6 +21,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="struts" level="project" />
+    <orderEntry type="library" name="dwr" level="project" />
     <orderEntryProperties />
   </component>
   <component name="WebModuleBuildComponent">
@@ -34,6 +35,15 @@
     <setting name="RUN_JASPER_VALIDATION" value="true" />
   </component>
   <component name="WebModuleProperties">
+    <containerElement type="library" level="module">
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="&lt;N/A&gt;" />
+      <url>jar://$APPLICATION_HOME_DIR$/lib/javaee.jar!/</url>
+    </containerElement>
+    <containerElement type="library" name="dwr" level="project">
+      <attribute name="method" value="1" />
+      <attribute name="URI" value="/WEB-INF/lib" />
+    </containerElement>
     <containerElement type="library" name="struts" level="project">
       <attribute name="method" value="1" />
       <attribute name="URI" value="/WEB-INF/lib" />

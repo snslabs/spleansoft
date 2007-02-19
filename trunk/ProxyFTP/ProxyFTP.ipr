@@ -306,6 +306,13 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="dwr">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/WEB-INF/lib/dwr.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
   <component name="uidesigner-configuration">
     <option name="INSTRUMENT_CLASSES" value="true" />

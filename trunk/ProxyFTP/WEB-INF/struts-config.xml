@@ -6,12 +6,18 @@
 
 <struts-config>
     <form-beans>
-        <form-bean name="logonForm" type="org.apache.struts.action.DynaActionForm"/>
+        <form-bean name="loginForm" type="com.splean.web.forms.Login"/>
+        <form-bean name="filePanel" type="com.splean.web.model.FilePanel"/>
     </form-beans>
     <global-forwards>
-        <forward path="/index.jsp" name="/logon.do"/>
+        <forward name="login" path="/login.do"/>
+        <forward name="welcome" path="/welcome.do"/>
+        <forward name="panel" path="/panel.do"/>
     </global-forwards>
     <action-mappings>
-        <action path="/logon" className="com.splean.web.actions.LoginAction"/>
+        <action path="/welcome" forward="/welcome.jsp"/>
+        <action path="/login" name="loginForm" forward="/pages/login.jsp"/>
+        <action path="/loginSubimt" name="loginForm" type="com.splean.web.actions.LoginAction"/>
+        <action path="/panel" name="filePanel" forward="/pages/panel.jsp"/> 
     </action-mappings>
 </struts-config>

@@ -13,4 +13,20 @@ public class FileBrowserConfig {
     public String getVersion(){
         return VERSION;
     }
+
+    public String getDefaultTextColor(){
+        return "black";
+    }
+
+    public String getDefaultBgColor(){
+        return "white";
+    }
+
+    public String getPanelBgColor(){
+        return "white";
+    }
+
+    public String getPanelTextColor(){
+        return "black";
+    }
 }
