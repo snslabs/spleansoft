@@ -1,13 +1,11 @@
 package com.splean.web.model;
 
-import com.splean.web.model.FileModel;
 import com.splean.web.file.FileBrowserException;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.io.File;
+import java.io.FileFilter;
 import java.text.MessageFormat;
+import java.util.*;
 
 /**
  * Thread safe file model builder
@@ -15,13 +13,8 @@ import java.text.MessageFormat;
 public class FileBuilder {
 
     public static List<FileModel> getFileModels(String dir) throws FileBrowserException {
-        List<File> filez = getFiles(dir);
-        List<FileModel> fileModelz = new ArrayList<FileModel>();
-        for (File file : filez) {
-            fileModelz.add(new FileModel(file));
-        }
-        File dirFile = new File(dir);
-        final File parentFile = dirFile.getParentFile();
+        List<FileModel> fileModelz = getFileModels(getFiles(dir));
+        final File parentFile = new File(dir).getParentFile();
         if(parentFile != null){
             FileModel model = new FileModel(parentFile);
             model.setName("..");
@@ -36,7 +29,20 @@ public class FileBuilder {
             throw new FileBrowserException(MessageFormat.format("File {0} is not a directory!", dir));
         }
         else{
-            return Arrays.asList(dirFile.listFiles());
+            FileFilter filter = new FileFilter() {
+                public boolean accept(File file) {
+                    return !file.isHidden();
+                }
+            };
+            return Arrays.asList(dirFile.listFiles(filter));
         }
    }
+
+    public static List<FileModel> getFileModels(Collection<File> filez) {
+        List<FileModel> fileModelz = new ArrayList<FileModel>();
+        for (File file : filez) {
+            fileModelz.add(new FileModel(file));
+        }
+        return fileModelz;
+    }
 }

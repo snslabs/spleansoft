@@ -17,6 +17,9 @@
         color: <jsp:getProperty name="filebrowserConfig" property="panelTextColor"/>;
         background-color: <jsp:getProperty name="filebrowserConfig" property="panelBgColor"/>;
     }
+    input{
+        border: 1 solid black;
+    }
     TABLE.panel{
         background-color: black;
     }
@@ -24,7 +27,7 @@
         background-color:white;
     }
     .panel TH{
-        background-color:white;
+        background-color:#E0E0E0;
     }
     A {
         color: navy;
