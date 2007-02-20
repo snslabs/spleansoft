@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.splean.web.file.FilesFacade;
-import com.splean.web.file.FileModel;
+import com.splean.web.file.AbstractFileModel;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -23,7 +23,7 @@ public class DownloadAction extends Action {
 
         final String path = request.getParameter("path");
         System.out.println("Downloading : "+ path);
-        FileModel fileModel = filesFacade.getFile(path);
+        AbstractFileModel fileModel = filesFacade.getFile(path);
         if(fileModel.isDirectory()){
             return actionMapping.findForward("filenotfound");
         }
@@ -38,7 +38,7 @@ public class DownloadAction extends Action {
          */
         byte[] buf = new byte[16384];
         OutputStream os = response.getOutputStream();
-        int length = 0;
+        int length;
         while((length = is.read(buf))!=-1){
             os.write(buf,0,length);
         }

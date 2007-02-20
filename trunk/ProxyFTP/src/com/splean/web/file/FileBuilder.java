@@ -1,22 +1,23 @@
 package com.splean.web.file;
 
-import com.splean.web.file.FileBrowserException;
-
 import java.io.File;
 import java.io.FileFilter;
 import java.text.MessageFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * Thread safe file model builder
  */
 public class FileBuilder {
 
-    public static List<FileModel> getFileModels(String dir) throws FileBrowserException {
-        List<FileModel> fileModelz = getFileModels(getFiles(dir));
+    public static List<AbstractFileModel> getFileModels(String dir) throws FileBrowserException {
+        List<AbstractFileModel> fileModelz = getFileModels(getFiles(dir));
         final File parentFile = new File(dir).getParentFile();
         if(parentFile != null){
-            FileModel model = new FileModel(parentFile);
+            FileSystemFileModel model = new FileSystemFileModel(parentFile);
             model.setName("..");
             fileModelz.add(model);
         }
@@ -38,10 +39,10 @@ public class FileBuilder {
         }
    }
 
-    public static List<FileModel> getFileModels(Collection<File> filez) {
-        List<FileModel> fileModelz = new ArrayList<FileModel>();
+    public static List<AbstractFileModel> getFileModels(Collection<File> filez) {
+        List<AbstractFileModel> fileModelz = new ArrayList<AbstractFileModel>();
         for (File file : filez) {
-            fileModelz.add(new FileModel(file));
+            fileModelz.add(new FileSystemFileModel(file));
         }
         return fileModelz;
     }

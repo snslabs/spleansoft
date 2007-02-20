@@ -1,7 +1,5 @@
 package com.splean.web.file;
 
-import com.splean.web.file.FileModel;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -15,8 +13,9 @@ public class FilesFacade {
      * @param path path to directory
      * @return ordered collection of models
      * @throws FileBrowserException in case of unable to get list of files
+     * @throws java.io.IOException in case of error in ftp processing
      */
-    public List<FileModel> dir(String path) throws FileBrowserException{
+    public List<AbstractFileModel> dir(String path) throws FileBrowserException, IOException {
         return getImplementation(path).dir(path);
     }
 
@@ -74,7 +73,7 @@ public class FilesFacade {
      * @param clipboardId clipboard identifier
      * @return list of files placed in clipboard
      */
-    public List<FileModel>getClipboard(String clipboardId){
+    public List<AbstractFileModel>getClipboard(String clipboardId){
         return getImplementation("default").getClipboard(clipboardId);
     }
 
@@ -94,7 +93,7 @@ public class FilesFacade {
             return IMPLEMENTATIONS.get("ntfs");
         }
     }
-    private FilesFacadeInterface getImplementation(FileModel fileModel){
+    private FilesFacadeInterface getImplementation(AbstractFileModel fileModel){
         return getImplementation(fileModel.getFullPath());
     }
 
@@ -105,15 +104,15 @@ public class FilesFacade {
         IMPLEMENTATIONS.put("default", new FilesFacadeFileSystemImpl());
     }
 
-    public byte[] getFileDataAsByteArray(FileModel fileModel) throws IOException {
+    public byte[] getFileDataAsByteArray(AbstractFileModel fileModel) throws IOException {
         return getImplementation(fileModel).getFileDataAsByteArray(fileModel);
     }
 
-    public InputStream getFileDataAsInputStream(FileModel fileModel) throws IOException {
+    public InputStream getFileDataAsInputStream(AbstractFileModel fileModel) throws IOException {
         return getImplementation(fileModel).getFileDataAsStream(fileModel);
     }
 
-    public FileModel getFile(String path) {
+    public AbstractFileModel getFile(String path) {
         return getImplementation(path).getFile(path);
     }
 

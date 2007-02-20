@@ -1,14 +1,13 @@
 package com.splean.web.file;
 
-import com.splean.web.file.FileModel;
-import com.splean.web.file.FileBuilder;
-
-import java.io.*;
-import java.util.*;
-
 import org.apache.commons.io.FileUtils;
 
-class FilesFacadeFileSystemImpl extends AbstractFiles{
+import java.io.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+
+class FilesFacadeFileSystemImpl extends AbstractFilesImpl {
 
     /**
      * returns content of the directory with default sorting (dirs first, alphabetically)
@@ -16,8 +15,8 @@ class FilesFacadeFileSystemImpl extends AbstractFiles{
      * @return ordered collection of models
      * @throws com.splean.web.file.FileBrowserException in case of unable to get list of files
      */
-    public List<FileModel> dir(String path) throws FileBrowserException{
-        final List<FileModel> list = FileBuilder.getFileModels(path);
+    public List<AbstractFileModel> dir(String path) throws FileBrowserException{
+        final List<AbstractFileModel> list = FileBuilder.getFileModels(path);
         Collections.sort(list);
         return list;
     }
@@ -106,7 +105,7 @@ class FilesFacadeFileSystemImpl extends AbstractFiles{
      * @return byte array with file data
      * @throws IOException in case of error
      */
-    public byte[] getFileDataAsByteArray(FileModel fileModel) throws IOException {
+    public byte[] getFileDataAsByteArray(AbstractFileModel fileModel) throws IOException {
         return FileUtils.readFileToByteArray(fileModel.getFile());
     }
 
@@ -116,13 +115,17 @@ class FilesFacadeFileSystemImpl extends AbstractFiles{
      * @return input stream to read files data
      * @throws IOException in case of error
      */
-    public InputStream getFileDataAsStream(FileModel fileModel) throws IOException {
+    public InputStream getFileDataAsStream(AbstractFileModel fileModel) throws IOException {
         return new FileInputStream(fileModel.getFile());
     }
 
 
-    public FileModel getFile(String path) {
+    public AbstractFileModel getFile(String path) {
         final File file = new File(path);
-        return new FileModel(file);
+        return new FileSystemFileModel(file);
+    }
+
+    public void createDirectore(String path) {
+
     }
 }

@@ -2,44 +2,24 @@ package com.splean.web.file;
 
 import java.io.Serializable;
 import java.io.File;
-import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.DecimalFormat;
 
-public class FileModel implements Serializable, Comparable<FileModel> {
-    private boolean directory;
-    private String name;
-    private String extension;
-    private String date;
-    private String size;
-    private String fileName;
-    private String fullPath;
-    private File file;
+public abstract class AbstractFileModel implements Serializable, Comparable<AbstractFileModel> {
+    
+    protected boolean directory;
+    protected String name;
+    protected String extension;
+    protected String date;
+    protected String size;
+    protected String fileName;
+    protected String fullPath;
+    protected File file;
+    protected int type;
+    protected static final SimpleDateFormat SDF = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
+    protected static final DecimalFormat DF = new DecimalFormat("#,###");
 
-    private static final SimpleDateFormat SDF = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
-    private static final DecimalFormat DF = new DecimalFormat("#,###");
-
-    public FileModel() {
-    }
-
-    public FileModel(File f) {
-        file = f;
-        fullPath = f.getAbsolutePath();
-        fullPath = fullPath.replaceAll("\\\\","/");
-        directory = f.isDirectory();
-        fileName = f.getName();
-        name = f.getName();
-        if (!directory) {
-            extension = extractExtension(f.getName());
-            if (extension != null) {
-                name = name.substring(0, name.length() - extension.length() - 1);
-            }
-        }
-        date = SDF.format(new Date(f.lastModified()));
-        size = f.length() == 0 ? "" : DF.format(f.length());
-    }
-
-    private String extractExtension(String name) {
+    protected String extractExtension(String name) {
         int lastDotIndex = name.lastIndexOf(".");
         if ((lastDotIndex != -1) && (lastDotIndex + 1 < name.length())) {
             String ext = name.substring(lastDotIndex + 1);
@@ -93,7 +73,6 @@ public class FileModel implements Serializable, Comparable<FileModel> {
         this.size = size;
     }
 
-
     public String getFullPath() {
         return fullPath;
     }
@@ -118,7 +97,7 @@ public class FileModel implements Serializable, Comparable<FileModel> {
         return fileName;
     }
 
-    public int compareTo(FileModel fileModel) {
+    public int compareTo(AbstractFileModel fileModel) {
         if (fileModel.directory && !this.directory) {
             return 1;
         }
