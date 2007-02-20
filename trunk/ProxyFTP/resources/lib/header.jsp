@@ -26,4 +26,9 @@
     .panel TH{
         background-color:white;
     }
+    A {
+        color: navy;
+        font-weight: bold;
+        text-decoration: none;
+    }
 </style>
