@@ -11,4 +11,13 @@ public class FtpFileModel extends AbstractFileModel {
         fullPath = "ftp://"+user+":"+password+"@"+server+":"+port+dirPath+fileName;
     }
 
+    public FtpFileModel(String fileName, String dirPath, String server, int port, String user, String password, boolean isDirectory) {
+        directory = isDirectory;
+        name = fileName;
+        extension = extractExtension(name);
+        if (extension != null) {
+            name = name.substring(0, name.length() - extension.length() - 1);
+        }
+        fullPath = "ftp://"+user+":"+password+"@"+server+":"+port+dirPath+fileName;
+    }
 }

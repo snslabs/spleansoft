@@ -1,40 +1,33 @@
 package com.splean.web.file;
 
 import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPFile;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
-import java.net.URL;
 import java.net.MalformedURLException;
-import java.util.List;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.regex.Pattern;
+import java.util.List;
 
 /**
  * FilesFacade to work with ftp server
  */
 class FilesFacadeFtpImpl extends AbstractFilesImpl {
-    private String server = "localhost";
-    private String username = "admin";
-    private String password = "1111";
-    private int port = 21;
-
     public List<AbstractFileModel> dir(String path) throws FileBrowserException, IOException {
         PathModel pm = new PathModel(path);
         FTPClient ftpClient = getFtpClient(pm);
         ftpClient.changeWorkingDirectory(path);
-        String[] files = ftpClient.listNames();
-        String dirPath = ftpClient.printWorkingDirectory();
+        FTPFile[] ff = ftpClient.listFiles();
         List<AbstractFileModel> res = new ArrayList<AbstractFileModel>();
-        for (String file : files) {
+        for (FTPFile file : ff) {
             res.add(
                     new FtpFileModel(
-                            file, dirPath,
+                            file.getName(), path,
                             ftpClient.getRemoteAddress().getHostAddress(), ftpClient.getRemotePort(),
-                            username, password)
+                            pm.username, pm.password,file.isDirectory() )
             );
-            System.out.println(file);
         }
         return res;
     }
