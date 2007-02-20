@@ -77,6 +77,9 @@ public class FilesFacade {
         return getImplementation("default").getClipboard(clipboardId);
     }
 
+    public String createDirectory(String fullDirPath){
+        return getImplementation(fullDirPath).createDirectory(fullDirPath);
+    }
 
     /**
      * This method decides what implementation should be used to deal with file specified with path.

@@ -13,8 +13,7 @@
         <create creator="new" javascript="FilesFacade">
             <param name="class" value="com.splean.web.file.FilesFacade"/>
         </create>
-        <convert converter="bean" match="com.splean.web.file.FileSystemFileModel">
-            
-        </convert>
+        <convert converter="bean" match="com.splean.web.file.FileSystemFileModel"/>
+        <convert converter="bean" match="com.splean.web.file.FtpFileModel"/>
     </allow>
 </dwr>

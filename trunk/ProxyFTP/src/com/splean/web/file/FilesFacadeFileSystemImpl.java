@@ -35,7 +35,13 @@ class FilesFacadeFileSystemImpl extends AbstractFilesImpl {
         }
         else{
             try{
-                f.delete();
+                boolean result = f.delete();
+                if(!result){
+                    res = "Cannot delete "+path;
+                    if(f.isDirectory()){
+                        res += "\nProbably directory is not empty";
+                    }
+                }
             }
             catch(Exception e){
                 res = "cannot delete file\n"+e.getMessage();
@@ -125,7 +131,22 @@ class FilesFacadeFileSystemImpl extends AbstractFilesImpl {
         return new FileSystemFileModel(file);
     }
 
-    public void createDirectore(String path) {
-
+    /**
+     * Creates directory
+     * @param path path to new directory to be created
+     * @return null if succeded, error message otherwise
+     */
+    public String createDirectory(String path) {
+        try{
+            File f = new File(path);
+            boolean result = f.mkdir();
+            if(!result){
+                return "Cannot create directory";
+            }
+        }
+        catch(Exception e){
+            return "Cannot create directory\n"+e.getMessage();
+        }
+        return null;
     }
 }

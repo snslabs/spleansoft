@@ -25,5 +25,5 @@ interface FilesFacadeInterface {
 
     AbstractFileModel getFile(String path);
 
-    void createDirectore(String path);
+    String createDirectory(String path);
 }

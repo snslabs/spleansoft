@@ -17,9 +17,10 @@
             <img src="/images/open-dir.gif" alt="dir"/>&nbsp;
             <select id="drive" onchange="changeDrive()">
                 <option value="C:/">C</option>
-                <!--<option value="D:/">D</option>-->
-                <!--<option value="E:/">E</option>-->
-                <!--<option value="F:/">F</option>-->
+                <option value="D:/">D</option>
+                <option value="E:/">E</option>
+                <option value="F:/">F</option>
+                <option value="ftp://admin:1111@localhost:21/root/">ftp@localhost</option>
             </select>
             <span id="dirSpan"></span>
         </td>
@@ -279,6 +280,20 @@ function clipboardUpdated(res) {
     showLoadInticator(false);
 }
 
+function createDirectory(){
+    showLoadInticator(true);
+    FilesFacade.createDirectory(($("currentDir").value + $("newFolderName").value), directoryCreated);
+}
+
+function directoryCreated(data){
+    if(data != null){
+        alert(data);
+    }
+    showLoadInticator(false);
+    $("newFolderName").value = "";
+    changeDirectory($("currentDir").value);
+}
+
 </script>
 <br><br>
 <html:form action="/upload" method="post" enctype="multipart/form-data">
@@ -297,6 +312,19 @@ function clipboardUpdated(res) {
         </tr>
     </table>
 </html:form>
+<table class="panel" cellspacing="1">
+    <tr>
+        <th colspan="2">Create folder</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="newFolderName">
+        </td>
+        <td>
+            <input type="button" value="Create Dir" onclick="createDirectory()"/>
+        </td>
+    </tr>
+</table>
 <script language="JavaScript">
     changeDirectory('c:/');
     FilesFacade.createClipboard(initClipboard);
