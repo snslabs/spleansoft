@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.splean.web.forms.Upload;
+import com.splean.web.file.FilesFacade;
 
 import java.io.FileOutputStream;
 
 public class UploadAction extends Action {
+    private FilesFacade filesFacade = new FilesFacade();
 
     public ActionForward execute(ActionMapping actionMapping, ActionForm actionForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
         final Upload uploadForm = ((Upload) actionForm);
@@ -24,9 +26,9 @@ public class UploadAction extends Action {
         byte[] fileData = myFile.getFileData();
         System.out.println("Uploaded = " + fileName);
 
-        FileOutputStream fos = new FileOutputStream(uploadForm.getCurrentDir() + "/" + fileName);
-        fos.write(fileData);
-        fos.close();
+        final String path = uploadForm.getCurrentDir() + "/" + fileName;
+        filesFacade.uploadFile(path, fileData);
+
 
         return actionMapping.findForward("panel");
     }

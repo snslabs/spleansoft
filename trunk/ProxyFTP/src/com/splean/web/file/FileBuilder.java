@@ -1,4 +1,4 @@
-package com.splean.web.model;
+package com.splean.web.file;
 
 import com.splean.web.file.FileBrowserException;
 

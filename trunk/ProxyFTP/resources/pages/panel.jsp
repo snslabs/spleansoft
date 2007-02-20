@@ -3,7 +3,6 @@
 <%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 <%@ taglib prefix="logic" uri="http://struts.apache.org/tags-logic" %>
 <jsp:useBean id="filebrowserConfig" class="com.splean.FileBrowserConfig" scope="application"/>
-<jsp:useBean id="panel" class="com.splean.web.model.FilePanel" scope="session"/>
 <html>
 <head>
     <title>File Browser
@@ -23,7 +22,6 @@
                 <!--<option value="F:/">F</option>-->
             </select>
             <span id="dirSpan"></span>
-            <bean:write name="panel" property="path"/>
         </td>
         <td>
             <span id="loadIndicator" style="display:none;">LOADING...</span>

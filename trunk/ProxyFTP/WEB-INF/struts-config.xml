@@ -7,7 +7,6 @@
 <struts-config>
     <form-beans>
         <form-bean name="loginForm" type="com.splean.web.forms.Login"/>
-        <form-bean name="filePanel" type="com.splean.web.model.FilePanel"/>
         <form-bean name="uploadForm" type="com.splean.web.forms.Upload" />
     </form-beans>
     <global-forwards>
@@ -23,6 +22,6 @@
         <action path="/welcome" forward="/welcome.jsp"/>
         <action path="/login" name="loginForm" forward="/pages/login.jsp"/>
         <action path="/loginSubimt" name="loginForm" type="com.splean.web.actions.LoginAction"/>
-        <action path="/panel" name="filePanel" forward="/pages/panel.jsp"/> 
+        <action path="/panel" forward="/pages/panel.jsp"/>
     </action-mappings>
 </struts-config>

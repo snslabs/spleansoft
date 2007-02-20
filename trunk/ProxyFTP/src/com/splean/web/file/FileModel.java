@@ -1,4 +1,4 @@
-package com.splean.web.model;
+package com.splean.web.file;
 
 import java.io.Serializable;
 import java.io.File;
@@ -6,13 +6,15 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.DecimalFormat;
 
-public class FileModel implements Serializable, Comparable {
+public class FileModel implements Serializable, Comparable<FileModel> {
     private boolean directory;
     private String name;
     private String extension;
     private String date;
     private String size;
+    private String fileName;
     private String fullPath;
+    private File file;
 
     private static final SimpleDateFormat SDF = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
     private static final DecimalFormat DF = new DecimalFormat("#,###");
@@ -20,10 +22,12 @@ public class FileModel implements Serializable, Comparable {
     public FileModel() {
     }
 
-    FileModel(File f) {
+    public FileModel(File f) {
+        file = f;
         fullPath = f.getAbsolutePath();
         fullPath = fullPath.replaceAll("\\\\","/");
         directory = f.isDirectory();
+        fileName = f.getName();
         name = f.getName();
         if (!directory) {
             extension = extractExtension(f.getName());
@@ -102,19 +106,27 @@ public class FileModel implements Serializable, Comparable {
         return this.name;
     }
 
-    public int compareTo(Object o) {
-        if (o instanceof FileModel) {
-            final FileModel fileModel = (FileModel) o;
-            if (fileModel.directory && !this.directory) {
-                return 1;
-            }
-            else if (!fileModel.directory && this.directory) {
-                return -1;
-            }
-            else {
-                return this.name.compareTo(fileModel.name);
-            }
+    public long length() {
+        return file.length();
+    }
+
+    File getFile() {
+        return file;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public int compareTo(FileModel fileModel) {
+        if (fileModel.directory && !this.directory) {
+            return 1;
         }
-        return 0;
+        else if (!fileModel.directory && this.directory) {
+            return -1;
+        }
+        else {
+            return this.name.compareTo(fileModel.name);
+        }
     }
 }

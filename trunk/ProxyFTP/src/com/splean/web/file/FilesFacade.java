@@ -1,14 +1,14 @@
 package com.splean.web.file;
 
-import com.splean.web.model.FileBuilder;
-import com.splean.web.model.FileModel;
-import org.apache.commons.io.FileUtils;
+import com.splean.web.file.FileModel;
 
-import java.io.File;
-import java.util.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class FilesFacade {
-    static Map<String, Set<File>> clipBoards = new HashMap<String, Set<File>>();
 
     /**
      * returns content of the directory with default sorting (dirs first, alphabetically)
@@ -17,9 +17,7 @@ public class FilesFacade {
      * @throws FileBrowserException in case of unable to get list of files
      */
     public List<FileModel> dir(String path) throws FileBrowserException{
-        final List<FileModel> list = FileBuilder.getFileModels(path);
-        Collections.sort(list);
-        return list;
+        return getImplementation(path).dir(path);
     }
 
     /**
@@ -29,20 +27,7 @@ public class FilesFacade {
      * @throws FileBrowserException in case of fatal error
      */
     public String deleteFile(String path) throws FileBrowserException{
-        File f = new File(path);
-        String res = null;
-        if(!f.exists()){
-            res = "file not found!";
-        }
-        else{
-            try{
-                f.delete();
-            }
-            catch(Exception e){
-                res = "cannot delete file\n"+e.getMessage();
-            }
-        }
-        return res;
+        return getImplementation(path).deleteFile(path);
     }
 
     /**
@@ -50,57 +35,86 @@ public class FilesFacade {
      * @return unique clipboard id
      */
     public String createClipboard(){
-        return String.valueOf(System.currentTimeMillis());
+        return getImplementation("default").createClipboard();
     }
 
+    /**
+     * Copies file to clipboard
+     * @param filePath path to file
+     * @param clipboardId clipboardId
+     * @return null if succeded or error message otherwise.
+     */
     public String copyFile(String filePath, String clipboardId){
-        final File file = new File(filePath);
-        if(!file.exists()){
-            return "File not found!";
+        return getImplementation(filePath).copyFile(filePath, clipboardId);
+    }
+
+    /**
+     * Stores provided byte array into file with provided path.
+     * Not for use via DWR
+     * @param path path to newly created file
+     * @param fileData binary data of file content
+     * @throws IOException in case of error
+     */
+    public void uploadFile(String path, byte[] fileData) throws IOException {
+        getImplementation(path).uploadFile(path, fileData);
+    }
+
+    /**
+     * Pastes files from clipboard to current directory
+     * @param dstDirPath destination directory
+     * @param clipboardId clipboard identifier
+     * @return result of copying
+     */
+    public String pasteFiles(String dstDirPath, String clipboardId){
+        return getImplementation(dstDirPath).pasteFiles(dstDirPath,clipboardId);
+    }
+
+    /**
+     * Returns list of files in clipboard
+     * @param clipboardId clipboard identifier
+     * @return list of files placed in clipboard
+     */
+    public List<FileModel>getClipboard(String clipboardId){
+        return getImplementation("default").getClipboard(clipboardId);
+    }
+
+
+    /**
+     * This method decides what implementation should be used to deal with file specified with path.
+     * The main idea is that path always contains full path (like URL). So it is possible to determine
+     * if this is file on local file system or file at some ftp server.
+     * @param path path to file
+     * @return implementation of FilesFacade
+     */
+    private FilesFacadeInterface getImplementation(String path){
+        if(path.toLowerCase().startsWith("ftp://")){
+            return IMPLEMENTATIONS.get("ftp");
         }
         else{
-            getClipBoardSet(clipboardId).add(file);
+            return IMPLEMENTATIONS.get("ntfs");
         }
-        return null;
+    }
+    private FilesFacadeInterface getImplementation(FileModel fileModel){
+        return getImplementation(fileModel.getFullPath());
     }
 
-    public String pasteFiles(String dstDirPath, String clipboardId){
-        File dstDir = new File(dstDirPath);
-        if(!dstDir.exists()){
-            return "Directory "+dstDirPath + " not found!";
-        }
-        if(!dstDir.isDirectory()){
-            return dstDirPath+" is not a directory";
-        }
-        return copyFiles(getClipBoardSet(clipboardId), dstDir);
+    private static Map<String, FilesFacadeInterface> IMPLEMENTATIONS = new HashMap<String, FilesFacadeInterface>();
+    {
+        IMPLEMENTATIONS.put("ntfs", new FilesFacadeFileSystemImpl());
+        IMPLEMENTATIONS.put("ftp", new FilesFacadeFtpImpl());
+        IMPLEMENTATIONS.put("default", new FilesFacadeFileSystemImpl());
     }
 
-    private String copyFiles(Set<File> clipBoardSet, File dstDir) {
-        try{
-            // copying files from set to dst dir.
-            for (File file : clipBoardSet) {
-                FileUtils.copyFileToDirectory(file, dstDir);
-            }
-        }
-        catch(Exception e){
-            return "Cannot copy files:\n"+e.getMessage();
-        }
-        // clearing clipboard
-        clipBoardSet.clear();
-        return null;
+    public byte[] getFileDataAsByteArray(FileModel fileModel) throws IOException {
+        return getImplementation(fileModel).getFileDataAsByteArray(fileModel);
     }
 
-    public List<FileModel>getClipboard(String clipboardId){
-        return FileBuilder.getFileModels( getClipBoardSet(clipboardId) );
+    public InputStream getFileDataAsInputStream(FileModel fileModel) throws IOException {
+        return getImplementation(fileModel).getFileDataAsStream(fileModel);
     }
 
-    private Set<File> getClipBoardSet(String id){
-        Set<File> f = clipBoards.get(id);
-        if(f == null){
-            f =  new LinkedHashSet<File>();
-            clipBoards.put(id, f);
-        }
-        return f;
+    public FileModel getFile(String path) {
+        return getImplementation(path).getFile(path);
     }
 
 }
