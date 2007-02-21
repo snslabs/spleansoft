@@ -22,12 +22,15 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
         FTPFile[] ff = ftpClient.listFiles();
         List<AbstractFileModel> res = new ArrayList<AbstractFileModel>();
         for (FTPFile file : ff) {
-            res.add(
-                    new FtpFileModel(
-                            file.getName(), path,
-                            ftpClient.getRemoteAddress().getHostAddress(), ftpClient.getRemotePort(),
-                            pm.username, pm.password,file.isDirectory() )
-            );
+            if(!file.getName().equals(".")){
+                final FtpFileModel fileModel = new FtpFileModel(
+                        file.getName(), pm.path,
+                        ftpClient.getRemoteAddress().getHostAddress(), ftpClient.getRemotePort(),
+                        pm.username, pm.password, file.isDirectory());
+                res.add(
+                        fileModel
+                );
+            }
         }
         return res;
     }
@@ -83,6 +86,7 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
         String password;
         int port;
         String path;
+        String name;
 
         public PathModel(String fullPath) throws MalformedURLException {
             URL url = new URL(fullPath);
@@ -90,7 +94,7 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
             port = url.getPort()==0?url.getDefaultPort():url.getPort();
             username = url.getUserInfo().substring(0,url.getUserInfo().indexOf(":"));
             password = url.getUserInfo().substring(url.getUserInfo().indexOf(":")+1);
-            path = url.getFile();
+            path = url.getPath();
         }
     }
 }

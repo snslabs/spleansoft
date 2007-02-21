@@ -13,13 +13,16 @@
 <body>
 <table border="0">
     <tr>
+        <td><html:link action="/panel">panel</html:link></td>
+    </tr>
+    <tr>
         <td>
             <img src="/images/open-dir.gif" alt="dir"/>&nbsp;
             <select id="drive" onchange="changeDrive()">
                 <option value="C:/">C</option>
-                <option value="D:/">D</option>
-                <option value="E:/">E</option>
-                <option value="F:/">F</option>
+                <!--<option value="D:/">D</option>-->
+                <!--<option value="E:/">E</option>-->
+                <!--<option value="F:/">F</option>-->
                 <option value="ftp://admin:1111@localhost:21/root/">ftp@localhost</option>
             </select>
             <span id="dirSpan"></span>
