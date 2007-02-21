@@ -3,7 +3,7 @@ package com.splean.web.file;
 import java.io.File;
 import java.util.*;
 
-abstract class AbstractFilesImpl implements FilesFacadeInterface {
+abstract class AbstractFilesImpl implements FilesFacadeBackend {
 
     protected static Map<String, Set<File>> clipBoards = new HashMap<String, Set<File>>();
     
@@ -24,6 +24,6 @@ abstract class AbstractFilesImpl implements FilesFacadeInterface {
         return String.valueOf(System.currentTimeMillis());
     }
 
-
-
+    public void init(String path) throws FileBrowserException {
+    }
 }

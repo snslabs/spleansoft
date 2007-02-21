@@ -1,17 +1,20 @@
 package com.splean.web.file;
 
+import javax.servlet.SingleThreadModel;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.net.MalformedURLException;
 
-interface FilesFacadeInterface {
+interface FilesFacadeBackend {
+    
     List<AbstractFileModel> dir(String path) throws FileBrowserException, IOException;
 
-    String deleteFile(String path) throws FileBrowserException;
+    String deleteFile(String path) throws FileBrowserException, IOException;
 
     String copyFile(String filePath, String clipboardId);
 
-    void uploadFile(String path, byte[] fileData) throws IOException;
+    void uploadFile(String path, byte[] fileData) throws IOException, FileBrowserException;
 
     String pasteFiles(String dstDirPath, String clipboardId);
 
@@ -26,4 +29,6 @@ interface FilesFacadeInterface {
     AbstractFileModel getFile(String path);
 
     String createDirectory(String path) throws IOException, FileBrowserException;
+
+    void init(String path) throws FileBrowserException;
 }

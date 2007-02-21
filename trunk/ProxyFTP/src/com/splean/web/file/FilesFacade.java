@@ -2,9 +2,7 @@ package com.splean.web.file;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class FilesFacade {
 
@@ -16,7 +14,8 @@ public class FilesFacade {
      * @throws java.io.IOException in case of error in ftp processing
      */
     public List<AbstractFileModel> dir(String path) throws FileBrowserException, IOException {
-        return getImplementation(path).dir(path);
+        final FilesFacadeBackend backend = getImplementation(path);
+        return backend.dir(path);
     }
 
     /**
@@ -24,8 +23,9 @@ public class FilesFacade {
      * @param path absolute path to file
      * @return error message in case of error, null if succeded
      * @throws FileBrowserException in case of fatal error
+     * @throws java.io.IOException in case of io error
      */
-    public String deleteFile(String path) throws FileBrowserException{
+    public String deleteFile(String path) throws FileBrowserException, IOException {
         return getImplementation(path).deleteFile(path);
     }
 
@@ -54,7 +54,7 @@ public class FilesFacade {
      * @param fileData binary data of file content
      * @throws IOException in case of error
      */
-    public void uploadFile(String path, byte[] fileData) throws IOException {
+    public void uploadFile(String path, byte[] fileData) throws IOException, FileBrowserException {
         getImplementation(path).uploadFile(path, fileData);
     }
 
@@ -88,23 +88,11 @@ public class FilesFacade {
      * @param path path to file
      * @return implementation of FilesFacade
      */
-    private FilesFacadeInterface getImplementation(String path){
-        if(path.toLowerCase().startsWith("ftp://")){
-            return IMPLEMENTATIONS.get("ftp");
-        }
-        else{
-            return IMPLEMENTATIONS.get("ntfs");
-        }
+    private FilesFacadeBackend getImplementation(String path){
+        return FilesFacadeFactory.getInstance().getImplementation(path);
     }
-    private FilesFacadeInterface getImplementation(AbstractFileModel fileModel){
+    private FilesFacadeBackend getImplementation(AbstractFileModel fileModel){
         return getImplementation(fileModel.getFullPath());
-    }
-
-    private static Map<String, FilesFacadeInterface> IMPLEMENTATIONS = new HashMap<String, FilesFacadeInterface>();
-    {
-        IMPLEMENTATIONS.put("ntfs", new FilesFacadeFileSystemImpl());
-        IMPLEMENTATIONS.put("ftp", new FilesFacadeFtpImpl());
-        IMPLEMENTATIONS.put("default", new FilesFacadeFileSystemImpl());
     }
 
     public byte[] getFileDataAsByteArray(AbstractFileModel fileModel) throws IOException {
