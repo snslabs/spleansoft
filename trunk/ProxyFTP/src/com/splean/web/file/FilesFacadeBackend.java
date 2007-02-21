@@ -26,7 +26,7 @@ interface FilesFacadeBackend {
 
     InputStream getFileDataAsStream(AbstractFileModel fileModel) throws IOException;
 
-    AbstractFileModel getFile(String path);
+    AbstractFileModel getFile(String path) throws IOException;
 
     String createDirectory(String path) throws IOException, FileBrowserException;
 

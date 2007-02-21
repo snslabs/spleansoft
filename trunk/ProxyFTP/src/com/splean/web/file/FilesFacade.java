@@ -103,7 +103,7 @@ public class FilesFacade {
         return getImplementation(fileModel).getFileDataAsStream(fileModel);
     }
 
-    public AbstractFileModel getFile(String path) {
+    public AbstractFileModel getFile(String path) throws IOException {
         return getImplementation(path).getFile(path);
     }
 

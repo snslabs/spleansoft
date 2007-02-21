@@ -3,9 +3,7 @@ package com.splean.web.file;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.InetAddress;
 import java.text.MessageFormat;
 import java.util.ArrayList;
@@ -121,14 +119,25 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
     }
 
     public byte[] getFileDataAsByteArray(AbstractFileModel fileModel) throws IOException {
-        return new byte[0];
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ftpClient.retrieveFile(fileModel.getName(), bos);
+        return bos.toByteArray();
     }
 
     public InputStream getFileDataAsStream(AbstractFileModel fileModel) throws IOException {
-        return null;
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ftpClient.retrieveFile(fileModel.getName(), bos);
+        return new ByteArrayInputStream(bos.toByteArray());
     }
 
-    public AbstractFileModel getFile(String path) {
+    public AbstractFileModel getFile(String filePath) throws IOException {
+        FTPFile[] ftpf = ftpClient.listFiles();
+        PathModel pm = new PathModel(path);
+        for (FTPFile file : ftpf) {
+            if (file.getName().equals(pm.name)) {
+                return new FtpFileModel(file.getName(), path, server, port, username, password, file.isDirectory());
+            }
+        }
         return null;
     }
 
