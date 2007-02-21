@@ -82,7 +82,7 @@ public abstract class AbstractFileModel implements Serializable, Comparable<Abst
     }
 
     public String toString() {
-        return this.name;
+        return this.fullPath;
     }
 
     public long length() {
@@ -96,6 +96,7 @@ public abstract class AbstractFileModel implements Serializable, Comparable<Abst
     public String getFileName() {
         return fileName;
     }
+
 
     public int compareTo(AbstractFileModel fileModel) {
         if (fileModel.directory && !this.directory) {

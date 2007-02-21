@@ -9,10 +9,13 @@ public class FileSystemFileModel extends AbstractFileModel {
     }
 
     public FileSystemFileModel(File f) {
+        directory = f.isDirectory();
         file = f;
         fullPath = f.getAbsolutePath();
         fullPath = fullPath.replaceAll("\\\\","/");
-        directory = f.isDirectory();
+        if(!fullPath.endsWith("/")){
+                fullPath = fullPath + (directory?"/":"");
+        }
         fileName = f.getName();
         name = f.getName();
         if (!directory) {

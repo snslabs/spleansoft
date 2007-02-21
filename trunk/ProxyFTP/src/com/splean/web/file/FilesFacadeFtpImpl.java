@@ -35,7 +35,14 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
         return res;
     }
 
-    public String createDirectory(String path) {
+    public String createDirectory(String path) throws IOException, FileBrowserException {
+        PathModel pm = new PathModel(path);
+        FTPClient ftpClient = getFtpClient(pm);
+        ftpClient.changeWorkingDirectory(pm.path);
+        boolean res = ftpClient.makeDirectory(pm.name);
+        if(!res){
+            return "Cannot create directory\n"+ftpClient.getReplyString();
+        }
         return null;
     }
 
@@ -95,6 +102,7 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
             username = url.getUserInfo().substring(0,url.getUserInfo().indexOf(":"));
             password = url.getUserInfo().substring(url.getUserInfo().indexOf(":")+1);
             path = url.getPath();
+            name = url.getFile();
         }
     }
 }

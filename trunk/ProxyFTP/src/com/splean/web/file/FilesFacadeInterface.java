@@ -25,5 +25,5 @@ interface FilesFacadeInterface {
 
     AbstractFileModel getFile(String path);
 
-    String createDirectory(String path);
+    String createDirectory(String path) throws IOException, FileBrowserException;
 }

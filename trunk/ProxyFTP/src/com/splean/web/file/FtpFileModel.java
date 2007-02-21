@@ -27,5 +27,9 @@ public class FtpFileModel extends AbstractFileModel {
             fileName = "";
         }
         fullPath = "ftp://"+user+":"+password+"@"+server+":"+port+dirPath+fileName;
+
+        if(!fullPath.endsWith("/")){
+                fullPath = fullPath + (directory?"/":"");
+        }
     }
 }

@@ -77,7 +77,7 @@ public class FilesFacade {
         return getImplementation("default").getClipboard(clipboardId);
     }
 
-    public String createDirectory(String fullDirPath){
+    public String createDirectory(String fullDirPath) throws IOException, FileBrowserException {
         return getImplementation(fullDirPath).createDirectory(fullDirPath);
     }
 

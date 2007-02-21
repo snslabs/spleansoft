@@ -42,7 +42,8 @@ public class FileBuilder {
     public static List<AbstractFileModel> getFileModels(Collection<File> filez) {
         List<AbstractFileModel> fileModelz = new ArrayList<AbstractFileModel>();
         for (File file : filez) {
-            fileModelz.add(new FileSystemFileModel(file));
+            final FileSystemFileModel fileModel = new FileSystemFileModel(file);
+            fileModelz.add(fileModel);
         }
         return fileModelz;
     }
