@@ -18,6 +18,9 @@ public abstract class AbstractFileModel implements Serializable, Comparable<Abst
     protected int type;
     protected static final SimpleDateFormat SDF = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
     protected static final DecimalFormat DF = new DecimalFormat("#,###");
+    protected boolean copiable;
+    protected boolean deletable;
+    protected boolean downloadable;
 
     protected String extractExtension(String name) {
         int lastDotIndex = name.lastIndexOf(".");
@@ -108,5 +111,29 @@ public abstract class AbstractFileModel implements Serializable, Comparable<Abst
         else {
             return this.name.compareTo(fileModel.name);
         }
+    }
+
+    public boolean isCopiable() {
+        return copiable;
+    }
+
+    public void setCopiable(boolean copiable) {
+        this.copiable = copiable;
+    }
+
+    public boolean isDeletable() {
+        return deletable;
+    }
+
+    public void setDeletable(boolean deletable) {
+        this.deletable = deletable;
+    }
+
+    public boolean isDownloadable() {
+        return downloadable;
+    }
+
+    public void setDownloadable(boolean downloadable) {
+        this.downloadable = downloadable;
     }
 }

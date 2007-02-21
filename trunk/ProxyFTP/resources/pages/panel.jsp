@@ -115,7 +115,8 @@ function panelUpdated(res) {
         },
         cellCreator:function(options) {
             var td = document.createElement("td");
-            var data = options['rowData']['name'];
+            var name_ = options['rowData']['name'];
+            var data = options['rowData'];
             var fullPath = options['rowData']['fullPath'];
             if (options['cellNum'] == 0) {
                 if (options['rowData']['directory']) {
@@ -129,11 +130,11 @@ function panelUpdated(res) {
                 if (options['rowData']['directory']) {
                     var a = document.createElement("a");
                     a.href = "javascript:navigate(\"" + fullPath + "\")";
-                    a.appendChild(document.createTextNode(data));
+                    a.appendChild(document.createTextNode(name_));
                     td.appendChild(a);
                 }
                 else {
-                    td.appendChild(document.createTextNode(data))
+                    td.appendChild(document.createTextNode(name_))
                 }
             }
             else if (options['cellNum'] == 3) {
@@ -142,10 +143,21 @@ function panelUpdated(res) {
 
             if ((options['cellNum'] == 4)) {
                 //                td.appendChild(createLink('javascript:cutFile("' + fullPath + '")', '/images/cut.gif'));
-                td.appendChild(createLink('javascript:copyFile("' + fullPath + '")', '/images/copy.gif'));
+                if(data["copiable"]){
+                    td.appendChild(createLink('javascript:copyFile("' + fullPath + '")', '/images/copy.gif'));
+                }
                 //                td.appendChild(createLink('javascript:pasteFile("' + fullPath + '")', '/images/paste.gif'));
-                td.appendChild(createLink('javascript:deleteFile("' + fullPath + '")', '/images/delete.gif'));
-                if (!options['rowData']['directory']) {
+                var delPath;
+                if (!data['directory']) {
+                    delPath = fullPath;
+                }
+                else{
+                    delPath = fullPath.substring(0,fullPath.length-1);
+                }
+                if(data["deletable"]){
+                    td.appendChild(createLink('javascript:deleteFile("' + delPath + '")', '/images/delete.gif'));
+                }
+                if(data["downloadable"]){
                     td.appendChild(createLink('javascript:download("' + fullPath + '")', '/images/download.gif'));
                 }
             }

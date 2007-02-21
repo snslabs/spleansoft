@@ -68,9 +68,6 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
         PathModel pm = new PathModel(path);
         StringBuffer result = new StringBuffer();
         String name = pm.name;
-        if (name.endsWith("/")) {
-            name = name.substring(0, name.length() - 1);
-        }
         FTPFile[] ftpf = ftpClient.listFiles();
         if (ftpf != null && ftpf.length > 0) {
             for (FTPFile ftpFile : ftpf) {
@@ -141,6 +138,8 @@ class FilesFacadeFtpImpl extends AbstractFilesImpl {
             ftpClient.connect(InetAddress.getByName(server), port);
             ftpClient.login(username, password);
             ftpClient.changeWorkingDirectory(path);
+            System.out.println(ftpClient.getReplyString());
+            System.out.println(ftpClient.printWorkingDirectory());
         }
         catch (Exception e) {
             throw new FileBrowserException(e);

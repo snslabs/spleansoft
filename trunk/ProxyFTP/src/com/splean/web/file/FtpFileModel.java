@@ -13,6 +13,8 @@ public class FtpFileModel extends AbstractFileModel {
 
     public FtpFileModel(String fileName, String dirPath, String server, int port, String user, String password, boolean isDirectory) {
         directory = isDirectory;
+        copiable = !directory;
+        downloadable = !directory;
         name = fileName;
         extension = extractExtension(name);
         if (extension != null) {
@@ -22,6 +24,9 @@ public class FtpFileModel extends AbstractFileModel {
             dirPath = dirPath + "/";
         }
         if("..".equals(fileName)){
+            copiable = false;
+            downloadable = false;
+            deletable = false;
             dirPath = dirPath.substring(0,dirPath.length()-1);
             dirPath = dirPath.substring(0, dirPath.lastIndexOf("/"));
             fileName = "";

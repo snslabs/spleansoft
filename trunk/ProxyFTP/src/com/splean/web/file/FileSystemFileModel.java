@@ -10,6 +10,9 @@ public class FileSystemFileModel extends AbstractFileModel {
 
     public FileSystemFileModel(File f) {
         directory = f.isDirectory();
+        copiable = !directory;
+        downloadable = !directory;
+        deletable = true;
         file = f;
         fullPath = f.getAbsolutePath();
         fullPath = fullPath.replaceAll("\\\\","/");
@@ -26,6 +29,11 @@ public class FileSystemFileModel extends AbstractFileModel {
         }
         date = SDF.format(new Date(f.lastModified()));
         size = f.length() == 0 ? "" : DF.format(f.length());
+        if("..".equals(name)){
+            copiable = false;
+            downloadable = false;
+            deletable = false;
+        }
     }
 
 
