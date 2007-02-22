@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4" relativePaths="true" type="J2ME_MODULE">
+  <component name="DOJASettings">
+    <jarUrl jarUrlName="" />
+    <manifest useUserManifest="false" />
+  </component>
+  <component name="J2ME Module Properties">
+    <resourceRoot path="C:\Serge\Projects\SRMobile\res" />
+    <mobileApplicationType name="MIDP" />
+  </component>
+  <component name="MIDPSettings">
+    <setting name="MIDlet-Jar-URL" module.settings.user.defined.value="SRMobile.jar" />
+    <setting name="MIDlet-Name" module.settings.user.defined.value="SRMobile" />
+    <setting name="MIDlet-Vendor" module.settings.user.defined.value="My Vendor" />
+    <setting name="MIDlet-Version" module.settings.user.defined.value="1.0" />
+    <jarUrl jarUrlName="$MODULE_DIR$/SRMobile.jar" />
+    <descriptionPath path="$MODULE_DIR$/SRMobile.jad" useUserDescriptor="false" />
+    <manifest useUserManifest="false" />
+  </component>
+  <component name="ModuleRootManager" />
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_4" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/res" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Sun Java(TM) Wireless Toolkit 2.5 for CLDC" jdkType="MobileSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntryProperties />
+  </component>
+</module>
+
