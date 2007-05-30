@@ -8,8 +8,9 @@
     <exclude-exploded />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test-src" isTestSource="true" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.5" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
@@ -21,7 +22,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="struts" level="project" />
-    <orderEntry type="library" name="dwr" level="project" />
     <orderEntryProperties />
   </component>
   <component name="WebModuleBuildComponent">

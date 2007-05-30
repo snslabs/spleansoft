@@ -5,6 +5,12 @@ public class Phone {
     private String number;
     private String comment;
     private User user;
+    private Category category;
+
+
+    public Phone(String number) {
+        this.number = number;
+    }
 
     public Integer getId() {
         return id;
@@ -39,5 +45,14 @@ public class Phone {
     }
 
     public Phone() {
+    }
+
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

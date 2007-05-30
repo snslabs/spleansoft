@@ -2,11 +2,18 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.sns.model.User" table="User" lazy="false">
+    <class name="com.sns.model.User" table="User" lazy="true">
         <id name="id" type="int" column="id">
             <generator class="native"/>
         </id>
         <property name="name" column="name" type="string"/>
         <property name="password" column="password" type="string"/>
+        <component name="userDetails" class="com.sns.model.UserDetails" lazy="true">
+            <property name="firstName" column="fisrtName" type="string"/>
+        </component>
+        <bag name="phoneList" inverse="true" cascade="save-update,evict" lazy="true">
+          <key column="aduser"/>
+          <one-to-many class="com.sns.model.Phone"/>
+        </bag>
     </class>
 </hibernate-mapping>

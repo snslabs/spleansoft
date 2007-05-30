@@ -11,6 +11,11 @@
     <setting name="BUILD_EXTERNAL_DEPENDENCIES" value="false" />
   </component>
   <component name="ApplicationModuleProperties">
+    <containerElement type="module" name="Business">
+      <attribute name="method" value="4" />
+      <attribute name="URI" value="Business.jar" />
+      <attribute name="contextRoot" value="&lt;N/A&gt;" />
+    </containerElement>
     <containerElement type="module" name="strutsapp">
       <attribute name="method" value="4" />
       <attribute name="URI" value="strutsapp.war" />
@@ -35,6 +40,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="strutsapp" />
+    <orderEntry type="module" module-name="Business" />
     <orderEntryProperties />
   </component>
   <component name="WeblogicApplicationModuleProperties" />

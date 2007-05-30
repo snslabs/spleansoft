@@ -23,6 +23,13 @@
           <ejb-class>com.sns.booking.ejb.SessionBookingBMTBean</ejb-class>
           <session-type>Stateless</session-type>
           <transaction-type>Bean</transaction-type>
+          <ejb-ref>
+              <ejb-ref-name>SessionBookingCMTEJB</ejb-ref-name>
+              <ejb-ref-type>Session</ejb-ref-type>
+              <home>com.sns.booking.ejb.SessionBookingCMTHome</home>
+              <remote>com.sns.booking.ejb.SessionBookingCMT</remote>
+              <ejb-link>SessionBookingCMTEJB</ejb-link>
+          </ejb-ref>
       </session>
   </enterprise-beans>
 </ejb-jar>

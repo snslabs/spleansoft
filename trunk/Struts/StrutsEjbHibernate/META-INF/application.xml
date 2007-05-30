@@ -11,5 +11,8 @@
             <context-root>strutsapp</context-root>
         </web>
     </module>
+    <module id="Business">
+        <ejb>Business.jar</ejb>
+    </module>
 
 </application>

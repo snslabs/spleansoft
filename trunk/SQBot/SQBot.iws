@@ -17,7 +17,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SRMobile.iws" afterPath="$PROJECT_DIR$/SRMobile.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sns/sqbot/groovy/test.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQBot.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sns/sqbot/groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sns" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQBot.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sns/sqbot/groovy/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sns/sqbot/groovy/t.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sns/sqbot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sns/sqbot/groovy/MyCredentialProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQBot.iml" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -128,24 +140,24 @@
     <option name="HIDE_WARNINGS" value="false" />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="SRMobile" />
+    <favorites_list name="SQBot" />
   </component>
-  <component name="FavoritesProjectViewPane">
-    <subPane subId="SRMobile">
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" />
-          <option name="myItemType" value="com.intellij.ide.favoritesTreeView.FavoritesTreeNodeDescriptor" />
-        </PATH_ELEMENT>
-      </PATH>
-    </subPane>
-  </component>
+  <component name="FavoritesProjectViewPane" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sns/sr/MainClass.java">
+      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sns/sqbot/groovy/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.31924883">
+            <state line="5" column="35" selection-start="145" selection-end="145" vertical-scroll-proportion="0.099765256">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sns/sqbot/groovy/t.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="54" selection-start="238" selection-end="238" vertical-scroll-proportion="0.099765256">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,13 +165,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGameCanvas.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sns/sr/MyGameCanvas.java">
+      <file leaf-file-name="Document.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/javascript/host/Document.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="27" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.5492958">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="96" column="19" selection-start="4616" selection-end="4616" vertical-scroll-proportion="0.020310633">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaScriptConfiguration.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/ITCI/htmlunit-1.10/lib/htmlunit-1.10.jar!/com/gargoylesoftware/htmlunit/javascript/configuration/JavaScriptConfiguration.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="106" selection-start="4178" selection-end="4178" vertical-scroll-proportion="0.020310633">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClickableElement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/html/ClickableElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="51" selection-start="3166" selection-end="3166" vertical-scroll-proportion="0.019953052">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StyledElement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/html/StyledElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="22" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.019953052">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HtmlObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/html/HtmlObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="39" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.019953052">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,20 +241,7 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="NamedScopeManager" />
-  <component name="PackagesPane">
-    <subPane>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </subPane>
-  </component>
+  <component name="PackagesPane" />
   <component name="PerforceChangeBrowserSettings">
     <option name="USE_CLIENT_FILTER" value="true" />
     <option name="CLIENT" value="" />
@@ -252,84 +285,12 @@
     <subPane>
       <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile.ipr" />
+          <option name="myItemId" value="SQBot.ipr" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile" />
+          <option name="myItemId" value="SQBot" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile\src\com\sns\sr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile\res" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Serge\Projects\SRMobile\doc" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -345,7 +306,7 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <showStructure PackagesPane="false" Scope="false" Favorites="false" ProjectPane="false" />
+      <showStructure ProjectPane="false" />
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
@@ -358,7 +319,6 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="RunManagerConfig.compileBeforeRunning" value="true" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="last_opened_file_path" value="C:\SVNRoot\BUNGE\TMS\branches\hibernate3-old" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
   </component>
@@ -367,56 +327,7 @@
   </component>
   <component name="RecentsManager" />
   <component name="RestoreUpdateTree" />
-  <component name="RunManager" selected="J2ME.com.sns.sr.MainClass">
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <module name="" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2meplugin.run.J2MEConfigurationType" factoryName="J2ME">
-      <module name="SRMobile" />
-      <USER_OPTIONS />
-      <option name="TARGET_DEVICE_NAME" />
-      <option name="COMMAND_LINE_PARAMETERS" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="JAD_NAME" value="C:\Serge\Projects\SRMobile\SRMobile.jad" />
-      <option name="IS_CLASSES" value="false" />
-      <option name="IS_OTA" value="false" />
-      <option name="INSTALL" />
-      <option name="REMOVE" />
-      <option name="RUN" />
-      <option name="TRANSIENT" />
-      <option name="FORCE" />
-      <option name="TO_START" />
-      <option name="SELECTION" value="0" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.t">
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -436,22 +347,72 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="false" name="com.sns.sr.MainClass" type="#com.intellij.j2meplugin.run.J2MEConfigurationType" factoryName="J2ME">
-      <module name="SRMobile" />
-      <USER_OPTIONS />
-      <option name="TARGET_DEVICE_NAME" />
-      <option name="COMMAND_LINE_PARAMETERS" value="" />
-      <option name="MAIN_CLASS_NAME" value="com.sns.sr.MainClass" />
-      <option name="JAD_NAME" value="C:\Serge\Projects\SRMobile\SRMobile.jad" />
-      <option name="IS_CLASSES" value="true" />
-      <option name="IS_OTA" value="false" />
-      <option name="INSTALL" value="" />
-      <option name="REMOVE" />
-      <option name="RUN" />
-      <option name="TRANSIENT" value="" />
-      <option name="FORCE" />
-      <option name="TO_START" value="" />
-      <option name="SELECTION" value="1" />
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <module name="" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="groovy.configuration.type" factoryName="Groovy">
+      <option name="SCRIPT_PATH" value="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="SCRIPT_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY_PATH" value="file://$PROJECT_DIR$" />
+      <module name="" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="false" name="t" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" value="com.sns.sqbot.groovy.t" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <module name="SQBot" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1167" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="false" name="test" type="groovy.configuration.type" factoryName="Groovy">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/src/com/sns/sqbot/groovy/test.groovy" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="SCRIPT_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY_PATH" value="file://$PROJECT_DIR$" />
+      <module name="SQBot" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method>
@@ -463,16 +424,7 @@
       <Port>5050</Port>
     </configuration>
   </component>
-  <component name="ScopeViewComponent">
-    <subPane subId="Project">
-      <PATH>
-        <PATH_ELEMENT USER_OBJECT="Root">
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="" />
-        </PATH_ELEMENT>
-      </PATH>
-    </subPane>
-  </component>
+  <component name="ScopeViewComponent" />
   <component name="SelectInManager" />
   <component name="StarteamConfiguration">
     <option name="SERVER" value="" />
@@ -520,9 +472,6 @@
     <option name="UPDATE_RECURSIVELY" value="true" />
     <option name="MERGE_DRY_RUN" value="false" />
     <configuration useDefault="true">C:\Documents and Settings\slubimov\Application Data\Subversion</configuration>
-    <checkoutURL>https://tech.bga.bunge.com/BungeHomeExt/TMS</checkoutURL>
-    <checkoutURL>https://tech.bga.bunge.com/BungeHomeExt/TMS/trunk/java/</checkoutURL>
-    <checkoutURL>https://tech.bga.bunge.com/BungeHomeExt/TMS/branches/hibernate3/</checkoutURL>
     <checkoutURL>https://sentinel2.luxoft.com/svn/repos/MARKIT/DTCCRELAY</checkoutURL>
     <checkoutURL>https://sentinel2.luxoft.com/svn/repos/MARKIT/DTCCRELAY/sm-deployed</checkoutURL>
     <checkoutURL>https://sentinel2.luxoft.com/svn/repos/MARKIT/DTCCRELAY/sm-project</checkoutURL>
@@ -549,8 +498,8 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927817" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2514193" order="0" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="8" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -558,15 +507,14 @@
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="2" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="8" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46857142" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="4" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="8" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="3" />
@@ -587,7 +535,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -650,29 +598,115 @@
   </component>
   <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667" version="1">
     <option name="myPlainMode" value="false" />
-    <option name="myLastEditedConfigurable" value="Sun Java(TM) Wireless Toolkit 2.5 for CLDC" />
+    <option name="myLastEditedConfigurable" value="HtmlUnit-1.10" />
   </component>
   <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="" version="1">
     <option name="myLastEditedConfigurable" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/sns/sr/MainClass.java">
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/WebClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.31924883">
+        <state line="852" column="21" selection-start="30201" selection-end="30201" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/ITCI/groovy/lib/commons-httpclient-3.0-rc3.jar!/org/apache/commons/httpclient/auth/CredentialsProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="176" selection-end="176" vertical-scroll-proportion="0.16190477">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sns/sqbot/groovy/MyCredentialProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="394" selection-end="394" vertical-scroll-proportion="0.3642857">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/couple.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/com/sns/sqbot/groovy/test.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="12" selection-start="431" selection-end="431" vertical-scroll-proportion="0.16113745">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sns/sr/MyGameCanvas.java">
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/html/HtmlPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="27" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.5492958">
+        <state line="90" column="19" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.33655006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="2438" selection-end="2438" vertical-scroll-proportion="0.24170616">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/ITCI/htmlunit-1.10/lib/js-1.6R2.jar!/org/mozilla/javascript/Function.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="164" selection-end="164" vertical-scroll-proportion="0.08202654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/javascript/ElementArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="0" selection-start="6973" selection-end="6973" vertical-scroll-proportion="0.16887817">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sns/sqbot/groovy/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="35" selection-start="145" selection-end="145" vertical-scroll-proportion="0.099765256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/javascript/host/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="19" selection-start="4616" selection-end="4616" vertical-scroll-proportion="0.020310633">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/ITCI/htmlunit-1.10/lib/htmlunit-1.10.jar!/com/gargoylesoftware/htmlunit/javascript/configuration/JavaScriptConfiguration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="106" selection-start="4178" selection-end="4178" vertical-scroll-proportion="0.020310633">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/html/ClickableElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="51" selection-start="3166" selection-end="3166" vertical-scroll-proportion="0.019953052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/html/StyledElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="22" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.019953052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ITCI/htmlunit-1.10/htmlunit-src-1.10/htmlunit-src-1.10/src/java/com/gargoylesoftware/htmlunit/html/HtmlObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="39" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.019953052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sns/sqbot/groovy/t.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="54" selection-start="238" selection-end="238" vertical-scroll-proportion="0.099765256">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

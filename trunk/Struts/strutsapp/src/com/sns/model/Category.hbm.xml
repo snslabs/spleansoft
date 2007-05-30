@@ -10,8 +10,11 @@
         <set name="adverts" table="link_category_advert">
             <key column="id"/>
             <many-to-many class="com.sns.model.Advert" column="advert"/>
-
         </set>
-            
+        <bag name="phoneList" inverse="true" cascade="save-update,evict" lazy="true">
+          <key column="categor"/>
+          <one-to-many class="com.sns.model.Phone"/>
+        </bag>
+
     </class>
 </hibernate-mapping>
