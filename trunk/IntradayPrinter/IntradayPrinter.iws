@@ -15,7 +15,6 @@
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IntradayPrinter.iws" afterPath="$PROJECT_DIR$/IntradayPrinter.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sns/IntradayPrinter.java" afterPath="$PROJECT_DIR$/src/com/sns/IntradayPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sns/Painter.java" afterPath="$PROJECT_DIR$/src/com/sns/Painter.java" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -94,7 +93,7 @@
       <file leaf-file-name="IntradayPrinter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sns/IntradayPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="45" selection-start="2873" selection-end="2873" vertical-scroll-proportion="1.1582733">
+            <state line="39" column="37" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.8561151">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -510,13 +509,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1004" extended-state="0" />
-    <editor active="false" />
+    <frame x="-4" y="-4" width="1288" height="1004" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18410382" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18410382" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" order="8" />
@@ -526,7 +525,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295711" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59029347" order="4" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
@@ -547,7 +546,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -657,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sns/IntradayPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="45" selection-start="2873" selection-end="2873" vertical-scroll-proportion="1.1582733">
+        <state line="39" column="37" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.8561151">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

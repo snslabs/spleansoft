@@ -5,10 +5,7 @@ import com.sns.model.FiveMinute;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.print.PageFormat;
-import java.awt.print.Printable;
-import java.awt.print.PrinterException;
-import java.awt.print.PrinterJob;
+import java.awt.print.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.math.BigDecimal;
@@ -31,8 +28,15 @@ public class IntradayPrinter implements Printable {
         intradayPrinter.loadData("C:\\Serge\\Projects\\IntradayPrinter\\data\\EESR_070110_070614.txt");
 //        intradayPrinter.preview();
 //        /*
+
         PrinterJob printJob = PrinterJob.getPrinterJob();
         printJob.setPrintable(intradayPrinter);
+
+        PageFormat pf = printJob.defaultPage();
+        Paper paper = pf.getPaper();
+        paper.setImageableArea(0, 0, pf.getPaper().getWidth(), pf.getPaper().getHeight());
+        pf.setPaper(paper);
+        printJob.pageDialog(pf);
         if (printJob.printDialog()) {
             try {
                 printJob.print();
