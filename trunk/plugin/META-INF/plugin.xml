@@ -1,0 +1,24 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <name>HelloWorld</name>
+  <description>HelloWorld plugin</description>
+  <version>1.0</version>
+  <vendor>ITCI</vendor>
+  <idea-version since-build="6827"/>
+    <application-components>
+        <component>
+            <implementation-class>com.luxoft.itci.i18n.plugin.HelloWorldApplicationComponent</implementation-class>
+        </component>
+    </application-components>
+    <project-components>
+        <component>
+            <implementation-class>com.luxoft.itci.i18n.plugin.VerificatorProjectComponent</implementation-class>
+        </component>
+    </project-components>
+    <actions>
+        <action id="SayHello" class="com.luxoft.itci.i18n.plugin.VerificatorSettingsAction" text="Verificator Settings">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt H" second-keystroke="alt H"/>
+            <add-to-group group-id="WindowMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
