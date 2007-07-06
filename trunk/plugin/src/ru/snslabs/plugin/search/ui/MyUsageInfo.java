@@ -1,4 +1,4 @@
-package com.luxoft.itci.i18n.plugin;
+package ru.snslabs.plugin.search.ui;
 
 import com.intellij.usageView.UsageInfo;
 import com.intellij.psi.PsiElement;

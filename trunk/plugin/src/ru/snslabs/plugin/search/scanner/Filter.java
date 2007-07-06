@@ -1,4 +1,4 @@
-package com.luxoft.itci.i18n.plugin.scanner.filter;
+package ru.snslabs.plugin.search.scanner;
 
 /**
  * After search filter. The only accept method determines does founded result matches provided filter criteria 

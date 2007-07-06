@@ -1,11 +1,13 @@
-package com.luxoft.itci.i18n.plugin.scanner.filter;
+package ru.snslabs.plugin.search.scanner.impl;
+
+import ru.snslabs.plugin.search.scanner.Filter;
 
 import java.util.List;
 
 /**
  * Chain filter. Used to apply chain of filters to provided result. If any of filter fails - the result will be rejected.
  */
-public class ChainFilter implements Filter{
+public class ChainFilter implements Filter {
 
     private List<Filter> filters;
 

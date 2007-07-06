@@ -1,21 +1,24 @@
-package com.luxoft.itci.i18n.plugin.scanner;
+package ru.snslabs.plugin.search;
 
+import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.vfs.VirtualFile;
+import ru.snslabs.plugin.search.scanner.ScanResult;
+import ru.snslabs.plugin.search.scanner.impl.RegexpScanner;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class Scanner {
+public class ScannerComponent {
     private VirtualFile rootFolder;
-    private List<String> acceptFileTypes = Arrays.asList("JSP","XML","JavaScript","HTML","JAVA");
+    private List<FileType> acceptFileTypes = new ArrayList<FileType>();
     private List<String> excludedDirs = Arrays.asList(".svn",".","..","classes");
     private List<RegexpScanner> regexpScanners;
-
     private List<ScanResult> scanResults;
 
-    public Scanner() {
+    public ScannerComponent() {
         scanResults = new ArrayList<ScanResult>();
+
     }
 
     public void scan(){
@@ -33,7 +36,7 @@ public class Scanner {
             }
         }
         else{
-            if(acceptFileTypes.contains(virtualFile.getFileType().getName())){
+            if(acceptFileTypes.contains(virtualFile.getFileType())){
                 scanFile(virtualFile);
             }
         }
@@ -46,7 +49,7 @@ public class Scanner {
     private void scanFile(VirtualFile virtualFile) {
         for (RegexpScanner regexpScanner : regexpScanners) {
             try{
-                scanResults.addAll(regexpScanner.scan(virtualFile));
+                scanResults.addAll(regexpScanner.scan(virtualFile.getInputStream(), virtualFile.getLength(), virtualFile));
             }
             catch(Exception e){
                 throw new RuntimeException(e);
@@ -62,14 +65,14 @@ public class Scanner {
         this.rootFolder = rootFolder;
     }
 
-    public List<String> getAcceptFileTypes() {
+    public List<FileType> getAcceptFileTypes() {
         if(acceptFileTypes == null){
-            acceptFileTypes = new ArrayList<String>();
+            acceptFileTypes = new ArrayList<FileType>();
         }
         return acceptFileTypes;
     }
 
-    public void setAcceptFileTypes(List<String> acceptFileTypes) {
+    public void setAcceptFileTypes(List<FileType> acceptFileTypes) {
         this.acceptFileTypes = acceptFileTypes;
     }
 

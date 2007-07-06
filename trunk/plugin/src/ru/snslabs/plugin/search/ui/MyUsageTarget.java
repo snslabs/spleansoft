@@ -1,4 +1,4 @@
-package com.luxoft.itci.i18n.plugin;
+package ru.snslabs.plugin.search.ui;
 
 import com.intellij.ide.projectView.PresentationData;
 import com.intellij.navigation.ItemPresentation;
