@@ -22,41 +22,44 @@ public class IntradayPrinter implements Printable {
     private List<AbstractCandel> data = new ArrayList<AbstractCandel>();
     private Map<String, List<AbstractCandel>> map = new LinkedHashMap<String, List<AbstractCandel>>();
     private static final int GRAPHICS_PER_PAGE = 3;
+    private double PRINT_SCALE = 0.5;
 
     public static void main(String[] args) throws Exception {
         IntradayPrinter intradayPrinter = new IntradayPrinter();
         intradayPrinter.loadData("C:\\Serge\\Projects\\IntradayPrinter\\data\\EESR_070110_070614.txt");
-//        intradayPrinter.preview();
-//        /*
-
-        PrinterJob printJob = PrinterJob.getPrinterJob();
-        printJob.setPrintable(intradayPrinter);
-
-        PageFormat pf = printJob.defaultPage();
-        Paper paper = pf.getPaper();
-        paper.setImageableArea(0, 0, pf.getPaper().getWidth(), pf.getPaper().getHeight());
-        pf.setPaper(paper);
-        printJob.pageDialog(pf);
-        if (printJob.printDialog()) {
-            try {
-                printJob.print();
-            }
-            catch (PrinterException pe) {
-                System.out.println("Error printing: " + pe);
+        if(args.length > 0 ){
+            intradayPrinter.preview();
+        }
+        else{
+            PrinterJob printJob = PrinterJob.getPrinterJob();
+            printJob.setPrintable(intradayPrinter);
+    
+            PageFormat pf = printJob.defaultPage();
+            Paper paper = pf.getPaper();
+            paper.setImageableArea(0, 0, pf.getPaper().getWidth(), pf.getPaper().getHeight());
+            pf.setPaper(paper);
+            printJob.pageDialog(pf);
+            if (printJob.printDialog()) {
+                try {
+                    printJob.print();
+                }
+                catch (PrinterException pe) {
+                    System.out.println("Error printing: " + pe);
+                }
             }
         }
-/* */
     }
 
     private void preview() {
+        PRINT_SCALE = 1;
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
         frame.setVisible(true);
         final IntradayPrinter this_ = this;
+
         JPanel comp = new JPanel() {
             final Iterator<List<AbstractCandel>> iterator = map.values().iterator();
-
             public void paint(Graphics g) {
                 try {
                     this_.print(g, new PageFormat(), 0);
@@ -66,7 +69,13 @@ public class IntradayPrinter implements Printable {
                 }
             }
         };
-        frame.getContentPane().add(comp);
+
+        JScrollPane scrollPane = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        JViewport jViewport = new JViewport();
+        jViewport.setView(comp);
+        comp.setSize(700,1024);
+        scrollPane.setViewport(jViewport);
+        frame.getContentPane().add(scrollPane);
         comp.updateUI();
 
     }
@@ -123,7 +132,7 @@ public class IntradayPrinter implements Printable {
         }
         Graphics2D g2d = (Graphics2D) g;
         g2d.translate(pageFormat.getImageableX(), pageFormat.getImageableY());
-        g2d.scale(0.5, 0.5);
+        g2d.scale(PRINT_SCALE, PRINT_SCALE);
         /*
         // print rulers
         for(int i = 0;i<2000;i+=100){
