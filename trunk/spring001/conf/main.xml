@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:s="http://www.snslabs.ru/schemas/scripting-spring-cfg"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.snslabs.ru/schemas/scripting-spring-cfg scripting.xsd">
+
+    <bean id="main" class="ru.snslabs.clicker.Main">
+        <property name="scriptOperation" ref="mailRuSpam"/>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.html.GetElementBySubstringInProperty" id="mailruSubmitButton">
+        <property name="attrName" value="class"/>
+        <property name="substring" value="submit"/>
+        <property name="tagName" value="input"/>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.flow.Script" id="addToGuestBook">
+        <property name="operations">
+            <list>
+                <!-- удаляем имеющееся объявление -->
+                <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
+                    <property name="xpath" value="//a[contains(@href,'gb_update?delete=')]"/>
+                </bean>
+                <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
+                    <property name="xpath" value="//a[contains(@href,'#replylink')]"/>
+                </bean>
+                <bean class="ru.snslabs.clicker.script.ops.html.FillTextarea">
+                    <property name="xpath" value="//textarea[@name='Comment']"/>
+                </bean>
+                <bean class="x.Debug">
+                    <property name="xpath" value="//span[@class='inline']/h1/a/text()"/>
+                </bean>
+                <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
+                    <property name="xpath" value="//input[@id='sub_but']"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.flow.Script" id="mailRuSpam">
+        <property name="operations">
+            <list>
+                <!-- Logging in -->
+                <s:open url="http://www.mail.ru/"/>
+                <s:type-into nameAttr="Login" value="trashcan.08"/>
+                <s:type-into nameAttr="Password" value="splean"/>
+                <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
+                    <property name="xpath" value="//input[@class='submit']"/>
+                </bean>
+                <!--<s:open url="http://my.mail.ru/mail/trashcan.08/?from_commercial=3"/>-->
+                <s:open url="http://my.mail.ru/catalog"/>
+                <bean class="ru.snslabs.clicker.script.ops.html.ForEachInList">
+                    <property name="paramName" value="id"/>
+                    <property name="stringList">
+                        <list>
+                            <!--<value>91</value>-->
+                            <!--<value>81</value>-->
+                            <!--<value>92</value>-->
+                            <!--<value>89</value>-->
+                            <!--<value>82</value>-->
+<!--                            <value>77</value>
+                            <value>95</value>
+                            <value>96</value>
+                            <value>102</value>
+                            <value>105</value>
+                            <value>100</value>
+                            <value>90</value>
+                            <value>80</value>
+                            <value>86</value>
+                            <value>98</value>
+                            <value>85</value>
+                            <value>87</value>
+                            <value>106</value>
+                            <value>78</value>
+                            <value>101</value>
+                            <value>93</value>
+                            <value>79</value>
+                            <value>99</value>
+                            <value>84</value>-->
+                            <value>83</value>
+                            <value>94</value>
+                            <value>97</value>
+                            <value>103</value>
+                        </list>
+                    </property>
+                    <property name="script" ref="spamCategoryNN"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.flow.Script" id="spamCategoryNN">
+        <property name="operations">
+            <list>
+                <s:open url="http://my.mail.ru/catalog/${id}/friends"/>
+                <ref bean="iterateCommunitiesOnPage"/>
+                <s:open url="http://my.mail.ru/catalog/${id}/friends"/>
+                <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor">
+                    <property name="xpath" value="//a[contains(@href,'catalog/${id}/friends/')]"/>
+                    <property name="operation" ref="iterateCommunitiesOnPage"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.flow.Script" id="spamCategory78">
+        <property name="operations">
+            <list>
+                <s:open url="http://my.mail.ru/catalog/78/friends"/>
+                <ref bean="iterateCommunitiesOnPage"/>
+                <s:open url="http://my.mail.ru/catalog/78/friends"/>
+                <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor">
+                    <property name="xpath" value="//a[contains(@href,'catalog/78/friends/')]"/>
+                    <property name="operation" ref="iterateCommunitiesOnPage"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.flow.Script" id="spamCategory94">
+        <property name="operations">
+            <list>
+                <s:open url="http://my.mail.ru/catalog/94/friends"/>
+                <ref bean="iterateCommunitiesOnPage"/>
+                <s:open url="http://my.mail.ru/catalog/94/friends"/>
+                <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor">
+                    <property name="xpath" value="//a[contains(@href,'catalog/94/friends/')]"/>
+                    <property name="operation" ref="iterateCommunitiesOnPage"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor" id="iterateCommunitiesOnPage">
+        <property name="xpath"
+                  value="//a[img[@src='http://img.mail.ru/mail/ru/images/blogs/community.gif']]"/>
+        <property name="excludeRegexp" value="(.*bestproject.*)|(.*waytokrim.*)"/>
+        <property name="operation" ref="addToGuestBook"/>
+    </bean>
+
+</beans>

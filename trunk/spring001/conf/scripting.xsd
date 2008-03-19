@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.snslabs.ru/schemas/scripting-spring-cfg" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:beans="http://www.springframework.org/schema/beans"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+            targetNamespace="http://www.snslabs.ru/schemas/scripting-spring-cfg" elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+
+    <xsd:complexType name="scriptOperationType">
+        <xsd:complexContent>
+            <xsd:extension base="beans:identifiedType">
+                <xsd:group ref="beans:beanElements"/>
+                <xsd:attributeGroup ref="beans:beanAttributes"/>
+                <xsd:attribute name="idAttr" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            id attribute of html input element
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="nameAttr" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            name attribute of html input element
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="attribute" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            attribute to search substring in
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+                <xsd:attribute name="substr" type="xsd:string">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            substring to be searched in attribute
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="elementOperationType">
+        <xsd:complexContent>
+            <xsd:extension base="scriptOperationType">
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:element name="script">
+        <xsd:annotation>
+            <xsd:documentation>
+                This tag contains the list of operations to be executed. This is root element of configuration. &lt;script&gt; defines script (like procedure or function) that can be executed by schedule. This tag should have one element &lt;property name="operations"&gt;&lt;list&gt;...&lt;/list&gt;&lt;/property&gt; with the list of script operation elements
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="scriptOperationType"/>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="print">
+        <xsd:annotation>
+            <xsd:documentation>
+                Prints current page (taken from scripting context). Basicly used for debug.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="scriptOperationType">
+                    <xsd:attribute name="filename" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>
+                                If specified, operation will print current html page into that file,
+                                if not - to System.out
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="click-through">
+        <xsd:annotation>
+            <xsd:documentation>
+                Performs consequent clicks and script execution by links extracrted by REGEXP from current page.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="scriptOperationType">
+                    <xsd:attribute name="regexp" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>
+                                Regexp to extract links from current page
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="open">
+        <xsd:annotation>
+            <xsd:documentation>
+                Opens page with specified URL. Opened page will be placed in scripting context for further processing.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="scriptOperationType">
+                    <xsd:attribute name="url" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>
+                                URL of page to be opened
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="type-into">
+        <xsd:annotation>
+            <xsd:documentation>
+                Types some string into specified element. Element can be specified using id, name or substring of any attribute
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="elementOperationType">
+                    <xsd:attribute name="value" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>
+                                value to type in 
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="click-on">
+        <xsd:annotation>
+            <xsd:documentation>
+                Clicks on element
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="elementOperationType">
+                    <xsd:attribute name="x" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>
+                                x coord
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                    <xsd:attribute name="y" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>
+                                y coord
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!--
+    <xsd:element name="irsMappingEntry">
+         <xsd:complexType>
+             <xsd:complexContent>
+                 <xsd:extension base="mappingEntryType">
+                     <xsd:attribute name="productTypes" type="xsd:string" default="InterestSwap,InterestSwaption"/>
+                 </xsd:extension>
+             </xsd:complexContent>
+         </xsd:complexType>
+     </xsd:element>
+
+    <xsd:element name="genericMappingEntry">
+         <xsd:complexType>
+             <xsd:complexContent>
+                 <xsd:extension base="mappingEntryType">
+                     <xsd:attribute name="productTypes" type="xsd:string" default="GenericSwap"/>
+                 </xsd:extension>
+             </xsd:complexContent>
+         </xsd:complexType>
+     </xsd:element>
+
+    <xsd:element name="insertEntry">
+        <xsd:complexType>
+            <xsd:complexContent >
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="table" type="xsd:string" use="required"/>
+                    <xsd:attribute name="keyProperty" type="xsd:string" use="optional"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="defaultEntry">
+        <xsd:complexType>
+            <xsd:complexContent >
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:group ref="beans:beanElements"/>
+                    <xsd:attributeGroup ref="beans:beanAttributes"/>
+                    <xsd:attribute name="table" type="xsd:string" use="required"/>
+                    <xsd:attribute name="column" type="xsd:string" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="numericTruncateEntry">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="table" type="xsd:string" use="required"/>
+                    <xsd:attribute name="column" type="xsd:string" use="required"/>
+                    <xsd:attribute name="decimal" type="xsd:integer" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+    -->
+
+</xsd:schema>
