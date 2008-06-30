@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+	<class name="uz.sportloto.paynet.model.response.Service" table="T_SERVICE">
+        <id column="SERVICE_ID" type="integer" name="serviceId">
+            <generator class="assigned" />
+        </id>
+        <property name="name" column="NAME"/>
+        <many-to-one name="provider" class="uz.sportloto.paynet.model.response.Provider" column="PROVIDER_ID" cascade="all"/>
+        <many-to-one name="category" class="uz.sportloto.paynet.model.response.Category" column="CATEGORY_ID" cascade="all"/>
+        <many-to-one name="serviceType" class="uz.sportloto.paynet.model.response.ServiceType" column="SERVICE_TYPE_ID" cascade="all"/>
+        <property name="active" column="ACTIVE" type="char" length="1"/>
+        <property name="createdOn" column="CREATED_ON"/>
+        <property name="chequeInfo" column="CHEQUE_INFO"/>
+        <property name="servicePrice" column="SERVICE_PRICE"/>
+    </class>
+</hibernate-mapping>

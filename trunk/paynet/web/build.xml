@@ -1,0 +1,49 @@
+<project default="compile">
+    <property name="paynet.webapp.dir" value="c:/Program Files/Apache Software Foundation/Tomcat 5.5/webapps/ROOT" />
+
+    <path id="classpath.buildtime">
+        <fileset dir="./lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="compile">
+	        <javac destdir="classes" classpathref="classpath.buildtime" debug="true" >
+	            <src path="src"/>
+            </javac>
+            <copyfile src="src/paynet.properties" dest="classes/paynet.properties"/>
+            <copyfile src="src/log4j.properties" dest="classes/log4j.properties"/>
+            <copy todir="classes">
+                <fileset dir="src">
+                    <include name="**/*.properties"/>
+                    <include name="**/*.xml"/>
+                </fileset>
+            </copy>
+    </target>
+    <target name="clean">
+        <delete dir="${paynet.webapp.dir}">
+            <include name="**/*.*"/>
+        </delete>
+    </target>
+    <target name="deploy" depends="compile, clean, deploy-classes">
+        <copy todir="${paynet.webapp.dir}\WEB-INF\lib">
+            <fileset dir="./lib">
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="deploy-web">
+        <copy todir="${paynet.webapp.dir}">
+            <fileset dir="./web">
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="deploy-classes" depends="compile, deploy-web">
+        <copy todir="${paynet.webapp.dir}\WEB-INF\classes">
+            <fileset dir="./classes">
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+    </target>
+</project>

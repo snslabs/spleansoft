@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<response>
+    <transaction>
+        <status>0</status>
+        <status_text>Platezh proveden uspeshno</status_text>
+        <receipt>
+            <provider_name label="Operator">MTS</provider_name>
+            <service_name label="Usluga">Popolnenie scheta</service_name>
+            <time label="Vremya">14.03.2008 14:57:04</time>
+            <terminal_id label="Nomer terminala">9000000</terminal_id>
+            <transaction_id label="Nomer cheka">70657841</transaction_id>
+            <phone_number label="Nomer telefona">3008903</phone_number>
+            <summa label="Oplacheno">2000 sum</summa>
+            <comission label="Komissiya agenta">40 sum</comission>
+            <purchased_amount label="Vash balans popolnen na">1960 sum</purchased_amount>
+            <agent_cheque_message label="">Test message from agent</agent_cheque_message>
+        </receipt>
+    </transaction>
+</response>

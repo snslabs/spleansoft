@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<response>
+<transaction>
+      <status>0</status>
+      <status_text>Platezh proveden uspeshno</status_text>
+      <receipt>
+            <details>Operator: MTS</details>
+            <details>Usluga: Popolnenie scheta</details>
+            <details>Vremya tranzaktsii: 01.01.2007 00:00:00</details>
+            <details>Nomer terminala: 1111111</details>
+            <details>Nomer cheka: 1234567890</details>
+            <details>Nomer telefona: 1234567</details>
+            <details>Oplacheno: 5000 sum</details>
+            <details>Komissiya agenta: 100 sum</details>
+            <details>Vash balans popolnen na: 4900 sum</details>
+            <details>My rady Vas obsluzhit'!</details>
+      </receipt>
+</transaction>
+</response>

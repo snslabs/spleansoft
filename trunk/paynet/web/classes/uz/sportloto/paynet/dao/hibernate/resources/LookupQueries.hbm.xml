@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+    <query name="findByBusinessKey.uz.sportloto.paynet.model.response.ServiceType">
+        from ServiceType o where o.serviceTypeId = :businessKey
+    </query>
+    <query name="findByBusinessKey.uz.sportloto.paynet.model.response.Service">
+        from Service o where o.serviceId = :businessKey
+    </query>
+    <query name="findByBusinessKey.uz.sportloto.paynet.model.response.Category">
+        from Category o where o.categoryId = :businessKey
+    </query>
+    <query name="findByBusinessKey.uz.sportloto.paynet.model.response.Field">
+        from Field o where o.serviceTypeId = :businessKey1 and o.name = :businessKey2
+    </query>
+    <query name="findByBusinessKey.uz.sportloto.paynet.model.response.Provider">
+        from Provider o where o.providerId = :businessKey
+    </query>
+    <query name="findByBusinessKeyInactive.uz.sportloto.paynet.model.response.Provider">
+        from Provider o where o.providerId = :businessKey and o.active='N'
+    </query>
+    <query name="findByBusinessKey.uz.sportloto.paynet.model.response.ChequeInfo">
+        from ChequeInfo o where o.serviceId = :businessKey
+    </query>
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+<payment>
+	<status>-6</status>
+	<status_text>Платеж не найден!</status_text>
+</payment>
+</response>

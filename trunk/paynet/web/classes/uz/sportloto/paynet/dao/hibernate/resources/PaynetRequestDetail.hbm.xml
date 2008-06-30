@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+	<class name="uz.sportloto.paynet.model.PaynetRequestDetail" table="T_PAYMENT_DETAIL">
+        <id column="PAYMENT_DETAIL_ID" type="long" name="id">
+            <generator class="increment"/>
+        </id>
+        <many-to-one name="paynetRequest" class="uz.sportloto.paynet.model.PaynetRequest" cascade="none" access="field" column="PAYMENT_ID" />
+        <property name="fieldName" column="FIELD_NAME" />
+        <property name="fieldValue" column="FIELD_VALUE" />
+    </class>
+</hibernate-mapping>
+<!-- parsed in 0ms -->

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+	<class name="uz.sportloto.paynet.model.response.Provider" table="T_PROVIDER" >
+        <id column="PROVIDER_ID" type="integer" name="providerId">
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="category" column="CATEGORY_ID" class="uz.sportloto.paynet.model.response.Category" cascade="all"/>
+        <property name="name" column="NAME"/>
+        <bag name="services" cascade="all" inverse="true" lazy="false">
+            <key column="PROVIDER_ID"/>
+            <one-to-many class="uz.sportloto.paynet.model.response.Service"/>
+        </bag>
+        <property name="active" column="ACTIVE" type="char" length="1"/>
+        <property name="createdOn" column="CREATED_ON"/>
+	</class>
+</hibernate-mapping>
+<!-- parsed in 0ms -->
