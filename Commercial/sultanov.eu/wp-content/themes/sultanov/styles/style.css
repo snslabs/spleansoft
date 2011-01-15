@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* Reset */
+body,html,p,div,dl,dt,dd,pre,form,q,blockquote,fieldset{margin:0;padding:0}
+fieldset,img{border:none}
+table{border-collapse:collapse;border-spacing:0}
+h1,h2,h3,h4,h5,h6{font-family:Georgia, "Times New Roman", Times, serif;font-weight:normal;color:#d9ad29;margin:5px;padding-bottom:5px}
+.none{display:none}
+.clear{clear:both}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{}
+a{color:#09F}
+a:hover{color:#09F;text-decoration:none}
+
+/* Backgrounds of Page */
+body{color:#888;line-height:24px;font-family:Arial, Helvetica, sans-serif;font-size:15px}
+#warp{width:100%}
+#context{width:1000px;margin:0 auto;background:#fff}
+/* Top Part*/
+#top{padding-top:10px;height:70px;overflow:hidden}
+.logo{margin-right:20px;position:relative;left:15px;top:-2px}
+.topmenu{padding-top:20px;font-size:17px;font-family:Georgia, "Times New Roman", Times, serif}
+.topmenu a{width:123px;height:43px;display:block;float:left;background:url(../img/top_selector.gif) 0px 43px no-repeat;padding:0px 0 0 5px;color:#8c4040}
+.topmenu a:hover{background-position:0px 0px;color:#09F;text-decoration:none}
+.topmenu a.active{background-position:0px -43px}
+.topmenu a img{position:relative;top:7px;margin-right:7px}
+/* Search */
+#search{float:right;padding-top:2px;width:260px;overflow:hidden}
+#search input{float:right}
+.search{font-size:15px;color:#8c4040;padding:7px;border:2px solid #efdec6;width:209px;background:#fefcf8;
+	border-radius:5px 5px 5px 5px;
+	-moz-border-radius:15px;
+	-webkit-border-top-right-radius:15px;
+	-webkit-border-top-left-radius:15px;
+	-webkit-border-bottom-right-radius:15px;
+	-webkit-border-bottom-left-radius:15px;
+}
+#search a{background:url(../img/search.gif) top left;width:24px;height:27px;display:block;float:right;text-indent:24px;overflow:hidden;position:relative;left:-33px;top:3px}
+#search a:hover{background-position:0px -27px}
+.hsubmit{font-size:0px;width:1px;height:1px;background:none;border:none;overflow:hidden}
+/* Menu */
+#menu{background:url(../img/menubg.jpg) no-repeat;height:85px;padding-left:20px;clear:both;overflow:hidden}
+#menu a{text-decoration:none;display:block;width:205px;height:62px;float:left;font-size:16px!important;padding:20px 5px 0 5px;color:#8b3e3c;background:url(../img/menu_a.gif) 0 82px repeat-x;position:relative;top:2px;line-height:18px!important;font-family:Georgia, "Times New Roman", Times, serif}
+#menu a span{position:relative;top:-7px}
+#menu a:hover{color:#09F;background-position:0px 0px}
+#menu a.active{background-position:0px -82px}
+#menu a img{float:left;margin-right:8px}
+#menu a b{font-weight:normal;position:relative;top:10px}
+#menu .div{width:2px;height:82px;overflow:hidden;background:url(../img/menu_div.gif);float:left;position:relative;top:2px}
+/*Left colume*/
+#lcolum{width:695px;padding:5px 5px 5px 25px;clear:both;float:left;overflow:hidden}
+#lcolum.banner{margin:0px}
+#lcolum img{margin:8px}
+#lcolum .lmargin{padding-left:170px;margin-top:10px}
+#lcolum h1{font-size:34px}
+/*Right colum*/
+#rcolum{float:right;width:237px;position:relative;top:-75px;padding-right:12px}
+#rcolum h3{font-size:20px}
+#rcolum p{margin-top:10px}
+.biglink{font-size:1.45em;line-height:1.3em}
+/*fotter*/
+#fotter{clear:both}
+.submenu{width:150px;float:left;margin-right:10px}
+.submenu h5{font-size:20px}
+.submenu ul{margin:0;padding:0 0 0 5px;list-style:none}
+
+#copyr{height:80px;padding-top:50px;clear:both}
