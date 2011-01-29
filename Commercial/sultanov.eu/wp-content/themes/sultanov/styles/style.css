@@ -6,9 +6,29 @@ table{border-collapse:collapse;border-spacing:0}
 h1,h2,h3,h4,h5,h6{font-family:Georgia, "Times New Roman", Times, serif;font-weight:normal;color:#d9ad29;margin:5px;padding-bottom:5px}
 .none{display:none}
 .clear{clear:both}
+/*Root*/
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{}
+h1{margin:20px 5px 12px 5px}
+
 a{color:#09F}
 a:hover{color:#09F;text-decoration:none}
+.big{font-size:25px!important;line-height:30px!important}
+.middle{font-size:18px!important}
+.center{text-align:center;padding:10px 0}
+.blue{color:#09f!important}
+.gray{color:#ccc!important}
+.red{color:#c00!important}
+.georg{font-family:Georgia, "Times New Roman", Times, serif}
+h1 img{position:relative;top:5px}
+table.dec{border-collapse:collapse;margin:0;padding:0}
+table.dec tr{border-top:#f9e8ce 1px dotted}
+table.dec td h2{margin:0;padding:0}
+table.dec td{padding:3px!important;font-size:13px}
+table.dec td b.blue{font-size:20px;font-family:Georgia, "Times New Roman", Times, serif!important;font-weight:normal}
+table.dec th img{margin:0 10px 0 10px!important;position:relative;top:3px}
+.header, .header th{background:url(../img/theader.gif) repeat-x;height:49px;font-family:Georgia, "Times New Roman", Times, serif;
+font-weight:normal;color:#8c4040;font-size:18px;border:none}
+.row{background:#fbf8ee}
 
 /* Backgrounds of Page */
 body{color:#888;line-height:24px;font-family:Arial, Helvetica, sans-serif;font-size:15px}
@@ -18,7 +38,7 @@ body{color:#888;line-height:24px;font-family:Arial, Helvetica, sans-serif;font-s
 #top{padding-top:10px;height:70px;overflow:hidden}
 .logo{margin-right:20px;position:relative;left:15px;top:-2px}
 .topmenu{padding-top:20px;font-size:17px;font-family:Georgia, "Times New Roman", Times, serif}
-.topmenu a{width:123px;height:43px;display:block;float:left;background:url(../img/top_selector.gif) 0px 43px no-repeat;padding:0px 0 0 5px;color:#8c4040}
+.topmenu a{width:123px;height:43px;display:block;float:left;background:url(../img/top_selector.gif) 0px 43px no-repeat;padding:0px 0 0 5px;color:#8c4040;text-decoration:none}
 .topmenu a:hover{background-position:0px 0px;color:#09F;text-decoration:none}
 .topmenu a.active{background-position:0px -43px}
 .topmenu a img{position:relative;top:7px;margin-right:7px}
@@ -46,16 +66,50 @@ body{color:#888;line-height:24px;font-family:Arial, Helvetica, sans-serif;font-s
 #menu a b{font-weight:normal;position:relative;top:10px}
 #menu .div{width:2px;height:82px;overflow:hidden;background:url(../img/menu_div.gif);float:left;position:relative;top:2px}
 /*Left colume*/
-#lcolum{width:695px;padding:5px 5px 5px 25px;clear:both;float:left;overflow:hidden}
+#lcolum{width:695px;padding:15px 5px 5px 25px;clear:both;float:left;overflow:hidden}
 #lcolum.banner{margin:0px}
-#lcolum img{margin:8px}
+img.pic{margin:8px}
 #lcolum .lmargin{padding-left:170px;margin-top:10px}
-#lcolum h1{font-size:34px}
+#lcolum h1{font-size:34px;}
+/*Brands*/
+a, img{border:none}
+#brands{margin:0 auto}
+#brands img{margin:0px}
+#tbrands{width:325px;height:29px;position:relative;top:-195px;background:#fff;text-align:center;padding:18px 10px;font-size:30px;color:#aaa;margin:0 auto;font-family:Georgia, "Times New Roman", Times, serif}
+/*Events table*/
+#hevents{width:490px;padding:0 4px;height:30px;text-align:center;margin:0 auto;font-size:17px}
+#hevents a.mfirst,#hevents a.mnext{width:150px;overflow:hidden;display:block}
+#hevents a.mfirst{float:left;text-align:left}
+#hevents a.mnext{float:right;text-align:right}
+#events{border-collapse:collapse;margin:0 auto 5px auto}
+#events td{border:1px solid #ccc;text-align:center;height:65px;width:70px;padding:0;vertical-align:middle;font-size:18px;color:#ccc;margin:0}
+#events tr td a{width:100%;height:100%;background:url(../img/event_bg.gif) repeat-x;display:block}
+#events tr td a img{position:relative;top:10px;left:5px}
+#events tr td a b{position:relative;top:20px;right:5px}
+#events a.next{width:100%;height:100%;background:#ddd;color:#fff;display:block}
+#events a.next:hover{background:#aecbff}
+#events a.next b{position:relative;font-weight:normal;font-size:25px;right:0!important}
 /*Right colum*/
-#rcolum{float:right;width:237px;position:relative;top:-75px;padding-right:12px}
+#rcolum{float:right;width:237px;position:relative;top:-75px;padding-right:12px;overflow:hidden}
 #rcolum h3{font-size:20px}
 #rcolum p{margin-top:10px}
 .biglink{font-size:1.45em;line-height:1.3em}
+/*paper*/
+.rules{background:url(../img/paper2.gif) center top repeat-y;width:243px;overflow:hidden}
+.rules h3{position:relative;top:40px;left:20px;margin:0;padding:0;width:202px}
+.rules p{width:190px;margin:0 auto;overflow:hidden;font-size:12px}
+.rules ul{width:190px;margin:0 auto;overflow:hidden;list-style:none;padding:0}
+.rules li{margin:5px 0;padding:0;font-size:14px}
+.rtop{background:url(../img/paper1.gif) center top;height:71px;margin:0 auto;}
+.rbot{background:url(../img/paper3.gif) center top;height:56px;margin:0 auto;}
+/*error*/
+#center{clear:both;padding:5px 5px 50px 5px}
+#emsg{position:relative;width:800px;margin:0 auto}
+#emsg.closed{line-height:55px}
+#emsg img{margin:10px;float:left}
+#emsg h1{margin:150px 0 30px 0;width:400px;float:left;font-size:70px}
+#emsg h1 b{color:#bd9375}
+#emsg p{float:left;padding:0 3px;width:320px;font-size:17px;text-align:center}
 /*fotter*/
 #fotter{clear:both}
 .submenu{width:150px;float:left;margin-right:10px}

@@ -1,4 +1,5 @@
 <div id="fotter">
+	  <?php // wp_footer(); // API Hook ?>
       <div class="submenu">
         <h5>Main</h5>
         <ul>
@@ -18,3 +19,8 @@
       </div>      
     </div>
     <div id="copyr">&copy; <a href="http://sultanov.eu/" title="Sultanov web site">Sultanov</a> ltd. 2010 All rights reserved</div>
+    
+ </div>
+</div>
+</body>
+</html>
