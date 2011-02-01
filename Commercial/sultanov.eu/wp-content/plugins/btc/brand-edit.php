@@ -55,7 +55,8 @@ function renderEditBrand(Brand $brand){
             BRAND_NAME: jQuery('#BRAND_NAME').val(),
             BRAND_ARTICLE_URL: jQuery('#BRAND_ARTICLE_URL').val(),
             BRAND_LOGO_URL: jQuery('#BRAND_LOGO_URL').val(),
-            IS_ACTIVE: jQuery('#IS_ACTIVE').is(':checked')?1:0            
+            IS_ACTIVE: jQuery('#IS_ACTIVE').is(':checked')?1:0,
+            XDEBUG_SESSION_START: "PhpStorm1"
         };
         jQuery.post('<?php echo BRAND_SERVICE_URL ?>', data, function(data) {  jQuery('#tablePlaceholder').html(data); });
     }
@@ -77,12 +78,12 @@ function renderEditBrand(Brand $brand){
 		<h2>Редактирование брэнда</h2>
         <table width="100%">
             <tr>
-                <td><b>Номер бренда:</b></td><td><?= $brand->BRAND_ID ?> <?= hiddenControl('TOUR_ID', $brand->BRAND_ID, 'TOUR_ID') ?></td>
+                <td><b>Номер бренда:</b></td><td><?= $brand->BRAND_ID ?> <?= hiddenControl('BRAND_ID', $brand->BRAND_ID, 'BRAND_ID') ?></td>
                 <td nowrap><b>Язык:</b></td><td><?= $akmalPlugin->LANGUAGES[$brand->LANG_ID] ?>  <?= hiddenControl('LANG_ID', $brand->LANG_ID, 'LANG_ID') ?> </td>
                 <td nowrap><span style="color:#a0a0a0" >ID: </td><td><?= $brand->ID ?> <?= hiddenControl('ID', $brand->ID, 'ID') ?></span></td>
             </tr>
             <tr>
-                <td colspan="1"><b>Наименование:</b></td><td colspan="3"> <?= textControl('TOUR_NAME', $brand->BRAND_NAME, 'BRAND_NAME') ?></td>
+                <td colspan="1"><b>Наименование:</b></td><td colspan="3"> <?= textControl('BRAND_NAME', $brand->BRAND_NAME, 'BRAND_NAME') ?></td>
                 <td colspan="1"><b>Активный:</b></td><td><?= checkboxControl('IS_ACTIVE', $brand->IS_ACTIVE, 'IS_ACTIVE') ?></td>
             </tr>
 <!--
@@ -138,7 +139,7 @@ function renderEditBrand(Brand $brand){
         </table>
         <script type="text/javascript">
             ASPSESSID = "ciftuemt43pxrh55jjdohm3o";
-            BindSWFUpload("*.jpg; *.gif; *.png", "Images");
+            BindSWFUpload("*.jpg; *.gif; *.png", "Images", "BRAND_ID");
         </script>
         <table width="100%" style="margin-top:20px;"><tr>
         <td align="center">

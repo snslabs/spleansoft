@@ -145,7 +145,15 @@ function renderEditTour($tour){
         </table>
         <script type="text/javascript">
             ASPSESSID = "ciftuemt43pxrh55jjdohm3o";
-            BindSWFUpload();
+            try{
+                alert('binding fileuploader');
+                BindSWFUpload("*.pdf", "PDF files", "TOUR_ID");
+            }
+            catch(e)
+            {
+                alert(e);
+            }
+
         </script>
         <table width="100%" style="margin-top:20px;"><tr>
         <td align="center">

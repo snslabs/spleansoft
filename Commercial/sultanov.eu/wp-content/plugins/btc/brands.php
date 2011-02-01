@@ -44,11 +44,11 @@ class BrandManager{
         <script src="/wp-content/plugins/btc/files/js/script.js" type="text/javascript"></script>
 		<script language="JavaScript" type="text/javascript">
 		function listBrands(){
-            var langId = jQuery('#tour_lang_id').val() == undefined ? "<?= $this->DEFAULT_LANG ?>" : jQuery('#tour_lang_id').val();
+            var langId = jQuery('#brand_lang_id').val() == undefined ? "<?= $this->DEFAULT_LANG ?>" : jQuery('#brand_lang_id').val();
 			jQuery.post('<?php echo BRAND_SERVICE_URL ?>', {action : 'brand_list', LANG_ID : langId } ,function(data) {  jQuery('#tablePlaceholder').html(data); });
 		}
 		function listBrandCategories(){
-            var langId = jQuery('#tour_lang_id').val() == undefined ? "<?= $this->DEFAULT_LANG ?>" : jQuery('#tour_lang_id').val();
+            var langId = jQuery('#brand_lang_id').val() == undefined ? "<?= $this->DEFAULT_LANG ?>" : jQuery('#brand_lang_id').val();
 			jQuery.post('<?php echo BRAND_SERVICE_URL ?>', {action : 'brand_cat_list', LANG_ID : langId } ,function(data) {  jQuery('#tablePlaceholder').html(data); });
 		}
 		function editBrandCat(id){

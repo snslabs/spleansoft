@@ -82,7 +82,7 @@ function swfuploadLoaded() {
 }
 var ASPSESSID = "";
 var swfuPhotos;
-function BindSWFUpload(extensions, descriptions) {
+function BindSWFUpload(extensions, descriptions, paramControl) {
     var swfuPhotosSettings = {
         file_dialog_complete_handler: photos_fileDialogComplete,
         upload_progress_handler: photos_uploadProgress,
@@ -103,9 +103,7 @@ function BindSWFUpload(extensions, descriptions) {
         upload_url: "/wp-content/plugins/btc/upload.php",
         post_params: {
             "PHPSID": "1231231231313131313123",
-            // "TOUR_ID": jQuery("#TOUR_ID").val(),
-            "BRAND_ID": jQuery("#BRAND_ID").val(),
-            "LANG_ID": jQuery("#LANG_ID").val()
+            "ID" : jQuery(paramControl).val()
         },
 
         button_width: 115,

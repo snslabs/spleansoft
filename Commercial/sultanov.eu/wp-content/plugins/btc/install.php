@@ -22,7 +22,7 @@
 				  TOUR_CAT_ID,
 				  LANG_ID
 				)
-			)
+			) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
 			";
 			$wpdb->show_errors(true);
 			$wpdb->query($sql);
@@ -41,7 +41,8 @@
             `TOUR_ARTICLE_URL` TEXT NULL ,
             `TOUR_PDF_URL` TEXT NULL ,
             `IS_ACTIVE` TINYINT NOT NULL
-            )";
+            ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+            ";
             $wpdb->show_errors(true);
             $wpdb->query($sql);
             echo $wpdb->last_error;
@@ -60,7 +61,8 @@
 				  CAT_ID,
 				  LANG_ID
 				)
-            )";
+            ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+            ";
             $wpdb->show_errors(true);
             $wpdb->query($sql);
         }
@@ -81,7 +83,8 @@
 				  BRAND_ID,
 				  LANG_ID
 				)
-            )";
+            ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+            ";
             $wpdb->show_errors(true);
             $wpdb->query($sql);
         }
@@ -93,7 +96,8 @@
             `ID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
             `BRAND_ID` INT NOT NULL ,
             `CAT_ID` INT NOT NULL 
-            )";
+            ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+            ";
             $wpdb->show_errors(true);
             $wpdb->query($sql);
         }

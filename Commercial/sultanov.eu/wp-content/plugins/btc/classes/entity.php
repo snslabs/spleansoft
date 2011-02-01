@@ -20,7 +20,7 @@ class Entity {
         if($arr != null){
             $vars = get_class_vars(get_class($this));
             foreach($vars as $name => $value){
-                if(strpos($name, "_") != 0){
+                if(!(strpos($name, "_") === 0)){
                     $this->$name = $arr[$name];
                     echo "<div style='background-color: green;'>" . $name . " = " . $arr[$name]  . "++" .strpos($name, "_") . " </div>";
                 }
