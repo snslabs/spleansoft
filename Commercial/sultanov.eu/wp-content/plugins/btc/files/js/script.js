@@ -34,7 +34,8 @@ function photos_uploadSuccess(file, serverData) {
             jQuery("#TOUR_PDF_URL_HREF").attr("href", res.url);
             jQuery("#TOUR_PDF_URL").val(res.url);
             jQuery("#BRAND_LOGO_URL_IMG").attr("src",res.url);
-            alert("Файл " + res.filename + " успешно загружен!");
+            jQuery("#BRAND_LOGO_URL").val(res.url);
+            alert("Файл " + res.filename + " : " + res.url + " успешно загружен!");
         }
         UploadedFiles++;
     } catch (ex) {

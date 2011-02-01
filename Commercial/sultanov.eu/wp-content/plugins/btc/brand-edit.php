@@ -140,7 +140,6 @@ function renderEditBrand(Brand $brand){
         <script type="text/javascript">
             ASPSESSID = "ciftuemt43pxrh55jjdohm3o";
             try{
-                alert('binding fileuploader');
                 BindSWFUpload("*.jpg; *.gif; *.png", "Images", "#BRAND_ID", "BRAND_LOGO_URL");
             }
             catch(e){
