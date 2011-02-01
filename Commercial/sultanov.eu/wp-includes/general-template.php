@@ -23,16 +23,14 @@
  */
 function get_header( $name = null ) {
 	do_action( 'get_header', $name );
-
+    
 	$templates = array();
 	if ( isset($name) )
-		$templates[] = "header-{$name}.php";
-
+		$templates[] = "header-{$name}.php";    
 	$templates[] = "header.php";
-
 	// Backward compat code will be removed in a future release
 	if ('' == locate_template($templates, true))
-		load_template( ABSPATH . WPINC . '/theme-compat/header.php');
+		load_template( ABSPATH . WPINC . '/theme-compat/header.php');   
 }
 
 /**
@@ -120,7 +118,8 @@ function get_template_part( $slug, $name = null ) {
 	do_action( "get_template_part_{$slug}", $slug, $name );
 
 	$templates = array();
-	if ( isset($name) )
+	
+    if ( isset($name) )
 		$templates[] = "{$slug}-{$name}.php";
 
 	$templates[] = "{$slug}.php";
