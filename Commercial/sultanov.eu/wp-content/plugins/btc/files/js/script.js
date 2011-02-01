@@ -33,8 +33,8 @@ function photos_uploadSuccess(file, serverData) {
         if(res != null && res.url != null){
             jQuery("#TOUR_PDF_URL_HREF").attr("href", res.url);
             jQuery("#TOUR_PDF_URL").val(res.url);
-            jQuery("#BRAND_LOGO_URL_IMG").attr("src",res.url);
-            jQuery("#BRAND_LOGO_URL").val(res.url);
+            jQuery("#BRAND_LOGO_URL_IMG").attr("src",res.url + "?random=" + Math.random()*100000000);
+            jQuery("#BRAND_LOGO_URL").val(res.url );
             alert("Файл " + res.filename + " : " + res.url + " успешно загружен!");
         }
         UploadedFiles++;

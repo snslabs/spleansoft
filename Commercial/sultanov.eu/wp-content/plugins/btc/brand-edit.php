@@ -104,7 +104,7 @@ function renderEditBrand(Brand $brand){
             </td>
             <td valign="middle">
         <?php if ($brand->BRAND_LOGO_URL != null) { ?>
-            <img id="BRAND_LOGO_URL_IMG" src="<?= $brand->BRAND_LOGO_URL ?>" alt=""/>
+            <img id="BRAND_LOGO_URL_IMG" src="<?= $brand->BRAND_LOGO_URL ?>?rnd=<?= rand(1,1000000000) ?>" alt=""/>
         <?php }else{ ?>
             <img id="BRAND_LOGO_URL_IMG" src="#" alt=""/>
         <?php } ?>
