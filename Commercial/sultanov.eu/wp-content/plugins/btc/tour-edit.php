@@ -147,7 +147,7 @@ function renderEditTour($tour){
             ASPSESSID = "ciftuemt43pxrh55jjdohm3o";
             try{
                 alert('binding fileuploader');
-                BindSWFUpload("*.pdf", "PDF files", "TOUR_ID");
+                BindSWFUpload("*.pdf", "PDF files", "#TOUR_ID", "TOUR");
             }
             catch(e)
             {

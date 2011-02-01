@@ -113,7 +113,7 @@ function renderEditBrand(Brand $brand){
         <tr>
             <td>Статья:</td>
             <td valign="middle" colspan="2">
-                <select name="TOUR_ARTICLE_URL" id="TOUR_ARTICLE_URL">
+                <select name="BRAND_ARTICLE_URL" id="BRAND_ARTICLE_URL">
                     <option value=""> </option>
                 <?php
                     global $wpdb;
@@ -139,7 +139,13 @@ function renderEditBrand(Brand $brand){
         </table>
         <script type="text/javascript">
             ASPSESSID = "ciftuemt43pxrh55jjdohm3o";
-            BindSWFUpload("*.jpg; *.gif; *.png", "Images", "BRAND_ID");
+            try{
+                alert('binding fileuploader');
+                BindSWFUpload("*.jpg; *.gif; *.png", "Images", "#BRAND_ID", "BRAND_LOGO_URL");
+            }
+            catch(e){
+                alert(e);
+            }
         </script>
         <table width="100%" style="margin-top:20px;"><tr>
         <td align="center">

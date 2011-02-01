@@ -18,12 +18,18 @@ define('DIR_FILES',		'/wp-content/plugins/btc/files');
                 header('HTTP/1.1 403 Forbidden');
                 exit();
             }
+            if(isset($_POST["RESULT_FIELD"])){
+                $storedFileName = $_POST["RESULT_FIELD"] . $_POST["ID"] . "." . $extension;  
+            }
+            /*
             if(isset($_POST["BRAND_ID"])){
                 $storedFileName = "brand_".$_POST["BRAND_ID"]. "_".$_POST["LANG_ID"]."." .$extension;
             }
             else{
                 $storedFileName = "tour_" . $_POST["TOUR_ID"] . ".pdf";
             }
+
+             */
 
             echo "{filename: '" . $_POST['Filename'] . "', filepath:'" . $storedFileName . "', \n";
 
