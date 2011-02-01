@@ -1,6 +1,20 @@
 <?php
 /*Levon`s functions*/
 /*Prepare menu*/
+function get_rightmenu(){
+	$meta_key=right;
+	// Simple query to DB. Table wp_postmeta - metadata of posts
+	/*$q="SELECT `post_id`,`meta_value` FROM `wp_postmeta` WHERE meta_key='right'";
+	$r=@mysql_query($q) or die('error');
+	$r=mysql_fetch_row($r);*/
+	$pages=get_pages(array('meta_key' => $meta_key)); // get page by filter meta_key
+	foreach($pages as $page){ 
+		//print_r($page); output all content
+		echo "<h3>".$page->meta_value."</h3>";
+		echo $page->post_content;
+		break; // return 2 records why? =(
+	}
+}
 function parse_menu($s,$path=''){
 	$s = preg_replace('#<li\s(.+)>.+(href=".+" title=".+">.+</a>)</li>#siU','<a $1 $2',$s);
 	$s = preg_replace('#page.*? \b#','"',$s);

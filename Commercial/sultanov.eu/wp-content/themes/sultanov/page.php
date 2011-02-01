@@ -5,6 +5,7 @@
 /*
 Testing code here...
 */
+
 ?>
 
 <?php include (TEMPLATEPATH . '/loop.php'); ?>

@@ -12,7 +12,9 @@
     $ USD .......................... 1,614.49<br />
     &yen; JPY ........................... 189.52</p>
   <!-- side menu -->
-  <?php /* Widgetized sidebar, if you have the plugin installed.  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+  <?php 
+  get_rightmenu(); // output irht menu(Levon)
+  /* Widgetized sidebar, if you have the plugin installed.  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
   <?php wp_list_pages('title_li=<h3>Pages</h3>' ); ?>
   <?php wp_list_bookmarks(); ?>
   <h3>Archives</h3>
