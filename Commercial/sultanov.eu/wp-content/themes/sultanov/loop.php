@@ -12,12 +12,10 @@ while (have_posts()) : the_post();
 if (is_single()) { include (TEMPLATEPATH . '/navigation.php'); }
 ?>
 <?php /* сам пост, включает постоянную ссылку, метаданные, счетчик комментариев и текст */ ?>
-<div class="entry">
+<?php if (is_search()){?>
 <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Постоянная ссылка для <?php
 the_title(); ?>"><?php the_title(); ?></a></h1>
-<p class="postmetadata">Опубликовано <?php the_time('F jS, Y') ?>. <?php comments_popup_link('Без
-комментов', '1 Коммент', '% Комментов'); ?> <?php edit_post_link('Редактировать', '<strong>',
-'</strong>'); ?></p>
+<?php } ?>
 <?php
 /*
 Самый интересный момент. Здесь при постраничном просмотре архивов или поиске
@@ -28,15 +26,17 @@ the_title(); ?>"><?php the_title(); ?></a></h1>
 ?>
 <?php if ( (is_archive()) or (is_search()) ) { ?>
 <?php the_excerpt(); ?>
+
 <?php } else { ?>
 <?php the_content("Читать дальше..."); ?>
 <?php } ?>
 <?php link_pages('<p><strong>Страницы:</strong> ', '', 'number'); ?>
-</div>
+
 <!--
 <?php trackback_rdf(); ?>
 -->
 <?php endwhile; ?>
+
 <?php /* Подключение навигации между страницами (показывается везде и на главной тоже) */
 if ( (is_home() or is_archive()) or (is_search()) or (is_paged()) or (is_category()) ) {
 include (TEMPLATEPATH . '/navigation.php'); }

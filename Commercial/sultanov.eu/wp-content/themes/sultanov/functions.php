@@ -1,8 +1,72 @@
 <?php
 /*Levon`s functions*/
 /*Prepare menu*/
-function get_rightmenu(){
-	$meta_key=right;
+function get_menu_by_meta($meta){ // return array with [name], [link], [active] or not of menus' items and full [url] to page
+	$links = wp_list_pages('title_li=&echo=0&post_status=publish&meta_key='.$meta);	
+	$links = explode('</li>',trim($links));	
+	for($i=0;$i<(sizeof($links)-1);$i++){
+		if(strpos($links[$i],'current_page_item')>0){ // if active menu
+			$result[$i][active]=true;
+			$active=true;
+		}
+		else{
+			$result[$i][active]=false;
+		}
+		$links[$i]=trim($links[$i]);
+		$temp=explode('<a href="',$links[$i]);
+		$result[$i][url]='<a href="'.$temp[1];
+		$temp=explode('"',$temp[1]);
+		$result[$i][link]=$temp[0];
+		$temp=explode('>', substr($result[$i][url],0,strlen($result[$i][url])-4));
+		$result[$i][name]=$temp[1];															
+	}
+	return $result;	
+}
+function output_menu($items,$position='',$path=''){ // output top_menu & sub_menu
+	if($position=='top_menu'){ // Hightlight Home page
+		for ($i=0;$i<sizeof($items);$i++){			
+			if($items[$i][active]==true){
+				$active=true;
+				break 1;
+			}
+		}
+		if(!isset($active)){
+			$items[0][active]=true;
+		}
+	}
+	// prepare constants for menus
+	if($position=='sub_menu'){
+		$divider='<div class="div"></div>';
+		$u1='';$u2='';
+		$imgurl='micon_';
+	}
+	else{
+		$imgurl='top_icon_';
+		$u1='<u>';
+		$u2='</u>';
+	}
+	// output items
+	for($i=0;$i<sizeof($items);$i++){
+		$active='';		
+		if ($items[$i][active]==true){
+			$active='class="active" ';
+		}
+		if($position=='sub_menu'){  // text correction
+			$l = strlen($items[$i][name]);
+			if($l<30){ // if small
+				$u1='<b>';$u2='</b>';
+			}
+			elseif($l>34){ // if big
+				$u1='<span>';$u2='</span>';
+			}
+			else{$u1='';$u2='';}
+			
+		}
+		$s='<a '.$active.' href="'.$items[$i][link].'" tite="'.$items[$i][name].'" ><img src="'.$path.'/img/'.$imgurl.($i+1).'.gif" alt="Menu Icon '.($i+1).'"/> '.$u1.$items[$i][name].$u2.'</a>'.$divider;
+		echo $s;		
+	}
+}
+function get_side_by_meta($meta_key){ // side kontent by meta
 	// Simple query to DB. Table wp_postmeta - metadata of posts
 	/*$q="SELECT `post_id`,`meta_value` FROM `wp_postmeta` WHERE meta_key='right'";
 	$r=@mysql_query($q) or die('error');
@@ -13,43 +77,6 @@ function get_rightmenu(){
 		echo "<h3>".$page->meta_value."</h3>";
 		echo $page->post_content;
 		break; // return 2 records why? =(
-	}
-}
-function parse_menu($s,$path=''){
-	$s = preg_replace('#<li\s(.+)>.+(href=".+" title=".+">.+</a>)</li>#siU','<a $1 $2',$s);
-	$s = preg_replace('#page.*? \b#','"',$s);
-	$s = str_replace('class="""current_"','class="active" ',$s);
-	$s = str_replace('current_"','',$s);
-	$s = str_replace('class="""','',$s);
-	$list = explode("\n",$s);
-	$list[0]=str_replace('">','"><img src="'.$path.'/img/top_icon_1.gif" alt="house" /> <u>',$list[0]);
-	$list[1]=str_replace('">','"><img src="'.$path.'/img/top_icon_2.gif" alt="camel" /> <u>',$list[1]);
-	$list[2]=str_replace('">','"><img src="'.$path.'/img/top_icon_3.gif" alt="paper" /> <u>',$list[2]);
-	
-	array_pop($list);
-	for($i=0;$i<sizeof($list);$i++){
-		echo substr($list[$i],0,strlen($list[$i])-4).'</u></a>';
-	}
-}
-/*Prepare submenu*/
-function parse_submenu($s,$path=''){
-	$s=explode("<ul class='children'>",$s);
-	$s=explode('</ul>',$s[1]);
-	$s=$s[0];
-	$s = preg_replace('#<li\s(.+)>.+(href=".+" title=".+">.+</a>)</li>#siU','<a $1 $2',$s);
-	$s = preg_replace('#page.*? \b#','"',$s);
-	$s = str_replace('class="""current_"','class="active" ',$s);
-	$s = str_replace('class="""','',$s);
-	$list = explode("\n",$s);
-	$list[1]=str_replace('">','"><img src="'.$path.'/img/micon_1.gif" alt="Presents &amp; brands" /><b>',$list[1]);
-	$list[1]=substr($list[1],0,strlen($list[1])-4).'</b></a><div class="div"></div>';
-	$list[2]=str_replace('">','"><img src="'.$path.'/img/micon_2.gif" alt="Airplane &amp; travel" />',$list[2]);
-	$list[2].='<div class="div"></div>';
-	$list[3]=str_replace('">','"><img src="'.$path.'/img/micon_3.gif" alt="Preentation &amp; buiness" /><span>',$list[3]);
-	$list[3]=substr($list[3],0,strlen($list[3])-4).'</span></a>';
-	array_pop($list);	
-	for($i=1;$i<sizeof($list);$i++){
-		echo $list[$i];
 	}
 }
 ?>

@@ -1,4 +1,10 @@
-<?php	get_header(); ?>    
+<?php	
+// close
+/*include (TEMPLATEPATH . '/closed.php');
+exit;*/
+get_header(); 
+
+?>    
 <div id="lcolum">
 
 <?php
