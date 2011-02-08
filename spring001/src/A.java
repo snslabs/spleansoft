@@ -1,10 +1,14 @@
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-
 public class A {
     public static void main(String[] args) {
-        DecimalFormat df = new DecimalFormat("#,###.###");
-        System.out.println(df.format(new BigDecimal("110.01")));
-
+        System.out.println(new A().toString());
     }
+
+    @Override
+    public final String toString() {
+        return super.toString();
+    }
+}
+
+class B extends A{
+
 }

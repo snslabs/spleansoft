@@ -31,9 +31,9 @@ public class Main {
 
 
     private void runScript(){
-        // создаём веб-контекст
+
         ScriptWebContext webContext = new ScriptWebContext();
-        // создаём веб клиента
+
         WebClient wc = new WebClient(browserVersion);
         wc.setJavaScriptEnabled(false);
         wc.setCookiesEnabled(true);

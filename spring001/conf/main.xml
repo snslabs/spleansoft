@@ -40,9 +40,12 @@
         <property name="operations">
             <list>
                 <!-- Logging in -->
-                <s:open url="http://www.mail.ru/"/>
-                <s:type-into nameAttr="Login" value="trashcan.08"/>
-                <s:type-into nameAttr="Password" value="splean"/>
+                <s:open url="http://www.yellowpages.ru/"/>
+                <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor">
+                    <property name="xpath" value="//a[contains(@href,'rus/nd2/qu1')]"/>
+                    <property name="operation" ref="iterateCategory"/>
+                </bean>
+
                 <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
                     <property name="xpath" value="//input[@class='submit']"/>
                 </bean>
@@ -92,11 +95,11 @@
         <property name="operations">
             <list>
                 <s:open url="http://my.mail.ru/catalog/${id}/friends"/>
-                <ref bean="iterateCommunitiesOnPage"/>
+                <ref bean="iterateCategory"/>
                 <s:open url="http://my.mail.ru/catalog/${id}/friends"/>
                 <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor">
                     <property name="xpath" value="//a[contains(@href,'catalog/${id}/friends/')]"/>
-                    <property name="operation" ref="iterateCommunitiesOnPage"/>
+                    <property name="operation" ref="iterateCategory"/>
                 </bean>
             </list>
         </property>
@@ -106,11 +109,11 @@
         <property name="operations">
             <list>
                 <s:open url="http://my.mail.ru/catalog/78/friends"/>
-                <ref bean="iterateCommunitiesOnPage"/>
+                <ref bean="iterateCategory"/>
                 <s:open url="http://my.mail.ru/catalog/78/friends"/>
                 <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor">
                     <property name="xpath" value="//a[contains(@href,'catalog/78/friends/')]"/>
-                    <property name="operation" ref="iterateCommunitiesOnPage"/>
+                    <property name="operation" ref="iterateCategory"/>
                 </bean>
             </list>
         </property>
@@ -120,17 +123,17 @@
         <property name="operations">
             <list>
                 <s:open url="http://my.mail.ru/catalog/94/friends"/>
-                <ref bean="iterateCommunitiesOnPage"/>
+                <ref bean="iterateCategory"/>
                 <s:open url="http://my.mail.ru/catalog/94/friends"/>
                 <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor">
                     <property name="xpath" value="//a[contains(@href,'catalog/94/friends/')]"/>
-                    <property name="operation" ref="iterateCommunitiesOnPage"/>
+                    <property name="operation" ref="iterateCategory"/>
                 </bean>
             </list>
         </property>
     </bean>
 
-    <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor" id="iterateCommunitiesOnPage">
+    <bean class="ru.snslabs.clicker.script.ops.html.ForEachAnchor" id="iterateCategory">
         <property name="xpath"
                   value="//a[img[@src='http://img.mail.ru/mail/ru/images/blogs/community.gif']]"/>
         <property name="excludeRegexp" value="(.*bestproject.*)|(.*waytokrim.*)"/>
