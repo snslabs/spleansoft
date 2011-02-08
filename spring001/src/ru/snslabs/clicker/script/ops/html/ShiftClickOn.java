@@ -1,7 +1,6 @@
 package ru.snslabs.clicker.script.ops.html;
 
 import com.gargoylesoftware.htmlunit.Page;
-import com.gargoylesoftware.htmlunit.html.ClickableElement;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import ru.snslabs.clicker.script.ScriptContext;
 import ru.snslabs.clicker.script.ops.ScriptFailure;
@@ -9,13 +8,13 @@ import ru.snslabs.clicker.script.ops.ScriptFailure;
 import java.io.IOException;
 
 /**
- * Устанавливает фокус на найденый элемент
+ * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ С„РѕРєСѓСЃ РЅР° РЅР°Р№РґРµРЅС‹Р№ СЌР»РµРјРµРЅС‚
  */
 public class ShiftClickOn extends ClickOn {
     protected Object execute(HtmlElement htmlEl, ScriptContext scriptContext) {
-        if (htmlEl instanceof ClickableElement) {
+        if (htmlEl != null ) {
             try {
-                Page page = ((ClickableElement) htmlEl).click(true,false,false);
+                Page page = (htmlEl).click(true,false,false);
                 setCurrentPage(page, scriptContext);
                 return page;
             }

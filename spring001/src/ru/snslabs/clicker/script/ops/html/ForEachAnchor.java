@@ -3,7 +3,7 @@ package ru.snslabs.clicker.script.ops.html;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.xpath.HtmlUnitXPath;
+import com.gargoylesoftware.htmlunit.html.xpath.XPathUtils;
 import org.jaxen.JaxenException;
 import ru.snslabs.clicker.script.ScriptContext;
 import ru.snslabs.clicker.script.ScriptOperation;
@@ -45,8 +45,8 @@ public class ForEachAnchor extends HtmlScriptOperation {
         HtmlPage htmlPage = (HtmlPage) scriptContext.getAttribute(ScriptWebContext.CURRENT_PAGE);
         Set<String> visitedAnchors = new HashSet<String>();
         try {
-            HtmlUnitXPath xPath = new HtmlUnitXPath(substParams(xpath,scriptContext));
-            final List nodeList = xPath.selectNodes(htmlPage.getDocumentHtmlElement());
+            String xPath = substParams(xpath,scriptContext);
+            final List nodeList = XPathUtils.getByXPath(htmlPage.getDocumentElement(), xPath);
             for (Object node : nodeList) {
                 final HtmlAnchor a = (HtmlAnchor) node;
                 if(excludeRegexp != null){

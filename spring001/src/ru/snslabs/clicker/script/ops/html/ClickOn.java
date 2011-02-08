@@ -17,10 +17,15 @@ public class ClickOn extends AbstractElementOperationEx {
     private int y;
 
     protected Object execute(HtmlElement htmlEl, ScriptContext scriptContext) {
+        if(htmlEl == null){
+            System.out.println("element cannot be clicked : " + htmlEl);
+        }
         if (htmlEl instanceof ClickableElement) {
             try {
+                long start = System.currentTimeMillis();
+                System.out.println("Processing click ....  ");
                 Page page = ((ClickableElement) htmlEl).click();
-
+                System.out.println("... processed in " + (System.currentTimeMillis() - start) + " ms");
                 setCurrentPage(page, scriptContext);
                 return page;
             }

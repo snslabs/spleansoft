@@ -13,6 +13,7 @@ public class PrintBeanDefinitionParser extends AbstractScriptingBeanDefinitionPa
 
     protected void doCustomParse(Element element, BeanDefinitionBuilder beanDefinitionBuilder, ParserContext parserContext) {
         beanDefinitionBuilder.addPropertyValue("filename", "".equals(element.getAttribute("filename"))?null:element.getAttribute("filename"));
+        beanDefinitionBuilder.addPropertyValue("mode", "".equals(element.getAttribute("mode"))?null:element.getAttribute("mode"));
     }
 
 }

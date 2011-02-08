@@ -1,6 +1,5 @@
 package ru.snslabs.clicker.script.ops.html;
 
-import com.gargoylesoftware.htmlunit.html.FocusableElement;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlTextArea;
 import ru.snslabs.clicker.script.ScriptContext;
@@ -44,11 +43,11 @@ public class FillTextarea extends AbstractElementOperationEx {
             log.warn("No element found");
         }
         else{
-            ((FocusableElement)htmlEl).focus();
+            (htmlEl).focus();
             final String string = resolveToString(value, scriptContext);
             HtmlTextArea area = (HtmlTextArea) htmlEl;
             area.setText(substParams(string, scriptContext));
-            ((FocusableElement)htmlEl).blur();
+            (htmlEl).blur();
         }
         return null;
     }

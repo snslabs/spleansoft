@@ -1,9 +1,8 @@
 package ru.snslabs.clicker.script.ops.html;
 
-import com.gargoylesoftware.htmlunit.html.FocusableElement;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
-import com.gargoylesoftware.htmlunit.javascript.host.HTMLInputElement;
 import com.gargoylesoftware.htmlunit.javascript.host.Event;
+import com.gargoylesoftware.htmlunit.javascript.host.KeyboardEvent;
 import ru.snslabs.clicker.script.ScriptContext;
 import ru.snslabs.clicker.script.ValueResolver;
 
@@ -12,16 +11,16 @@ public class TypeValue extends AbstractElementOperation {
     private Object value;
 
     Object execute(HtmlElement htmlEl, ScriptContext scriptContext) {
-        ((FocusableElement)htmlEl).focus();
+        htmlEl.focus();
         typeIn(htmlEl, resolveToString(value,scriptContext));
-        ((FocusableElement)htmlEl).blur();
+        htmlEl.blur();
         return null;
     }
 
     /**
-     * ��������� ��������� �������� :-)
-     * @param htmlEl
-     * @param s
+     * Эмулирует печатание символов :-)
+     * @param el элемент в который будут печататься символы
+     * @param s текст для печати
      */
     private void typeIn(HtmlElement el, String s) {
         StringBuffer sb = null;
@@ -30,13 +29,13 @@ public class TypeValue extends AbstractElementOperation {
         }
 
         for(char c : s.toCharArray()){
-            el.fireEvent(new Event(el, Event.TYPE_KEY_DOWN, (int)c ,false, false, false));
-            String val = el.getAttributeValue("value");
+            el.fireEvent(new KeyboardEvent(el, Event.TYPE_KEY_DOWN, (int)c ,false, false, false));
+            String val = el.getAttribute("value");
             if(val == null){
                 val = "";
             }
-            el.setAttributeValue("value", val +c );
-            el.fireEvent(new Event(el, "keyup", (int)c ,false, false, false));
+            el.setAttribute("value", val +c );
+            el.fireEvent(new KeyboardEvent(el, "keyup", (int)c ,false, false, false));
             if(sb!=null){
                 sb.append(c);
             }

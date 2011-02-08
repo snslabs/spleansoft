@@ -1,14 +1,9 @@
 package ru.snslabs.clicker.script.ops.html;
 
-import com.gargoylesoftware.htmlunit.html.FocusableElement;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.javascript.host.Event;
+import com.gargoylesoftware.htmlunit.javascript.host.KeyboardEvent;
 import ru.snslabs.clicker.script.ScriptContext;
-import ru.snslabs.clicker.script.ValueResolver;
-import ru.snslabs.clicker.script.ops.HtmlScriptOperation;
-import ru.snslabs.clicker.script.ops.ScriptFailure;
-
-import java.util.List;
 
 public class TypeValueInto extends AbstractElementOperationEx {
 
@@ -19,15 +14,15 @@ public class TypeValueInto extends AbstractElementOperationEx {
             log.warn("No element found");
         }
         else{
-            ((FocusableElement)htmlEl).focus();
+            (htmlEl).focus();
             typeIn(htmlEl, resolveToString(value,scriptContext));
-            ((FocusableElement)htmlEl).blur();
+            (htmlEl).blur();
         }
         return null;
     }
 
     /**
-     * Эмулирует печатание символов :-)
+     * Р­РјСѓР»РёСЂСѓРµС‚ РїРµС‡Р°С‚Р°РЅРёРµ СЃРёРјРІРѕР»РѕРІ :-)
      * @param el
      * @param s
      */
@@ -38,13 +33,13 @@ public class TypeValueInto extends AbstractElementOperationEx {
         }
 
         for(char c : s.toCharArray()){
-            el.fireEvent(new Event(el, Event.TYPE_KEY_DOWN, (int)c ,false, false, false));
-            String val = el.getAttributeValue("value");
+            el.fireEvent(new KeyboardEvent(el, Event.TYPE_KEY_DOWN, (int)c ,false, false, false));
+            String val = el.getAttribute("value");
             if(val == null){
                 val = "";
             }
-            el.setAttributeValue("value", val +c );
-            el.fireEvent(new Event(el, "keyup", (int)c ,false, false, false));
+            el.setAttribute("value", val +c );
+            el.fireEvent(new KeyboardEvent(el, "keyup", (int)c ,false, false, false));
             if(sb!=null){
                 sb.append(c);
             }

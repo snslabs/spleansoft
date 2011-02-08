@@ -1,9 +1,8 @@
 package ru.snslabs.clicker;
 
 import com.gargoylesoftware.htmlunit.*;
-import com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -36,22 +35,24 @@ public class Main {
 
         WebClient wc = new WebClient(browserVersion);
         wc.setJavaScriptEnabled(false);
-        wc.setCookiesEnabled(true);
+        wc.setCookieManager(new CookieManager());
         wc.setRedirectEnabled(true);
-        wc.setActiveXObjectMap(new HashMap());
+        wc.setActiveXObjectMap(new HashMap<String, String>());
         wc.setAjaxController(new AjaxController(){
             public boolean processSynchron(HtmlPage htmlPage, WebRequestSettings webRequestSettings, boolean b) {
                 return super.processSynchron(htmlPage, webRequestSettings, b);
             }
         });
-        wc.setScriptEngine(new JavaScriptEngine(wc){
-            public Object execute(HtmlPage htmlPage, String s, String s1, HtmlElement htmlElement) {
-                return super.execute(htmlPage, s, s1, htmlElement);
-            }
-
-        });
+        wc.setJavaScriptEngine( new JavaScriptEngine(wc) );
         wc.setThrowExceptionOnScriptError(true);
         wc.setThrowExceptionOnFailingStatusCode(false);
+        /*
+        HttpClientParams params = wc.setPa;
+        params.setBooleanParameter( HttpClientParams.REJECT_RELATIVE_REDIRECT, false );
+        params.setBooleanParameter( HttpClientParams.ALLOW_CIRCULAR_REDIRECTS, false );
+        params.setIntParameter( HttpClientParams.MAX_REDIRECTS, 10 );
+        */
+
         webContext.setAttribute(ScriptWebContext.WEB_CLIENT, wc);
 
         Object result = scriptOperation.execute(webContext);

@@ -12,10 +12,28 @@ import java.io.File;
 
 public class Print extends HtmlScriptOperation {
     private String filename;
+    private String mode;
+
+    public static final String MODE_DOM = "dom";
+    public static final String MODE_HTML = "html";
+
     public Object execute(ScriptContext scriptContext) {
         Page currentPage = getCurrentPage(scriptContext);
-        printPage((HtmlPage) currentPage, "");
+        if(MODE_DOM.equalsIgnoreCase(mode) ){
+            printPageDom((HtmlPage) currentPage);
+        }
+        else{
+            printPage((HtmlPage) currentPage, "");
+        }
         return false;
+    }
+
+    private void printPageDom(HtmlPage htmlPage) {
+        /*
+        for( Object o : htmlPage.getTabbableElements()){
+            System.out.println("Tabbed element: " + o.getClass() + " : " + o.toString());
+        }
+        */
     }
 
     private void printPage(HtmlPage currentPage, String prefix) {
@@ -76,5 +94,13 @@ public class Print extends HtmlScriptOperation {
 
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    public String getMode() {
+        return mode;
+    }
+
+    public void setMode(String mode) {
+        this.mode = mode;
     }
 }

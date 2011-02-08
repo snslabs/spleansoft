@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.snslabs.ru/schemas/scripting-spring-cfg scripting.xsd">
 
     <bean id="main" class="ru.snslabs.clicker.Main">
-        <property name="scriptOperation" ref="mailRuSpam"/>
+        <property name="scriptOperation" ref="mailRuChat"/>
     </bean>
 
     <bean class="ru.snslabs.clicker.script.ops.html.GetElementBySubstringInProperty" id="mailruSubmitButton">
@@ -34,6 +34,22 @@
                 </bean>
             </list>
         </property>
+    </bean>
+
+    <bean class="ru.snslabs.clicker.script.ops.flow.Script" id="mailRuChat">
+        <property name="operations">
+            <list>
+                <s:open url="http://www.mail.ru/"/>
+                <s:type-into nameAttr="Login" value="le-cafard"/>
+                <s:type-into nameAttr="Password" value="splean"/>
+                <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
+                    <property name="xpath" value="//input[@class='submit']"/>
+                </bean>
+                <s:print filename="output" mode="dom"/>
+
+            </list>
+        </property>
+
     </bean>
 
     <bean class="ru.snslabs.clicker.script.ops.flow.Script" id="mailRuSpam">

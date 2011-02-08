@@ -1,6 +1,5 @@
 package ru.snslabs.clicker.script.ops.html;
 
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import ru.snslabs.clicker.script.ScriptContext;
 import ru.snslabs.clicker.script.ValueResolver;
 import ru.snslabs.clicker.script.ops.HtmlScriptOperation;
@@ -25,7 +24,7 @@ public class GetElementByName extends HtmlScriptOperation implements ValueResolv
     }
 
     public Object resolve(ScriptContext scriptContext) {
-        final List listByName = getCurrentPage(scriptContext).getHtmlElementsByName(name);
+        final List listByName = getCurrentPage(scriptContext).getElementsByName(name);
         if(listByName.size() >0){
             return listByName.get(0);
         }
