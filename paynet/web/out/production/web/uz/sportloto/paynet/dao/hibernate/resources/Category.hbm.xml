@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+	<class name="uz.sportloto.paynet.model.response.Category" table="TS_CATEGORY">
+        <id column="CATEGORY_ID" type="integer" name="categoryId">
+            <generator class="assigned" />
+        </id>
+        <property name="name" column="NAME"/>
+        <property name="active" column="ACTIVE" type="char" length="1"/>
+        <property name="createdOn" column="CREATED_ON"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+	<class name="uz.sportloto.paynet.model.PaynetRequest" table="T_PAYMENT">
+        <id column="PAYMENT_ID" type="long" name="id">
+            <generator class="increment"/>
+        </id>
+        <property name="internalChequeId"  column="INTERNAL_CHEQUE_ID"/>
+        <property name="paynetChequeId"  column="PAYNET_CHEQUE_ID"/>
+         <!--'R' получено от терминала, 'S' - отправлено в пейнет, 'C' - получен ответ из пейнета-->
+        <property name="state" type="char" length="1" column="STATE" />
+        <property name="sentOn" column="SENT_ON"/>
+        <property name="providerId" column="PROVIDER_ID"/>
+        <property name="serviceId" column="SERVICE_ID"/>
+        <property name="sum" column="SUMM"/>
+        <property name="statusCode" column="STATUS_CODE"/>
+        <property name="statusText" column="STATUS_TEXT"/>
+        <bag name="details" cascade="all" inverse="true" lazy="false" >
+            <key column="PAYMENT_ID"/>
+            <one-to-many class="uz.sportloto.paynet.model.PaynetRequestDetail" />
+        </bag>
+        <property name="url" column="URL" />
+        <property name="response" column="XML_RESPONSE" type="string" length="5000" insert="false" update="false" />
+        <property name="actionCode" column="ACTION_CODE"/>
+        <property name="terminalId" column="TERMINAL_ID"/>
+        <property name="reportDate" column="REPORT_DATE"/>
+        <property name="servicePrice" column="SERVICE_PRICE"/>
+        <property name="quantity" column="QUANTITY"/>
+        <many-to-one name="transaction" class="uz.sportloto.paynet.model.response.Transaction" column="TRANSACTION_ID" cascade="all"/>
+
+    </class>
+    <query name="findPaynetRequestByChequeId" >
+        from Payment obj where obj.paynetChequeId = :paynetChequeId
+    </query>
+    <query name="findPaynetRequestByBothChequeIds">
+        from Payment obj where obj.paynetChequeId = :paynetChequeId or obj.internalChequeId = :internalChequeId
+    </query>
+</hibernate-mapping>
+<!-- parsed in 0ms -->

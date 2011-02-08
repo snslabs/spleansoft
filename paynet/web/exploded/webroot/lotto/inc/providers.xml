@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<categories_list size="6">
+		<category id="1" name="Сотовые операторы"/>
+		<category id="2" name="Интернет"/>
+		<category id="3" name="IP телефония"/>
+		<category id="4" name="Коммунальные услуги"/>
+		<category id="5" name="Услуги"/>
+		<category id="100" name="Отмена платежей"/>
+	</categories_list>
+	<providers_list size="37">
+		<provider category_id="1" id="1" name="МТС"/>
+		<provider category_id="3" id="6" name="Buzton - ГольфStream"/>
+		<provider category_id="100" id="48" name="МТС (отмена)"/>
+		<provider category_id="5" id="8" name="Paynet"/>
+		<provider category_id="4" id="7" name="Электр (ТашГорПЭС)"/>
+		<provider category_id="2" id="3" name="Ars-Inform"/>
+		<provider category_id="2" id="4" name="Sarkor-Telecom"/>
+		<provider category_id="1" id="2" name="Билайн"/>
+		<provider category_id="4" id="47" name="Электр (ТашОблПЭС)"/>
+		<provider category_id="5" id="43" name="PreeCall"/>
+		<provider category_id="3" id="16" name="Toshkent Taksofoni"/>
+		<provider category_id="100" id="50" name="Билайн (отмена)"/>
+		<provider category_id="2" id="5" name="InfoNet"/>
+		<provider category_id="1" id="21" name="Perfectum Mobile"/>
+		<provider category_id="4" id="22" name="Газ (Фуркатский р-н)"/>
+		<provider category_id="3" id="17" name="Телеграф"/>
+		<provider category_id="3" id="18" name="TSHTT"/>
+		<provider category_id="1" id="44" name="U Cell"/>
+		<provider category_id="2" id="10" name="ROL"/>
+		<provider category_id="4" id="74" name="Электр (Бектемир)"/>
+		<provider category_id="2" id="11" name="NetCity "/>
+		<provider category_id="3" id="19" name="Platinum Connect"/>
+		<provider category_id="1" id="46" name="ГТС"/>
+		<provider category_id="2" id="12" name="Skyline"/>
+		<provider category_id="3" id="53" name="Телеграф (RU,KZ)"/>
+		<provider category_id="2" id="13" name="UAQ"/>
+		<provider category_id="2" id="14" name="Cron Telecom"/>
+		<provider category_id="2" id="15" name="Interpage"/>
+		<provider category_id="2" id="23" name="IPlus"/>
+		<provider category_id="2" id="24" name="COMNET"/>
+		<provider category_id="2" id="52" name="InterNext"/>
+		<provider category_id="2" id="54" name="TPS"/>
+		<provider category_id="4" id="100" name="Газ (г. Ташкент)"/>
+		<provider category_id="5" id="134" name="eKarmon"/>
+		<provider category_id="4" id="154" name="Электр (Навои)"/>
+		<provider category_id="4" id="155" name="Электр (Нукус)"/>
+		<provider category_id="3" id="156" name="Телеграф (Elite)"/>
+	</providers_list>
+	<services_list size="117">
+		<service category_id="1" provider_id="1" id="1" name="Пополнение счета" service_type_id="1" service_price="0"/>
+		<service category_id="1" provider_id="2" id="2" name="Пополнение счета" service_type_id="1" service_price="0"/>
+		<service category_id="1" provider_id="21" id="64" name="Пополнение счета" service_type_id="1" service_price="0"/>
+		<service category_id="2" provider_id="4" id="8" name="5000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="5" id="11" name="2000 сум" service_type_id="2" service_price="2000"/>
+		<service category_id="2" provider_id="10" id="26" name="5 RU (4000 сум)" service_type_id="2" service_price="4000"/>
+		<service category_id="2" provider_id="11" id="29" name="NetCity - 1000 сум" service_type_id="2" service_price="1000"/>
+		<service category_id="2" provider_id="12" id="33" name="Skyline - 3 000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="2" provider_id="14" id="39" name="Cron - 3000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="2" provider_id="15" id="43" name="Interpage-2 000 сум" service_type_id="2" service_price="2000"/>
+		<service category_id="2" provider_id="24" id="76" name="Silver (3000 сум)" service_type_id="2" service_price="3000"/>
+		<service category_id="3" provider_id="6" id="16" name="5 UNITS (5000 сум)" service_type_id="2" service_price="5000"/>
+		<service category_id="3" provider_id="16" id="47" name="Таксофон-2 500 сум" service_type_id="2" service_price="2500"/>
+		<service category_id="3" provider_id="17" id="50" name="Телеграф-3 000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="3" provider_id="18" id="52" name="TSHTT - 3 000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="3" provider_id="19" id="56" name="Platinum-3 000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="4" provider_id="7" id="92" name="Проверка лиц. счета " service_type_id="11" service_price="0"/>
+		<service category_id="4" provider_id="22" id="67" name="Проверка лиц. счета" service_type_id="11" service_price="0"/>
+		<service category_id="5" provider_id="8" id="60" name="Текущий депозит" service_type_id="8" service_price="0"/>
+		<service category_id="2" provider_id="4" id="9" name="10000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="2" provider_id="10" id="27" name="10 RU (8000 сум)" service_type_id="2" service_price="8000"/>
+		<service category_id="2" provider_id="11" id="30" name="NetCity - 3000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="2" provider_id="12" id="34" name="Skyline - 5 000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="14" id="40" name="Cron - 5000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="15" id="44" name="Interpage-3 000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="2" provider_id="24" id="77" name="Gold (5000 сум)" service_type_id="2" service_price="5000"/>
+		<service category_id="3" provider_id="6" id="17" name="10 UNITS (10000 сум)" service_type_id="2" service_price="10000"/>
+		<service category_id="3" provider_id="16" id="48" name="Таксофон-5 000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="3" provider_id="17" id="51" name="Телеграф-5 000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="3" provider_id="18" id="53" name="TSHTT - 5 000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="3" provider_id="19" id="57" name="Platinum-5 000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="4" provider_id="7" id="93" name="Регистрация PaynetID" service_type_id="12" service_price="0"/>
+		<service category_id="4" provider_id="22" id="68" name="Регистрация PaynetID" service_type_id="12" service_price="0"/>
+		<service category_id="5" provider_id="8" id="61" name="Текущий курс USD" service_type_id="9" service_price="0"/>
+		<service category_id="2" provider_id="5" id="95" name="5000 сум " service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="10" id="28" name="20 RU (16000 сум)" service_type_id="2" service_price="16000"/>
+		<service category_id="2" provider_id="11" id="31" name="NetCity - 5000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="12" id="35" name="Skyline - 10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="2" provider_id="14" id="41" name="Cron - 10000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="2" provider_id="15" id="45" name="Interpage-7 000 сум" service_type_id="2" service_price="7000"/>
+		<service category_id="2" provider_id="24" id="78" name="Platinum (7500)" service_type_id="2" service_price="7500"/>
+		<service category_id="3" provider_id="6" id="18" name="20 UNITS (20000 сум)" service_type_id="2" service_price="20000"/>
+		<service category_id="3" provider_id="16" id="49" name="Таксофон-15 000 сум" service_type_id="2" service_price="15000"/>
+		<service category_id="3" provider_id="17" id="96" name="Телеграф-10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="3" provider_id="18" id="54" name="TSHTT - 10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="3" provider_id="19" id="58" name="Platinum-10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="4" provider_id="7" id="65" name="Информация о счете" service_type_id="10" service_price="0"/>
+		<service category_id="4" provider_id="22" id="70" name="Информация о счете " service_type_id="5" service_price="0"/>
+		<service category_id="2" provider_id="3" id="6" name="250 Мб (10000 сум)" service_type_id="2" service_price="10000"/>
+		<service category_id="2" provider_id="4" id="94" name="20000 сум" service_type_id="2" service_price="20000"/>
+		<service category_id="2" provider_id="11" id="32" name="NetCity - 10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="2" provider_id="12" id="36" name="Skyline - 15 000 сум" service_type_id="2" service_price="15000"/>
+		<service category_id="2" provider_id="15" id="46" name="Interpage-10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="3" provider_id="6" id="19" name="50 UNITS (50000 сум)" service_type_id="2" service_price="50000"/>
+		<service category_id="3" provider_id="17" id="97" name="Телеграф-20 000 сум" service_type_id="2" service_price="20000"/>
+		<service category_id="3" provider_id="18" id="55" name="TSHTT - 20 000 сум" service_type_id="2" service_price="20000"/>
+		<service category_id="3" provider_id="19" id="59" name="Platinum-20 000 сум" service_type_id="2" service_price="20000"/>
+		<service category_id="4" provider_id="7" id="20" name="Оплата" service_type_id="3" service_price="0"/>
+		<service category_id="4" provider_id="22" id="69" name="Оплата " service_type_id="4" service_price="0"/>
+		<service category_id="2" provider_id="3" id="7" name="Night (15000 сум)" service_type_id="2" service_price="15000"/>
+		<service category_id="2" provider_id="5" id="13" name="6000 сум" service_type_id="2" service_price="6000"/>
+		<service category_id="3" provider_id="17" id="98" name="Телеграф-50 000 сум" service_type_id="2" service_price="50000"/>
+		<service category_id="3" provider_id="19" id="62" name="Platinum-50 000 сум" service_type_id="2" service_price="50000"/>
+		<service category_id="2" provider_id="3" id="71" name="500 Мб (15000 сум)" service_type_id="2" service_price="15000"/>
+		<service category_id="2" provider_id="5" id="15" name="10000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="3" provider_id="19" id="63" name="Platinum-100 000 сум" service_type_id="2" service_price="100000"/>
+		<service category_id="3" provider_id="17" id="99" name="Телеграф-100 000 сум" service_type_id="2" service_price="100000"/>
+		<service category_id="2" provider_id="4" id="100" name="Регистрация PaynetID" service_type_id="14" service_price="0"/>
+		<service category_id="2" provider_id="4" id="101" name=" Пополнение счета" service_type_id="13" service_price="0"/>
+		<service category_id="5" provider_id="43" id="102" name="PreeCall - 3 000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="5" provider_id="43" id="103" name="PreeCall - 5 000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="1" provider_id="44" id="104" name=" Пополнение счета " service_type_id="1" service_price="0"/>
+		<service category_id="2" provider_id="3" id="106" name="5 часов (3000 сум)" service_type_id="2" service_price="3000"/>
+		<service category_id="2" provider_id="3" id="107" name="10 часов (5000 сум)" service_type_id="2" service_price="5000"/>
+		<service category_id="1" provider_id="46" id="109" name="Абонентская плата" service_type_id="15" service_price="0"/>
+		<service category_id="4" provider_id="47" id="110" name="Оплата  " service_type_id="3" service_price="0"/>
+		<service category_id="4" provider_id="47" id="111" name="Информация о счете  " service_type_id="10" service_price="0"/>
+		<service category_id="1" provider_id="46" id="112" name="За МН и МГ разговоры" service_type_id="16" service_price="0"/>
+		<service category_id="100" provider_id="48" id="113" name="Отмена платежа" service_type_id="6" service_price="0"/>
+		<service category_id="100" provider_id="50" id="115" name="Отмена платежа  " service_type_id="6" service_price="0"/>
+		<service category_id="2" provider_id="5" id="117" name="8000 сум " service_type_id="2" service_price="8000"/>
+		<service category_id="2" provider_id="52" id="118" name="2 000 сум" service_type_id="2" service_price="2000"/>
+		<service category_id="2" provider_id="52" id="119" name="5 000 сум " service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="52" id="120" name="Луна (5000 сум)" service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="52" id="121" name="10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="3" provider_id="53" id="123" name="Россия 20-4 500 сум" service_type_id="2" service_price="4500"/>
+		<service category_id="3" provider_id="53" id="124" name="Россия 30-6 600 сум" service_type_id="2" service_price="6600"/>
+		<service category_id="3" provider_id="53" id="125" name="Россия 1ч-13 200 сум" service_type_id="2" service_price="13200"/>
+		<service category_id="3" provider_id="53" id="126" name="Казах-н 20-4 700 сум" service_type_id="2" service_price="4700"/>
+		<service category_id="3" provider_id="53" id="127" name="Казах-н 30-6 900 сум" service_type_id="2" service_price="6900"/>
+		<service category_id="3" provider_id="53" id="128" name="Казах-н 1ч-13 800 сум" service_type_id="2" service_price="13800"/>
+		<service category_id="2" provider_id="5" id="129" name="4000 сум" service_type_id="2" service_price="4000"/>
+		<service category_id="2" provider_id="5" id="130" name="7500 сум" service_type_id="2" service_price="7500"/>
+		<service category_id="2" provider_id="54" id="149" name="Small - 3000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="2" provider_id="54" id="150" name="Local - 5000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="2" provider_id="54" id="151" name="Large - 10000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="2" provider_id="54" id="152" name="ExtraLarge-15000 сум" service_type_id="2" service_price="15000"/>
+		<service category_id="2" provider_id="3" id="169" name="ЧАТ (7000 сум)" service_type_id="2" service_price="7000"/>
+		<service category_id="4" provider_id="74" id="189" name="Оплата" service_type_id="3" service_price="0"/>
+		<service category_id="4" provider_id="74" id="190" name="Информация о счете" service_type_id="10" service_price="0"/>
+		<service category_id="4" provider_id="100" id="209" name="Оплата" service_type_id="4" service_price="0"/>
+		<service category_id="4" provider_id="100" id="210" name="Информация о счете" service_type_id="5" service_price="0"/>
+		<service category_id="4" provider_id="100" id="211" name="Проверка лиц. счета" service_type_id="11" service_price="0"/>
+		<service category_id="4" provider_id="100" id="212" name="Регистрация PaynetID" service_type_id="12" service_price="0"/>
+		<service category_id="5" provider_id="134" id="249" name="Пополнение кошелька" service_type_id="17" service_price="0"/>
+		<service category_id="2" provider_id="12" id="289" name="Skyline - 30 000 сум" service_type_id="2" service_price="30000"/>
+		<service category_id="4" provider_id="154" id="309" name="Оплата    " service_type_id="3" service_price="0"/>
+		<service category_id="4" provider_id="154" id="310" name="Информация о счете   " service_type_id="10" service_price="0"/>
+		<service category_id="4" provider_id="155" id="311" name="Оплата     " service_type_id="3" service_price="0"/>
+		<service category_id="4" provider_id="155" id="312" name="Информация о счете      " service_type_id="10" service_price="0"/>
+		<service category_id="3" provider_id="156" id="329" name="Elite - 3 000 сум" service_type_id="2" service_price="3000"/>
+		<service category_id="3" provider_id="156" id="330" name="Elite - 5 000 сум" service_type_id="2" service_price="5000"/>
+		<service category_id="3" provider_id="156" id="331" name="Elite - 10 000 сум" service_type_id="2" service_price="10000"/>
+		<service category_id="3" provider_id="156" id="332" name="Elite - 20 000 сум" service_type_id="2" service_price="20000"/>
+		<service category_id="3" provider_id="156" id="333" name="Elite - 50 000 сум" service_type_id="2" service_price="50000"/>
+		<service category_id="3" provider_id="156" id="334" name="Elite - 100 000 сум" service_type_id="2" service_price="100000"/>
+		<service category_id="2" provider_id="14" id="349" name="Cron - 2000 сум" service_type_id="2" service_price="2000"/>
+	</services_list>
+	<service_type_list size="117">
+		<service_type id="7">
+			<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+		<service_type id="1">
+			<details><field_name>phone_number</field_name><field_label>Номер телефона</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Сумма</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+		<service_type id="2">
+			<details><field_name>quantity</field_name><field_label>Количество</field_label><field_type>N</field_type><field_size>2</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+		<service_type id="3">
+			<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Сумма</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details></service_type>
+		<service_type id="4">
+			<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Сумма</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>watt</field_name><field_label>Показатель счетчика</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+		<service_type id="5">
+			<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+		<service_type id="6">
+			<details><field_name>transaction_id</field_name><field_label>Номер платежа</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>phone_number</field_name><field_label>Номер телефона</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details></service_type>
+		<service_type id="12">
+			<details><field_name>licschet</field_name><field_label>Лицевой счет</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+		<service_type id="11">
+			<details><field_name>licschet</field_name><field_label>Лицевой счет</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+		<service_type id="8">
+		</service_type>
+		<service_type id="10">
+			<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>watt</field_name><field_label>Объем (кВт/ч)</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+		<service_type id="14">
+			<details><field_name>login</field_name><field_label>Логин X-</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+		<service_type id="17">
+			<details><field_name>phone_number</field_name><field_label>ЕКармон ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Сумма</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+		<service_type id="9">
+		</service_type>
+		<service_type id="13">
+			<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Сумма</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details></service_type>
+		<service_type id="15">
+			<details><field_name>phone_number</field_name><field_label>Номер телефона</field_label><field_type>N</field_type><field_size>7</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Сумма</field_label><field_type>N</field_type><field_size>6</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+		<service_type id="16">
+			<details><field_name>phone_number</field_name><field_label>Номер телефона</field_label><field_type>N</field_type><field_size>7</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Сумма</field_label><field_type>N</field_type><field_size>6</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+	</service_type_list>
+	<cheque_info_list size="13">
+		<cheque_info service_id="105" info="Подтверждаю информацию."/>
+		<cheque_info service_id="106" info="Подтверждаю информацию."/>
+		<cheque_info service_id="107" info="Подтверждаю информацию."/>
+		<cheque_info service_id="108" info="Подтверждаю информацию."/>
+		<cheque_info service_id="110" info="Подтверждаю информацию."/>
+		<cheque_info service_id="111" info="Подтверждаю информацию. "/>
+		<cheque_info service_id="104" info="Подписывая данную заявку согла-^шаюсь с зачислением платежа на^счет за вычетом 2% комиссионных.^Подтверждаю информацию."/>
+		<cheque_info service_id="64" info="Подписывая данную заявку согла-^шаюсь с зачислением платежа на^счет за вычетом 2% комиссионных.^Подтверждаю информацию."/>
+		<cheque_info service_id="1" info="Подписывая данную заявку согла-^шаюсь с зачислением платежа на^счет за вычетом 2% комиссионных.^Подтверждаю информацию.
+"/>
+		<cheque_info service_id="2" info="Подписывая данную заявку согла-^шаюсь с зачислением платежа на^счет за вычетом 2% комиссионных.^Подтверждаю информацию."/>
+		<cheque_info service_id="209" info="Подпись абонента"/>
+		<cheque_info service_id="112" info="Подписывая данную заявку согла-^шаюсь с зачислением платежа на^счет за вычетом 3% комиссионных.^Подтверждаю информацию."/>
+		<cheque_info service_id="109" info="Подписывая данную заявку согла-^шаюсь с зачислением платежа на^счет за вычетом 3% комиссионных.^Подтверждаю информацию."/>
+	</cheque_info_list>
+</response>

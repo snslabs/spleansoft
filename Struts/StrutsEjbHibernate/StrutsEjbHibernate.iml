@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4" relativePaths="true" type="J2EE_APPLICATION_MODULE">
+  <component name="AppServerSpecificValidatorsManager" />
+  <component name="ApplicationModuleBuildComponent">
+    <setting name="EXPLODED_URL" value="file://" />
+    <setting name="EXPLODED_ENABLED" value="false" />
+    <setting name="JAR_URL" value="file://$MODULE_DIR$/StrutsEjbHibernate.ear" />
+    <setting name="JAR_ENABLED" value="true" />
+    <setting name="SYNC_EXPLODED_DIR" value="true" />
+    <setting name="BUILD_MODULE_ON_FRAME_DEACTIVATION" value="false" />
+    <setting name="BUILD_EXTERNAL_DEPENDENCIES" value="false" />
+  </component>
+  <component name="ApplicationModuleProperties">
+    <containerElement type="module" name="Business">
+      <attribute name="method" value="4" />
+      <attribute name="URI" value="Business.jar" />
+      <attribute name="contextRoot" value="&lt;N/A&gt;" />
+    </containerElement>
+    <containerElement type="module" name="strutsapp">
+      <attribute name="method" value="4" />
+      <attribute name="URI" value="strutsapp.war" />
+      <attribute name="contextRoot" value="strutsapp" />
+    </containerElement>
+    <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/META-INF/application.xml" optional="false" version="5" />
+    <deploymentDescriptor name="jboss-app.xml" url="file://$MODULE_DIR$/META-INF/jboss-app.xml" optional="false" version="4.0" />
+  </component>
+  <component name="ModuleRootManager" />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/j2ee.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="strutsapp" />
+    <orderEntry type="module" module-name="Business" />
+    <orderEntryProperties />
+  </component>
+  <component name="WeblogicApplicationModuleProperties" />
+</module>
+

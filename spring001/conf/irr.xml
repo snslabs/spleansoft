@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:s="http://www.snslabs.ru/schemas/scripting-spring-cfg"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.snslabs.ru/schemas/scripting-spring-cfg scripting.xsd">
+
+    <s:script id="open-irr">
+        <property name="operations">
+            <list>
+                <s:open url="http://www.irr.ru/searchResults.do?cid=368&amp;s_eq_categories=368&amp;s_=1&amp;rid=101&amp;so_ns_rid=1&amp;s_eq_regions=101&amp;s_eq_rooms=2&amp;s_ge_meters-total=&amp;s_le_meters-total=&amp;s_qu_contents=&amp;s_nq_contents=%D0%B4%D0%BE%D0%BB%D0%B8&amp;s_go_price_usd=120000&amp;s_lo_price_usd=170000&amp;so_so_x=desc_valid_from&amp;s_eq_source_id=&amp;fieldsSequence=s_eq_categories%2Cs_%2Cs_eq_regions%2Cs_eq_rooms%2Cs_ge_meters-total%2Cs_le_meters-total%2Cs_qu_contents%2Cs_nq_contents%2Cs_go_price_usd%2Cs_lo_price_usd%2C%2Cso_so_x%2Cs_ge_photos%2Cs_eq_source_id"/>
+                <s:click-through
+                        regexp="http://www.irr.ru/real-estate/secondary/appartments-sale/showAdvert\,(\d+?),368,101\.html"/>
+            </list>
+        </property>
+    </s:script>
+
+    <!--
+        <bean id="login-to-google" class="ru.snslabs.clicker.script.ops.flow.Script">
+            <property name="operations">
+                <list>
+                    <s:open url="http://www.gmail.com/"/>
+                    <s:print filename="0001.html"/>
+                    <s:type-into id="Email" value="snslabs"/>
+                    <s:type-into id="Passwd" value="splean"/>
+                    <s:click-on name="signIn" x="1" y="1"/>
+                    <s:print filename="0002.html"/>
+                </list>
+            </property>
+        </bean>
+    -->
+
+    <bean id="loadGooglePage" class="ru.snslabs.clicker.script.ops.flow.Script">
+        <property name="operations">
+            <list>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.OpenPage">
+                    <property name="url" value="http://www.gmail.com/"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.Print">
+                    <property name="filename" value="001.html"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.Click">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetLinkByTextPart">
+                            <property name="text" value="Sign up for Gmail"/>
+                        </bean>
+                    </property>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.Print">
+                    <property name="filename" value="002.html"/>
+                </bean>
+                <!-- заполняем поля -->
+                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementById">
+                            <property name="id" value="FirstName"/>
+                        </bean>
+                    </property>
+                    <property name="value" value="Ivan"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementById">
+                            <property name="id" value="LastName"/>
+                        </bean>
+                    </property>
+                    <property name="value" value="Ivanoff"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementById">
+                            <property name="id" value="Email"/>
+                        </bean>
+                    </property>
+                    <property name="value" value="scourge.infinit.1"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementByName">
+                            <property name="name" value="Passwd"/>
+                        </bean>
+                    </property>
+                    <property name="value" value="1qaz@WSX"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementByName">
+                            <property name="name" value="PasswdAgain"/>
+                        </bean>
+                    </property>
+                    <property name="value" value="1qaz@WSX"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.SelectValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementById">
+                            <property name="id" value="questions"/>
+                        </bean>
+                    </property>
+                    <property name="index" value="2"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementByName">
+                            <property name="name" value="IdentityAnswer"/>
+                        </bean>
+                    </property>
+                    <property name="value" value="This is too complicated"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementByName">
+                            <property name="name" value="SecondaryEmail"/>
+                        </bean>
+                    </property>
+                    <property name="value" value="admin@mail.ru"/>
+                </bean>
+
+                <!--
+                                not selecting country right now
+                                <bean class="ru.snslabs.clicker.script.ops.html.SelectValue">
+                                    <property name="findElementOp">
+                                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementById">
+                                            <property name="id" value="loc"/>
+                                        </bean>
+                                    </property>
+                                    <property name="index" value="2"/>
+                                </bean>
+                -->
+
+                <!--
+                                <bean class="ru.snslabs.clicker.script.ops.html.TypeValue">
+                                    <property name="findElementOp">
+                                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementById">
+                                            <property name="id" value="newaccountcaptcha"/>
+                                        </bean>
+                                    </property>
+                                    <property name="value">
+                                        <bean class="ru.snslabs.clicker.ext.impl.ResolveCaptchaInDialog">
+                                            <property name="srcUrl">
+                                                <bean class="ru.snslabs.clicker.script.ops.html.GetAttribute">
+                                                    <property name="attributeName" value="src"/>
+                                                    <property name="htmlEl">
+                                                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementBySubstringInProperty">
+                                                            <property name="substring" value="https://www.google.com/accounts/Captcha"/>
+                                                            <property name="attrName" value="src"/>
+                                                        </bean>
+                                                    </property>
+                                                </bean>
+                                            </property>
+                                        </bean>
+                                    </property>
+                                </bean>
+                -->
+
+                <bean class="ru.snslabs.clicker.script.ops.html.Print">
+                    <property name="filename" value="003.html"/>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.Click">
+                    <property name="findElementOp">
+                        <bean class="ru.snslabs.clicker.script.ops.html.GetElementById">
+                            <property name="id" value="submitbutton"/>
+                        </bean>
+                    </property>
+                </bean>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.Print">
+                    <property name="filename" value="004.html"/>
+                </bean>
+
+            </list>
+        </property>
+    </bean>
+</beans>

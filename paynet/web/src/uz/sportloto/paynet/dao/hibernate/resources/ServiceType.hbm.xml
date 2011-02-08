@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+	<class name="uz.sportloto.paynet.model.response.ServiceType" table="TS_SERVICE_TYPE">
+        <id column="SERVICE_TYPE_ID" type="integer" name="serviceTypeId">
+            <generator class="assigned" />
+        </id>
+        <bag name="fields" cascade="all" inverse="true"  >
+            <key column="SERVICE_TYPE_ID" />
+            <one-to-many class="uz.sportloto.paynet.model.response.Field"/>
+        </bag>
+        <property name="active" column="ACTIVE" type="char" length="1"/>
+        <property name="createdOn" column="CREATED_ON"/>
+    </class>
+</hibernate-mapping>

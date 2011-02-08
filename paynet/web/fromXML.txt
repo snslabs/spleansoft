@@ -1,0 +1,2364 @@
+providers = {
+
+{	name = "Elektr (TashOblPES)",
+	id = "47",
+	services = {
+		{
+			id            = "111",
+			providerId    = "47",
+			categoryId    = "4",
+			name          = "Informatsiya o schete  ",
+			serviceTypeId = "10",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "10",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "true",
+							},
+							{
+								serviceTypeId = "10",
+								name    = "watt",
+								type    = "N",
+								size    = "11",
+								label   = "Ob'em (kVt/ch)",
+								required = "false",
+							},
+			},
+			chequeInfo    = "null"
+		},
+		{
+			id            = "110",
+			providerId    = "47",
+			categoryId    = "4",
+			name          = "Oplata  ",
+			serviceTypeId = "3",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "3",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "true",
+							},
+							{
+								serviceTypeId = "3",
+								name    = "summa",
+								type    = "N",
+								size    = "10",
+								label   = "Summa",
+								required = "true",
+							},
+			},
+			chequeInfo    = "null"
+		}
+	}
+},
+{	name = "Interpage",
+	id = "15",
+	services = {
+		{
+			id            = "43",
+			providerId    = "15",
+			categoryId    = "2",
+			name          = "Interpage-2 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "44",
+			providerId    = "15",
+			categoryId    = "2",
+			name          = "Interpage-3 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "45",
+			providerId    = "15",
+			categoryId    = "2",
+			name          = "Interpage-7 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "46",
+			providerId    = "15",
+			categoryId    = "2",
+			name          = "Interpage-10 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Sarkor-Telecom",
+	id = "4",
+	services = {
+		{
+			id            = "100",
+			providerId    = "4",
+			categoryId    = "2",
+			name          = "Registratsiya PaynetID",
+			serviceTypeId = "14",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "14",
+								name    = "login",
+								type    = "N",
+								size    = "11",
+								label   = "Login X-",
+								required = "true",
+							},
+							{
+								serviceTypeId = "14",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "true",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "101",
+			providerId    = "4",
+			categoryId    = "2",
+			name          = " Popolnenie scheta",
+			serviceTypeId = "13",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "13",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "true",
+							},
+							{
+								serviceTypeId = "13",
+								name    = "summa",
+								type    = "N",
+								size    = "10",
+								label   = "Summa",
+								required = "true",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "94",
+			providerId    = "4",
+			categoryId    = "2",
+			name          = "20000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "8",
+			providerId    = "4",
+			categoryId    = "2",
+			name          = "5000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "9",
+			providerId    = "4",
+			categoryId    = "2",
+			name          = "10000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Platinum Connect",
+	id = "19",
+	services = {
+		{
+			id            = "62",
+			providerId    = "19",
+			categoryId    = "3",
+			name          = "Platinum-50 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "59",
+			providerId    = "19",
+			categoryId    = "3",
+			name          = "Platinum-20 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "58",
+			providerId    = "19",
+			categoryId    = "3",
+			name          = "Platinum-10 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "63",
+			providerId    = "19",
+			categoryId    = "3",
+			name          = "Platinum-100 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "57",
+			providerId    = "19",
+			categoryId    = "3",
+			name          = "Platinum-5 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "56",
+			providerId    = "19",
+			categoryId    = "3",
+			name          = "Platinum-3 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Paynet",
+	id = "8",
+	services = {
+		{
+			id            = "60",
+			providerId    = "8",
+			categoryId    = "5",
+			name          = "Tekuschii depozit",
+			serviceTypeId = "8",
+			chequeInfoId  = "null",
+			serviceType   = {
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "61",
+			providerId    = "8",
+			categoryId    = "5",
+			name          = "Tekuschii kurs USD",
+			serviceTypeId = "9",
+			chequeInfoId  = "null",
+			serviceType   = {
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "IPlus",
+	id = "23",
+	services = {
+		{
+			id            = "73",
+			providerId    = "23",
+			categoryId    = "2",
+			name          = "Active 5 (5000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "75",
+			providerId    = "23",
+			categoryId    = "2",
+			name          = "Active15 (15000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "72",
+			providerId    = "23",
+			categoryId    = "2",
+			name          = "Active 3 (3000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "74",
+			providerId    = "23",
+			categoryId    = "2",
+			name          = "Active10 (10000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "NetCity ",
+	id = "11",
+	services = {
+		{
+			id            = "30",
+			providerId    = "11",
+			categoryId    = "2",
+			name          = "NetCity - 3000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "31",
+			providerId    = "11",
+			categoryId    = "2",
+			name          = "NetCity - 5000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "32",
+			providerId    = "11",
+			categoryId    = "2",
+			name          = "NetCity - 10 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "29",
+			providerId    = "11",
+			categoryId    = "2",
+			name          = "NetCity - 1000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "PreeCall",
+	id = "43",
+	services = {
+		{
+			id            = "103",
+			providerId    = "43",
+			categoryId    = "5",
+			name          = "PreeCall - 5 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "102",
+			providerId    = "43",
+			categoryId    = "5",
+			name          = "PreeCall - 3 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Toshkent Taksofoni",
+	id = "16",
+	services = {
+		{
+			id            = "48",
+			providerId    = "16",
+			categoryId    = "3",
+			name          = "Taksofon-5 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "47",
+			providerId    = "16",
+			categoryId    = "3",
+			name          = "Taksofon-2 500 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "49",
+			providerId    = "16",
+			categoryId    = "3",
+			name          = "Taksofon-15 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "TSHTT",
+	id = "18",
+	services = {
+		{
+			id            = "54",
+			providerId    = "18",
+			categoryId    = "3",
+			name          = "TSHTT - 10 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "53",
+			providerId    = "18",
+			categoryId    = "3",
+			name          = "TSHTT - 5 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "52",
+			providerId    = "18",
+			categoryId    = "3",
+			name          = "TSHTT - 3 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "55",
+			providerId    = "18",
+			categoryId    = "3",
+			name          = "TSHTT - 20 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Ars-Inform",
+	id = "3",
+	services = {
+		{
+			id            = "107",
+			providerId    = "3",
+			categoryId    = "2",
+			name          = "10 chasov (5000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "null"
+		},
+		{
+			id            = "106",
+			providerId    = "3",
+			categoryId    = "2",
+			name          = "5 chasov (3000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "null"
+		},
+		{
+			id            = "7",
+			providerId    = "3",
+			categoryId    = "2",
+			name          = "Night (15000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "71",
+			providerId    = "3",
+			categoryId    = "2",
+			name          = "500 Mb (15000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "6",
+			providerId    = "3",
+			categoryId    = "2",
+			name          = "250 Mb (10000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "5",
+			providerId    = "3",
+			categoryId    = "2",
+			name          = "ChAT (5000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Elektr (TashGorPES)",
+	id = "7",
+	services = {
+		{
+			id            = "65",
+			providerId    = "7",
+			categoryId    = "4",
+			name          = "Informatsiya o schete",
+			serviceTypeId = "10",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "10",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "true",
+							},
+							{
+								serviceTypeId = "10",
+								name    = "watt",
+								type    = "N",
+								size    = "11",
+								label   = "Ob'em (kVt/ch)",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "93",
+			providerId    = "7",
+			categoryId    = "4",
+			name          = "Registratsiya PaynetID",
+			serviceTypeId = "12",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "12",
+								name    = "licschet",
+								type    = "N",
+								size    = "11",
+								label   = "Litsevoi schet",
+								required = "true",
+							},
+							{
+								serviceTypeId = "12",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "true",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "92",
+			providerId    = "7",
+			categoryId    = "4",
+			name          = "Proverka lits. scheta ",
+			serviceTypeId = "11",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "11",
+								name    = "licschet",
+								type    = "N",
+								size    = "11",
+								label   = "Litsevoi schet",
+								required = "true",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "20",
+			providerId    = "7",
+			categoryId    = "4",
+			name          = "Oplata",
+			serviceTypeId = "3",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "3",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "true",
+							},
+							{
+								serviceTypeId = "3",
+								name    = "summa",
+								type    = "N",
+								size    = "10",
+								label   = "Summa",
+								required = "true",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Skyline",
+	id = "12",
+	services = {
+		{
+			id            = "34",
+			providerId    = "12",
+			categoryId    = "2",
+			name          = "Skyline - 5 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "35",
+			providerId    = "12",
+			categoryId    = "2",
+			name          = "Skyline - 10 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "33",
+			providerId    = "12",
+			categoryId    = "2",
+			name          = "Skyline - 3 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "36",
+			providerId    = "12",
+			categoryId    = "2",
+			name          = "Skyline - 15 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Telegraf",
+	id = "17",
+	services = {
+		{
+			id            = "96",
+			providerId    = "17",
+			categoryId    = "3",
+			name          = "Telegraf-10 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "97",
+			providerId    = "17",
+			categoryId    = "3",
+			name          = "Telegraf-20 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "98",
+			providerId    = "17",
+			categoryId    = "3",
+			name          = "Telegraf-50 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "51",
+			providerId    = "17",
+			categoryId    = "3",
+			name          = "Telegraf-5 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "99",
+			providerId    = "17",
+			categoryId    = "3",
+			name          = "Telegraf-100 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "50",
+			providerId    = "17",
+			categoryId    = "3",
+			name          = "Telegraf-3 000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Bilain",
+	id = "2",
+	services = {
+		{
+			id            = "2",
+			providerId    = "2",
+			categoryId    = "1",
+			name          = "Popolnenie scheta",
+			serviceTypeId = "1",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "1",
+								name    = "phone_number",
+								type    = "N",
+								size    = "10",
+								label   = "Nomer telefona",
+								required = "true",
+							},
+							{
+								serviceTypeId = "1",
+								name    = "summa",
+								type    = "N",
+								size    = "10",
+								label   = "Summa",
+								required = "true",
+							},
+							{
+								serviceTypeId = "1",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 2% komissionnyh.^Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "UAQ",
+	id = "13",
+	services = {
+		{
+			id            = "38",
+			providerId    = "13",
+			categoryId    = "2",
+			name          = "UAQ - 5000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "37",
+			providerId    = "13",
+			categoryId    = "2",
+			name          = "UAQ - 3000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Perfectum Mobile",
+	id = "21",
+	services = {
+		{
+			id            = "64",
+			providerId    = "21",
+			categoryId    = "1",
+			name          = "Popolnenie scheta",
+			serviceTypeId = "1",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "1",
+								name    = "phone_number",
+								type    = "N",
+								size    = "10",
+								label   = "Nomer telefona",
+								required = "true",
+							},
+							{
+								serviceTypeId = "1",
+								name    = "summa",
+								type    = "N",
+								size    = "10",
+								label   = "Summa",
+								required = "true",
+							},
+							{
+								serviceTypeId = "1",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 2% komissionnyh.^Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Buzton - Gol'fStream",
+	id = "6",
+	services = {
+		{
+			id            = "16",
+			providerId    = "6",
+			categoryId    = "3",
+			name          = "5 UNITS",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "18",
+			providerId    = "6",
+			categoryId    = "3",
+			name          = "20 UNITS",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "17",
+			providerId    = "6",
+			categoryId    = "3",
+			name          = "10 UNITS",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "19",
+			providerId    = "6",
+			categoryId    = "3",
+			name          = "50 UNITS",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "MTS",
+	id = "1",
+	services = {
+		{
+			id            = "1",
+			providerId    = "1",
+			categoryId    = "1",
+			name          = "Popolnenie scheta",
+			serviceTypeId = "1",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "1",
+								name    = "phone_number",
+								type    = "N",
+								size    = "10",
+								label   = "Nomer telefona",
+								required = "true",
+							},
+							{
+								serviceTypeId = "1",
+								name    = "summa",
+								type    = "N",
+								size    = "10",
+								label   = "Summa",
+								required = "true",
+							},
+							{
+								serviceTypeId = "1",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 2% komissionnyh.^Podtverzhdayu informatsiyu. "
+		}
+	}
+},
+{	name = "GTS",
+	id = "46",
+	services = {
+		{
+			id            = "112",
+			providerId    = "46",
+			categoryId    = "1",
+			name          = "Za MN i MG razgovory",
+			serviceTypeId = "16",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "16",
+								name    = "phone_number",
+								type    = "N",
+								size    = "7",
+								label   = "Nomer telefona",
+								required = "true",
+							},
+							{
+								serviceTypeId = "16",
+								name    = "summa",
+								type    = "N",
+								size    = "6",
+								label   = "Summa",
+								required = "true",
+							},
+							{
+								serviceTypeId = "16",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 3% komissionnyh.^Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "109",
+			providerId    = "46",
+			categoryId    = "1",
+			name          = "Abonentskaya plata",
+			serviceTypeId = "15",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "15",
+								name    = "phone_number",
+								type    = "N",
+								size    = "7",
+								label   = "Nomer telefona",
+								required = "true",
+							},
+							{
+								serviceTypeId = "15",
+								name    = "summa",
+								type    = "N",
+								size    = "6",
+								label   = "Summa",
+								required = "true",
+							},
+							{
+								serviceTypeId = "15",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 3% komissionnyh.^Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "Cron Telecom",
+	id = "14",
+	services = {
+		{
+			id            = "41",
+			providerId    = "14",
+			categoryId    = "2",
+			name          = "Cron - 10000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "40",
+			providerId    = "14",
+			categoryId    = "2",
+			name          = "Cron - 5000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "39",
+			providerId    = "14",
+			categoryId    = "2",
+			name          = "Cron - 3000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "COMNET",
+	id = "24",
+	services = {
+		{
+			id            = "79",
+			providerId    = "24",
+			categoryId    = "2",
+			name          = "Nochnoi (15 000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "77",
+			providerId    = "24",
+			categoryId    = "2",
+			name          = "Gold (5000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "78",
+			providerId    = "24",
+			categoryId    = "2",
+			name          = "Platinum (7500)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "76",
+			providerId    = "24",
+			categoryId    = "2",
+			name          = "Silver (3000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "ROL",
+	id = "10",
+	services = {
+		{
+			id            = "27",
+			providerId    = "10",
+			categoryId    = "2",
+			name          = "10 RU (8000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "28",
+			providerId    = "10",
+			categoryId    = "2",
+			name          = "20 RU (16000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "26",
+			providerId    = "10",
+			categoryId    = "2",
+			name          = "5 RU (4000 sum)",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+},
+{	name = "InfoNet",
+	id = "5",
+	services = {
+		{
+			id            = "15",
+			providerId    = "5",
+			categoryId    = "2",
+			name          = "10000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "95",
+			providerId    = "5",
+			categoryId    = "2",
+			name          = "5000 sum ",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "14",
+			providerId    = "5",
+			categoryId    = "2",
+			name          = "7000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "12",
+			providerId    = "5",
+			categoryId    = "2",
+			name          = "3000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "13",
+			providerId    = "5",
+			categoryId    = "2",
+			name          = "6000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		},
+		{
+			id            = "11",
+			providerId    = "5",
+			categoryId    = "2",
+			name          = "2000 sum",
+			serviceTypeId = "2",
+			chequeInfoId  = "null",
+			serviceType   = {
+							{
+								serviceTypeId = "2",
+								name    = "quantity",
+								type    = "N",
+								size    = "2",
+								label   = "Kolichestvo",
+								required = "true",
+							},
+							{
+								serviceTypeId = "2",
+								name    = "loyalty_id",
+								type    = "N",
+								size    = "11",
+								label   = "Paynet ID",
+								required = "false",
+							},
+			},
+			chequeInfo    = "Podtverzhdayu informatsiyu."
+		}
+	}
+}
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+<categories_list size="4">
+<category id="1" name="Sotovye operatory"/>
+<category id="2" name="Internet"/>
+<category id="5" name="Uslugi"/>
+<category id="100" name="Otmena platezhei"/>
+</categories_list>
+<providers_list size="4">
+<provider category_id="100" id="48" name="MTS (otmena)"/>
+<provider category_id="1" id="1" name="MTS"/>
+<provider category_id="5" id="8" name="Paynet"/>
+<provider category_id="2" id="3" name="Ars-Inform"/>
+</providers_list>
+<services_list size="10">
+<service category_id="1" provider_id="1" id="1" name="Popolnenie scheta" service_type_id="1" service_price="0"/>
+<service category_id="5" provider_id="8" id="60" name="Tekuschii depozit" service_type_id="8" service_price="0"/>
+<service category_id="5" provider_id="8" id="61" name="Tekuschii kurs USD" service_type_id="9" service_price="0"/>
+<service category_id="2" provider_id="3" id="5" name="ChAT (5000 sum)" service_type_id="2" service_price="0"/>
+<service category_id="2" provider_id="3" id="6" name="250 Mb (10000 sum)" service_type_id="2" service_price="0"/>
+<service category_id="2" provider_id="3" id="7" name="Night (15000 sum)" service_type_id="2" service_price="0"/>
+<service category_id="2" provider_id="3" id="71" name="500 Mb (15000 sum)" service_type_id="2" service_price="0"/>
+<service category_id="2" provider_id="3" id="106" name="5 chasov (3000 sum)" service_type_id="2" service_price="0"/>
+<service category_id="2" provider_id="3" id="107" name="10 chasov (5000 sum)" service_type_id="2" service_price="0"/>
+<service category_id="100" provider_id="48" id="113" name="Otmena platezha" service_type_id="6" service_price="0"/>
+</services_list>
+<service_type_list size="10">
+<service_type id="7">
+<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+<service_type id="1">
+<details><field_name>phone_number</field_name><field_label>Nomer telefona</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Summa</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+<service_type id="2">
+<details><field_name>quantity</field_name><field_label>Kolichestvo</field_label><field_type>N</field_type><field_size>2</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+<service_type id="3">
+<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Summa</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details></service_type>
+<service_type id="4">
+<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Summa</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>watt</field_name><field_label>Pokazatel' schetchika</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+<service_type id="5">
+<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+<service_type id="6">
+<details><field_name>transaction_id</field_name><field_label>Nomer platezha</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details><details><field_name>phone_number</field_name><field_label>Nomer telefona</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details></service_type>
+<service_type id="12">
+<details><field_name>licschet</field_name><field_label>Litsevoi schet</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+<service_type id="11">
+<details><field_name>licschet</field_name><field_label>Litsevoi schet</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+<service_type id="8">
+</service_type>
+<service_type id="10">
+<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>watt</field_name><field_label>Ob'em (kVt/ch)</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+<service_type id="14">
+<details><field_name>login</field_name><field_label>Login X-</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details></service_type>
+<service_type id="9">
+</service_type>
+<service_type id="13">
+<details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Summa</field_label><field_type>N</field_type><field_size>10</field_size><is_required>true</is_required></details></service_type>
+<service_type id="15">
+<details><field_name>phone_number</field_name><field_label>Nomer telefona</field_label><field_type>N</field_type><field_size>7</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Summa</field_label><field_type>N</field_type><field_size>6</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+<service_type id="16">
+<details><field_name>phone_number</field_name><field_label>Nomer telefona</field_label><field_type>N</field_type><field_size>7</field_size><is_required>true</is_required></details><details><field_name>summa</field_name><field_label>Summa</field_label><field_type>N</field_type><field_size>6</field_size><is_required>true</is_required></details><details><field_name>loyalty_id</field_name><field_label>Paynet ID</field_label><field_type>N</field_type><field_size>11</field_size><is_required>false</is_required></details></service_type>
+</service_type_list>
+<cheque_info_list size="91">
+<cheque_info service_id="26" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="27" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="28" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="29" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="30" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="31" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="32" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="33" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="34" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="35" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="36" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="37" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="38" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="39" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="40" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="41" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="42" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="43" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="44" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="45" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="46" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="47" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="48" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="49" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="50" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="51" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="52" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="53" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="54" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="55" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="56" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="57" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="58" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="59" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="60" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="61" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="62" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="63" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="65" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="66" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="67" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="68" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="69" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="70" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="71" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="72" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="73" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="74" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="75" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="76" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="77" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="78" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="79" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="92" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="93" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="94" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="95" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="96" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="97" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="98" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="99" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="100" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="101" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="102" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="103" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="104" info="Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 2% komissionnyh.^Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="64" info="Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 2% komissionnyh.^Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="1" info="Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 2% komissionnyh.^Podtverzhdayu informatsiyu.
+"/>
+<cheque_info service_id="2" info="Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 2% komissionnyh.^Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="112" info="Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 3% komissionnyh.^Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="109" info="Podpisyvaya dannuyu zayavku sogla-^shayus' s zachisleniem platezha na^schet za vychetom 3% komissionnyh.^Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="3" info="Podtverzhdayu informatsiyu.
+"/>
+<cheque_info service_id="4" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="5" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="6" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="7" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="8" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="9" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="10" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="11" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="12" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="13" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="14" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="15" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="16" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="17" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="18" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="19" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="20" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="21" info="Podtverzhdayu informatsiyu."/>
+<cheque_info service_id="22" info="Podtverzhdayu informatsiyu."/>
+</cheque_info_list>
+</response>

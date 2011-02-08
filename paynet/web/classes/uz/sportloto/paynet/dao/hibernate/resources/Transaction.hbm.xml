@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping schema="LOTTO">
+	<class name="uz.sportloto.paynet.model.response.Transaction" table="T_TRANSACTION">
+        <id column="TRANSACTION_ID" type="long" name="id">
+            <generator class="increment" />
+        </id>
+        <property name="paynetChequeId" column="PAYNET_CHEQUE" type="string" length="30"/>
+        <property name="transactionDate" column="TRANSACTION_DATE" type="timestamp"/>
+        <property name="statusCode" column="STATUS_CODE"/>
+        <property name="statusText" column="STATUS_TEXT"/>
+        <property name="receiptDetails" column="RECEIPT_DETAILS"/>
+        <property name="sum" column="SUMMA"/>
+        <property name="commission" column="COMMISSION"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://www.snslabs.com/schemas/test"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.snslabs.com/schemas/test test-schema.xsd">
+
+    <mappingEntry property="property" table="table1" column="column2"/>
+    <creditMappingEntry property="credit" table="credittable" column="creditcolumn"/>
+    <irsMappingEntry property="isrproperty" table="irstable" column="irscolumn"/>
+
+</map>

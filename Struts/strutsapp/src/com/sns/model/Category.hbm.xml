@@ -1,0 +1,20 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.sns.model.Category" table="Category">
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="title" column="property" type="string"/>
+        <set name="adverts" table="link_category_advert">
+            <key column="id"/>
+            <many-to-many class="com.sns.model.Advert" column="advert"/>
+        </set>
+        <bag name="phoneList" inverse="true" cascade="save-update,evict" lazy="true">
+          <key column="categor"/>
+          <one-to-many class="com.sns.model.Phone"/>
+        </bag>
+
+    </class>
+</hibernate-mapping>

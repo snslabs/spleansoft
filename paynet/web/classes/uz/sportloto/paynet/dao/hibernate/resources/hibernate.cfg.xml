@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!--<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:vpn4</property>
+        <property name="hibernate.connection.username">lotto</property>
+        <property name="hibernate.connection.password">lotto</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        <property name="hibernate.c3p0.max_statements">50</property>-->
+
+        <property name="hibernate.connection.datasource">java:/comp/env/jdbc/sportlotto</property>
+        <property name="dialect">net.sf.hibernate.dialect.OracleDialect</property>
+        <property name="hibernate.query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+        <!--Miscellaneous Settings-->
+        <!--<property name="hibernate.connection.isolation">2</property>-->
+        <property name="hibernate.cglib.use_reflection_optimizer">false</property>
+        <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
+        <property name="show_sql">true</property>
+
+        <!-- Do not set batch size to value other than zero, or BLOB/CLOB handling may fail -->
+        <property name="hibernate.jdbc.batch_size">0</property>
+        <property name="hibernate.jdbc.fetch_size">25</property>
+        <property name="hibernate.max_fetch_depth">5</property>
+
+        <!--accounting-->
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/Category.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/Service.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/ServiceType.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/Provider.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/Field.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/Transaction.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/PaynetRequest.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/PaynetRequestDetail.hbm.xml"/>
+        <mapping resource="uz/sportloto/paynet/dao/hibernate/resources/LookupQueries.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>

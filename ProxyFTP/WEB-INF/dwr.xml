@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE dwr PUBLIC
+        "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+        "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+
+<dwr>
+    <allow>
+        <create creator="new" javascript="JDate">
+            <param name="class" value="java.util.Date"/>
+        </create>
+        <create creator="new" javascript="DWRExample">
+            <param name="class" value="com.splean.web.dwr.DWRExample"/>
+        </create>
+        <create creator="new" javascript="FilesFacade">
+            <param name="class" value="com.splean.web.file.FilesFacade"/>
+        </create>
+        <convert converter="bean" match="com.splean.web.file.FileSystemFileModel"/>
+        <convert converter="bean" match="com.splean.web.file.FtpFileModel"/>
+    </allow>
+</dwr>
