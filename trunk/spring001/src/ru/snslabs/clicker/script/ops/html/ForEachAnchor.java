@@ -74,7 +74,7 @@ public class ForEachAnchor extends HtmlScriptOperation {
 
             }
         }
-        catch (JaxenException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         return null;

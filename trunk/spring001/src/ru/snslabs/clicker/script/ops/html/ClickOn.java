@@ -1,7 +1,6 @@
 package ru.snslabs.clicker.script.ops.html;
 
 import com.gargoylesoftware.htmlunit.Page;
-import com.gargoylesoftware.htmlunit.html.ClickableElement;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import ru.snslabs.clicker.script.ScriptContext;
 import ru.snslabs.clicker.script.ops.ScriptFailure;
@@ -20,11 +19,11 @@ public class ClickOn extends AbstractElementOperationEx {
         if(htmlEl == null){
             System.out.println("element cannot be clicked : " + htmlEl);
         }
-        if (htmlEl instanceof ClickableElement) {
+        if (htmlEl != null) {
             try {
                 long start = System.currentTimeMillis();
                 System.out.println("Processing click ....  ");
-                Page page = ((ClickableElement) htmlEl).click();
+                Page page = htmlEl.click();
                 System.out.println("... processed in " + (System.currentTimeMillis() - start) + " ms");
                 setCurrentPage(page, scriptContext);
                 return page;

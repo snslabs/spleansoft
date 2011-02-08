@@ -35,6 +35,6 @@ public class GetAttribute extends HtmlScriptOperation implements ValueResolver {
     public Object resolve(ScriptContext scriptContext) {
         HtmlElement el = resolveToHtmlElement(htmlEl, scriptContext);
         String attrName = resolveToString(attributeName, scriptContext);
-        return el.getAttributeValue(attrName);
+        return el.getAttribute(attrName);
     }
 }

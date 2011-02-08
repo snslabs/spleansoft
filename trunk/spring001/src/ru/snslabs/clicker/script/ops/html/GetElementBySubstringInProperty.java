@@ -21,7 +21,7 @@ public class GetElementBySubstringInProperty extends HtmlScriptOperation impleme
     }
 
     public Object resolve(ScriptContext scriptContext) {
-        HtmlElement element = getCurrentPage(scriptContext).getDocumentHtmlElement();
+        HtmlElement element = getCurrentPage(scriptContext).getDocumentElement();
         return find(element,
                 resolveToString(attrName, scriptContext),
                 resolveToString(substring, scriptContext),
@@ -32,13 +32,13 @@ public class GetElementBySubstringInProperty extends HtmlScriptOperation impleme
     }
 
     private Object find(HtmlElement element, String attrName, String substring, String tagName, ScriptContext scriptContext) {
-        String attrValue = element.getAttributeValue(attrName);
+        String attrValue = element.getAttribute(attrName);
         System.out.println(element + " : "+attrName + " = "+ attrValue+"\n"+substring);
         if (attrValue != null && attrValue.toUpperCase().indexOf(substring.toUpperCase())!=-1 && (tagName==null || tagName.equalsIgnoreCase(element.getTagName()) )) {
             return element;
         }
         else {
-            Iterator childIterator = element.getChildIterator();
+            Iterator childIterator = element.getChildElements().iterator();
             while (childIterator.hasNext()) {
                 final Object o = childIterator.next();
                 if(o instanceof HtmlElement){

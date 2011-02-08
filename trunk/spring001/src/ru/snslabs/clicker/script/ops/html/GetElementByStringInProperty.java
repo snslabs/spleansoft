@@ -21,7 +21,7 @@ public class GetElementByStringInProperty extends HtmlScriptOperation implements
     }
 
     public Object resolve(ScriptContext scriptContext) {
-        HtmlElement element = getCurrentPage(scriptContext).getDocumentHtmlElement();
+        HtmlElement element = getCurrentPage(scriptContext).getDocumentElement();
         return find(element,
                 resolveToString(attrName, scriptContext),
                 resolveToString(substring, scriptContext),
@@ -32,20 +32,15 @@ public class GetElementByStringInProperty extends HtmlScriptOperation implements
     }
 
     private Object find(HtmlElement element, String attrName, String substring, String tagName, ScriptContext scriptContext) {
-        String attrValue = element.getAttributeValue(attrName);
-        System.out.println(element + " : "+attrName + " = "+ attrValue+"\n"+substring);
-        if (attrValue != null && substring.equals(attrValue) && (tagName==null || tagName.equalsIgnoreCase(element.getTagName()) )) {
+        String attrValue = element.getAttribute(attrName);
+        System.out.println(element + " : " + attrName + " = " + attrValue + "\n" + substring);
+        if (attrValue != null && substring.equals(attrValue) && (tagName == null || tagName.equalsIgnoreCase(element.getTagName()))) {
             return element;
-        }
-        else {
-            Iterator childIterator = element.getChildIterator();
-            while (childIterator.hasNext()) {
-                final Object o = childIterator.next();
-                if(o instanceof HtmlElement){
-                    final Object res = find((HtmlElement) o, attrName, substring, tagName, scriptContext);
-                    if (res != null) {
-                        return res;
-                    }
+        } else {
+            for (HtmlElement htmlElement : element.getChildElements()) {
+                final Object res = find((HtmlElement) htmlElement, attrName, substring, tagName, scriptContext);
+                if (res != null) {
+                    return res;
                 }
             }
         }
