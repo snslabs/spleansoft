@@ -48,6 +48,39 @@
     <execution-inputs />
   </component>
   <component name="DBNavigator.Project.Settings">
+    <browser-settings>
+      <general>
+        <display-mode value="SIMPLE" />
+      </general>
+      <filters>
+        <visible-objects>
+          <object-type name="SCHEMA" enabled="true" />
+          <object-type name="USER" enabled="true" />
+          <object-type name="ROLE" enabled="true" />
+          <object-type name="PRIVILEGE" enabled="true" />
+          <object-type name="CHARSET" enabled="true" />
+          <object-type name="TABLE" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED VIEW" enabled="true" />
+          <object-type name="NESTED TABLE" enabled="true" />
+          <object-type name="COLUMN" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="TRIGGER" enabled="true" />
+          <object-type name="SYNONYM" enabled="true" />
+          <object-type name="SEQUENCE" enabled="true" />
+          <object-type name="PROCEDURE" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
+          <object-type name="PACKAGE" enabled="true" />
+          <object-type name="TYPE" enabled="true" />
+          <object-type name="TYPE ATTRIBUTE" enabled="true" />
+          <object-type name="ARGUMENT" enabled="true" />
+          <object-type name="DIMENSION" enabled="true" />
+          <object-type name="CLUSTER" enabled="true" />
+          <object-type name="DBLINK" enabled="true" />
+        </visible-objects>
+      </filters>
+    </browser-settings>
     <dataset-editor-settings>
       <autopopup-text-editor active="true" active-if-empty="false" data-length-threshold="100" delay="1000" />
       <values-list-popup>
@@ -76,9 +109,21 @@
         <content-type name="Java" enabled="true" />
         <content-type name="SQL" enabled="true" />
         <content-type name="PL/SQL" enabled="true" />
+        <content-type name="JPA QL" enabled="true" />
         <content-type name="JavaScript" enabled="true" />
         <content-type name="PHP" enabled="true" />
         <content-type name="JSP" enabled="true" />
+        <content-type name="JSPx" enabled="true" />
+        <content-type name="Groovy" enabled="true" />
+        <content-type name="FTL" enabled="true" />
+        <content-type name="TML" enabled="true" />
+        <content-type name="GSP" enabled="true" />
+        <content-type name="ASP" enabled="true" />
+        <content-type name="VTL" enabled="true" />
+        <content-type name="AIDL" enabled="true" />
+        <content-type name="YAML" enabled="true" />
+        <content-type name="Flex" enabled="true" />
+        <content-type name="Manifest" enabled="true" />
       </lob-content-types>
     </dataset-editor-settings>
     <code-completion-settings>
@@ -226,7 +271,16 @@
         <sorting-element type="RESERVED_WORD" id="parameter" />
       </sorting>
     </code-completion-settings>
-    <execution-engine-settings />
+    <execution-engine-settings>
+      <statement-execution>
+        <fetch-block-size value="100" />
+        <execution-timeout value="20" />
+      </statement-execution>
+      <compiler>
+        <compile-type value="NORMAL" />
+        <always-show-controls value="false" />
+      </compiler>
+    </execution-engine-settings>
     <ddl-file-settings>
       <extensions>
         <mapping file-type-id="VIEW" extensions="vw" />

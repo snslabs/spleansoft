@@ -27,7 +27,7 @@ public class GetLinkByText extends HtmlScriptOperation implements ValueResolver 
     public Object resolve(ScriptContext scriptContext) {
         List<HtmlAnchor> list = getCurrentPage(scriptContext).getAnchors();
         for (HtmlAnchor htmlAnchor : list) {
-            Object o = htmlAnchor.getChildIterator().next();
+            Object o = htmlAnchor.getChildElements().iterator().next();
             System.out.println(o.toString());
             if(text.equals(o.toString())){
                 return htmlAnchor;

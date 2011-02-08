@@ -1,7 +1,6 @@
 package ru.snslabs.clicker.script.ops.html;
 
 import com.gargoylesoftware.htmlunit.Page;
-import com.gargoylesoftware.htmlunit.html.ClickableElement;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import ru.snslabs.clicker.script.ScriptContext;
 import ru.snslabs.clicker.script.ops.ScriptFailure;
@@ -16,9 +15,9 @@ public class Click extends AbstractElementOperation {
     private int y;
 
     Object execute(HtmlElement htmlEl, ScriptContext scriptContext) {
-        if (htmlEl instanceof ClickableElement) {
+        if (htmlEl != null) {
             try {
-                Page page = ((ClickableElement) htmlEl).click();
+                Page page = htmlEl.click();
 
                 setCurrentPage(page, scriptContext);
                 return page;

@@ -42,10 +42,22 @@
                 <s:open url="http://www.mail.ru/"/>
                 <s:type-into nameAttr="Login" value="le-cafard"/>
                 <s:type-into nameAttr="Password" value="splean"/>
+                <s:print filename="output" mode="html"/>
                 <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
                     <property name="xpath" value="//input[@class='submit']"/>
                 </bean>
-                <s:print filename="output" mode="dom"/>
+                <s:open url="http://www.mail.ru/"/>
+
+                <bean class="ru.snslabs.clicker.script.ops.SwitchJavascript">
+                    <property name="enabled" value="true"/>
+                </bean>
+                <s:open url="http://chat.mail.ru/"/>
+                <s:type-into idAttr="chat_nick" value="HumanBeing"/>
+
+                <bean class="ru.snslabs.clicker.script.ops.html.ClickOn">
+                    <property name="xpath" value="//a[contains(@onclick,'1:2320879')]"/>
+                </bean>
+                <s:print filename="output" mode="html"/>
 
             </list>
         </property>

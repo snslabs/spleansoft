@@ -29,11 +29,9 @@ public class Print extends HtmlScriptOperation {
     }
 
     private void printPageDom(HtmlPage htmlPage) {
-        /*
         for( Object o : htmlPage.getTabbableElements()){
             System.out.println("Tabbed element: " + o.getClass() + " : " + o.toString());
         }
-        */
     }
 
     private void printPage(HtmlPage currentPage, String prefix) {

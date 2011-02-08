@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 public class Main {
 
-    private BrowserVersion browserVersion = BrowserVersion.FIREFOX_2;
+    private BrowserVersion browserVersion = BrowserVersion.FIREFOX_3_6;
 
     private ScriptOperation scriptOperation;
 

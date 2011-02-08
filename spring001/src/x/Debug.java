@@ -1,8 +1,7 @@
 package x;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
-import com.gargoylesoftware.htmlunit.html.xpath.HtmlUnitXPath;
-import org.jaxen.JaxenException;
+import com.gargoylesoftware.htmlunit.html.xpath.XPathUtils;
 import ru.snslabs.clicker.script.ScriptContext;
 import ru.snslabs.clicker.script.ops.HtmlScriptOperation;
 import ru.snslabs.clicker.script.ops.ScriptFailure;
@@ -21,13 +20,12 @@ public class Debug extends HtmlScriptOperation {
     }
 
     public Object execute(ScriptContext scriptContext) throws ScriptFailure {
-        HtmlElement element = getCurrentPage(scriptContext).getDocumentHtmlElement();
+        HtmlElement element = getCurrentPage(scriptContext).getDocumentElement();
         try {
-            HtmlUnitXPath xPath = new HtmlUnitXPath(xpath);
-            final List list = xPath.selectNodes(element);
+            final List list = XPathUtils.getByXPath(element, xpath);
             System.out.println(">> SPAMMED: "+list);
         }
-        catch (JaxenException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         return null;
