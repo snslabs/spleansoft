@@ -59,6 +59,7 @@ function renderEditTour($tour){
             TOUR_ID: jQuery('#TOUR_ID').val(),
             LANG_ID: jQuery('#LANG_ID').val(),
             TOUR_NAME: jQuery('#TOUR_NAME').val(),
+            TOUR_DATE: jQuery('#TOUR_DATE').val(),
             TOUR_DESC: jQuery('#TOUR_DESC').html(),
             TOUR_ARTICLE_URL: jQuery('#TOUR_ARTICLE_URL').val(),
             TOUR_PDF_URL: jQuery('#TOUR_PDF_URL').val(),
@@ -97,6 +98,9 @@ function renderEditTour($tour){
             </tr>
             <tr>
                 <td colspan="3"><b>Наименование:</b> <?= textControl('TOUR_NAME', $tour->TOUR_NAME, 'TOUR_NAME') ?></td>
+            </tr>
+            <tr>
+                <td colspan="3"><b>Дата:</b> <?= textControl('TOUR_DATE', $tour->TOUR_DATE, 'TOUR_DATE') ?></td>
             </tr>
         </table>
 		<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
@@ -146,7 +150,6 @@ function renderEditTour($tour){
         <script type="text/javascript">
             ASPSESSID = "ciftuemt43pxrh55jjdohm3o";
             try{
-                alert('binding fileuploader');
                 BindSWFUpload("*.pdf", "PDF files", "#TOUR_ID", "TOUR");
             }
             catch(e)

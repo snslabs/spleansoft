@@ -37,6 +37,7 @@
             `TOUR_ID` INT NOT NULL ,
             `LANG_ID` CHAR( 2 ) NOT NULL ,
             `TOUR_NAME` TEXT NOT NULL ,
+            `TOUR_DATE` DATE NULL,
             `TOUR_DESC` TEXT NULL ,
             `TOUR_ARTICLE_URL` TEXT NULL ,
             `TOUR_PDF_URL` TEXT NULL ,

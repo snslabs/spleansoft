@@ -16,6 +16,10 @@ function textControl($controlName, $controlValue, $controlId){
 ?><input type="text" name="<?= $controlName ?>" id="<?= $controlId ?>" style='width: 300px;' value="<?= $controlValue ?>"><?php
 }
 
+function dateControl($controlName, $controlValue, $controlId){
+?><input type="text" name="<?= $controlName ?>" id="<?= $controlId ?>" style='width: 300px;' value="<?= $controlValue ?>"><?php
+}
+
 function hiddenControl($controlName, $controlValue, $controlId){
 ?><input type="hidden" name="<?= $controlName ?>" id="<?= $controlId ?>" style='width: 300px;' value="<?= $controlValue ?>"><?php
 }

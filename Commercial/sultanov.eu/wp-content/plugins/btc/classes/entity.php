@@ -6,14 +6,14 @@
  * Time: 23:10:26
  * To change this template use File | Settings | File Templates.
  */
- 
+
 class Entity {
 
     public $ID;
     public $_LANGS;
 
     function GetTableName(){
-        
+
     }
 
     function initArray(Array $arr){
@@ -48,40 +48,49 @@ class Entity {
 
     public function save() {
         global $wpdb;
-        // echo $this->toString();
+        echo $this->toString();
+        $dataArray = array();
+        $typeArray = array();
+        $vars = get_class_vars(get_class($this));
+        $index = 0;
+        $PKFieldName = $this->_PK;
+        foreach($vars as $name => $value){
+            $value = $this->$name;
+            // echo $name . " = " . $value . " <br>";
+            if($name != "ID" && strpos($name,"_") != 0){
+                $dataArray[$name] = $value;
+                if(is_string($value)){
+                    $typeArray[$index] = "%s";
+                }
+                else if(is_numeric($index)){
+                    $typeArray[$index] = "%d";
+                }
+                else{
+                    // undefined data - let it be string for now
+                    $typeArray[$index] = "%s";
+                }
+                $index++;
+            }
+        }
 
         if($this->ID != ""){
-            // можно изменить только наименование тура, описание, ссылки на статью и PDF, но не номер и не язык
-            $wpdb->update($this->TABLE,
-                    array(  'TOUR_NAME'=>$this->TOUR_NAME,
-                            'TOUR_DESC'=>$this->TOUR_DESC,
-                            'TOUR_ARTICLE_URL'=>$this->TOUR_ARTICLE_URL,
-                            'TOUR_PDF_URL'=>$this->TOUR_PDF_URL,
-                            'IS_ACTIVE'=>$this->IS_ACTIVE,),
-                    array('ID' => $this->ID), array("%s","%s","%s","%s","%d"), array("%d"));
+            $wpdb->update($this->_TABLE, $dataArray, array('ID' => $this->ID), $typeArray, array("%d"));
         }
-        else if($this->TOUR_ID != ""){
-            // создание нового языка для существующего тура
-            $wpdb->insert($this->TABLE,
-                    array(  'LANG_ID'=>$this->LANG_ID,
-                            'TOUR_CAT_ID'=>$this->TOUR_CAT_ID,
-                            'TOUR_ID'=>$this->TOUR_ID,
-                            'TOUR_NAME'=>$this->TOUR_NAME,
-                            'TOUR_DESC'=>$this->TOUR_DESC,
-                            'TOUR_ARTICLE_URL'=>$this->TOUR_ARTICLE_URL,
-                            'TOUR_PDF_URL'=>$this->TOUR_PDF_URL,
-                            'IS_ACTIVE'=>$this->IS_ACTIVE,),
-                array("%s", "%d", "%d", "%s", "%s", "%s", "%s", "%d"));
+        else if($this->$PKFieldName != ""){
+            /*
+            foreach ($dataArray as $val){
+                echo $val . "<br>";
+            }
+             */
+            $wpdb->insert($this->_TABLE, $dataArray, $typeArray);
         }
         else{
-            // создание нового тура
-            // присваиваем новый тура
-            $this->TOUR_ID = $wpdb->get_var("select IFNULL(max(TOUR_ID) + 1, 0) from " . $this->TABLE);
-            echo "Obtained new Tour_id " . $this->TOUR_ID;
+            // СЃРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ Р±СЂРµРЅРґР°
+            $this->$PKFieldName = $wpdb->get_var("select IFNULL(max(  $this->_PK  ) + 1, 0) from $this->_TABLE");
+            // echo "saved with PK = " . $this->$PKFieldName;
             $this->save();
         }
-        echo  "<span style='background-color: #DDDDDD'>" . $wpdb->last_error . "</span>";
+        echo  "<span style='background-color: red'>" . $wpdb->last_error . "<br>".$this->_TABLE."</span>";
     }
-
 }
 ?>
