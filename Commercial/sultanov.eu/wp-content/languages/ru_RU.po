@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress 3.0.3\n"
+"Project-Id-Version: WordPress 3.0.4\n"
 "Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.com\n"
 "POT-Creation-Date: 2010-12-01 00:06+0000\n"
-"PO-Revision-Date: 2010-12-08 21:39+0300\n"
+"PO-Revision-Date: 2010-12-29 23:56+0300\n"
 "Last-Translator: Sergey Biryukov <sergeybiryukov.ru@gmail.com>\n"
 "Language-Team: ru.wordpress.org <sergeybiryukov.ru@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -2371,7 +2371,7 @@ msgstr "Экспорт"
 
 #: wp-admin/export.php:20
 msgid "You can export a file of your site&#8217;s content in order to import it into another installation or platform. The export file will be an XML file format called WXR. Posts, pages, comments, custom fields, categories, and tags can be included. You can set filters to have the WXR file only include a certain date, author, category, tag, all posts or all pages, certain publishing statuses."
-msgstr "Можно экспортировать содержимое вашего сайта в файл, чтобы импортировать его на другой сайт или платформу. Файл будет представлять собой XML-файл под названием WXR. В него можео включить записи, страницы, комментарии, произвольные поля, рубрики и метки. Можно установить фильтры, чтобы файл включал в себя только определённую дату, автора, рубрику, метку, все записи или все страницы, либо определённые статусы публикации."
+msgstr "Можно экспортировать содержимое вашего сайта в файл, чтобы импортировать его на другой сайт или платформу. Файл будет представлять собой XML-файл под названием WXR. В него можно включить записи, страницы, комментарии, произвольные поля, рубрики и метки. Можно установить фильтры, чтобы файл включал в себя только определённую дату, автора, рубрику, метку, все записи или все страницы, либо определённые статусы публикации."
 
 #: wp-admin/export.php:21
 msgid "Once generated, your WXR file can be imported by another WordPress site or by another blogging platform able to access this format."
@@ -8141,7 +8141,7 @@ msgstr "XML-RPC"
 
 #: wp-admin/options-writing.php:127
 msgid "Enable the WordPress, Movable Type, MetaWeblog and Blogger XML-RPC publishing protocols."
-msgstr "Включить протоколы публикации WordPress, Movable Type, MetaWeblog и Blogger XML-RPC."
+msgstr "Включить протоколы публикации XML-RPC для WordPress, Movable Type, MetaWeblog и Blogger."
 
 #: wp-admin/options-writing.php:134
 msgid "Update Services"
@@ -9031,7 +9031,7 @@ msgstr "Следующие темы установлены, однако явл�
 
 #: wp-admin/tools.php:15
 msgid "Press This is a bookmarklet that makes it easy to blog about something you come across on the web. You can use it to just grab a link, or to post an excerpt. Press This will even allow you to choose from images included on the page and use them in your post. Just drag the Press This link on this screen to your bookmarks bar in your browser, and you&#8217;ll be on your way to easier content creation."
-msgstr "&laquo;Опубликовать&raquo; это функциональная закладка, позволяющая с лёгкостью написать о чём-то, что встретилось вам в Сети. Можно использовать её, чтобы просто сохранить ссылку или процитировать абзац. Закладка даже позволяет выбрать изображение из используемых на страницы и включить его в свою запись. Просто перетащите ссылку &laquo;Опубликовать&raquo; с этого экрана в ваши закладки и откройте для себя лёгкий способ создания содержимого."
+msgstr "&laquo;Опубликовать&raquo; &#8212; это функциональная закладка, позволяющая с лёгкостью написать о чём-то, что встретилось вам в Сети. Можно использовать её, чтобы просто сохранить ссылку или процитировать абзац. Закладка даже позволяет выбрать изображение из используемых на странице и включить его в свою запись. Просто перетащите ссылку &laquo;Опубликовать&raquo; с этого экрана в ваши закладки и откройте для себя лёгкий способ создания содержимого."
 
 #: wp-admin/tools.php:16
 msgid "Note: Turbo/Gears is no longer promoted on this screen as it was in previous versions due to the fact that Google has discontinued support for it."

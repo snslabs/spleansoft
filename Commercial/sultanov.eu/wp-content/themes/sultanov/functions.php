@@ -56,7 +56,7 @@ function output_menu($items,$position='',$path=''){ // output top_menu & sub_men
 			if($l<30){ // if small
 				$u1='<b>';$u2='</b>';
 			}
-			elseif($l>34){ // if big
+			elseif($l>35){ // if big
 				$u1='<span>';$u2='</span>';
 			}
 			else{$u1='';$u2='';}
@@ -74,7 +74,7 @@ function get_side_by_meta($meta_key){ // side kontent by meta
 	$pages=get_pages(array('meta_key' => $meta_key)); // get page by filter meta_key
 	foreach($pages as $page){ 
 		//print_r($page); output all content
-		echo "<h3>".$page->meta_value."</h3>";
+		//echo "<h3>".$page->meta_value."</h3>";
 		echo $page->post_content;
 		break; // return 2 records why? =(
 	}
