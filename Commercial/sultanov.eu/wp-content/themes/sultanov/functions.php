@@ -61,7 +61,7 @@ function output_menu($items,$position='',$path=''){ // output top_menu & sub_men
 			}
 			else{$u1='';$u2='';}
 			
-		}
+		}				
 		$s='<a '.$active.' href="'.$items[$i][link].'" tite="'.$items[$i][name].'" ><img src="'.$path.'/img/'.$imgurl.($i+1).'.gif" alt="Menu Icon '.($i+1).'"/> '.$u1.$items[$i][name].$u2.'</a>'.$divider;
 		echo $s;		
 	}
