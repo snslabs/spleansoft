@@ -51,12 +51,12 @@ function output_menu($items,$position='',$path=''){ // output top_menu & sub_men
 		if ($items[$i][active]==true){
 			$active='class="active" ';
 		}
-		if($position=='sub_menu'){  // text correction
-			$l = strlen($items[$i][name]);
+		if($position=='sub_menu'){  // text correction			
+            $l = strlen($items[$i][name]);
 			if($l<30){ // if small
 				$u1='<b>';$u2='</b>';
 			}
-			elseif($l>35){ // if big
+			elseif(($l>35)&&($l<38)){ // if big
 				$u1='<span>';$u2='</span>';
 			}
 			else{$u1='';$u2='';}
