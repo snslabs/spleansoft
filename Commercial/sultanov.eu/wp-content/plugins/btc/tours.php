@@ -60,6 +60,20 @@ class TourManager{
         return $html;
     }
 
+    function brandListShortCodeHandler($attrs, $content = null){
+            $html = "
+            <div id='tour_content' ><table width='100%'>";
+            global $wpdb;
+            $rsBrands = $wpdb->get_results($wpdb->prepare("select * from wp_brand where LANG_ID = %s ", $this->getLangId()));
+            foreach($rsBrands as $rBrand){
+                $brand = new Brand();
+                $brand->init($rBrand);
+                $html .= velocity_process_template("brand_list_element.tpl", $brand);
+            }
+            $html .= "</table></div>";
+            return $html;
+    }
+
 	function showTourCategoryList(){
 		?>
         <script src="/wp-content/plugins/btc/files/js/swfupload.js" type="text/javascript"></script>

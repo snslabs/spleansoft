@@ -1,0 +1,1 @@
+<a href="#BRAND_ARTICLE_URL#"><img src="#BRAND_LOGO_URL#" alt="#BRAND_NAME#"/></a>

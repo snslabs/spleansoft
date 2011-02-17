@@ -23,6 +23,7 @@ class AkmalPlugin{
         $this->brandManager = new BrandManager($this);
 
         add_shortcode('tours_list',array (&$this->tourManager,  'tourListShortCodeHandler'));
+        add_shortcode('brands_list',array (&$this->tourManager,  'brandListShortCodeHandler'));
         add_action('admin_menu',  array (&$this,  'admin') );
     }
 
