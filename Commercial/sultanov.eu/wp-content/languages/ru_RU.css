@@ -57,9 +57,9 @@
 /* Press This */
 
 .press-this .posting {
-	margin-right: 255px; /* default 228px + 27px */
+	margin-right: 264px; /* default 212px + 52px */
 }
 
 .press-this #side-info-column {
-	width: 245px; /* default 218px + 27px */
+	width: 252px; /* default 200px + 52px */
 }

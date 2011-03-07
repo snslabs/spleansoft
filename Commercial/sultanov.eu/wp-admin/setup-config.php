@@ -42,7 +42,7 @@ define('WP_DEBUG', false);
 require_once(ABSPATH . WPINC . '/load.php');
 require_once(ABSPATH . WPINC . '/compat.php');
 require_once(ABSPATH . WPINC . '/functions.php');
-require_once(ABSPATH . WPINC . '/classes.php');
+require_once(ABSPATH . WPINC . '/class-wp-error.php');
 require_once(ABSPATH . WPINC . '/version.php');
 
 if (!file_exists(ABSPATH . 'wp-config-sample.php'))
@@ -132,7 +132,7 @@ switch($step) {
 		<tr>
 			<th scope="row"><label for="pwd">Пароль</label></th>
 			<td><input name="pwd" id="pwd" type="text" size="25" value="password" /></td>
-			<td>&hellip;и пароль пользователя MySQL.</td>
+			<td>...и пароль пользователя MySQL.</td>
 		</tr>
 		<tr>
 			<th scope="row"><label for="dbhost">Сервер базы данных</label></th>
@@ -176,8 +176,10 @@ switch($step) {
 
 	// We'll fail here if the values are no good.
 	require_wp_db();
-	if ( !empty($wpdb->error) )
-		wp_die($wpdb->error->get_error_message());
+	if ( ! empty( $wpdb->error ) ) {
+		$back = '<p class="step"><a href="setup-config.php?step=1" onclick="javascript:history.go(-1);return false;" class="button">Попробовать ещё раз</a></p>';
+		wp_die( $wpdb->error->get_error_message() . $back );
+	}
 
 	// Fetch or generate keys and salts.
 	$no_api = isset( $_POST['noapi'] );
