@@ -42,6 +42,7 @@ body{color:#888;line-height:24px;font-family:Arial, Helvetica, sans-serif;font-s
 .topmenu a:hover{background-position:0px 0px;color:#09F;text-decoration:none}
 .topmenu a.active{background-position:0px -43px}
 .topmenu a img{position:relative;top:7px;margin-right:7px}
+.topmenu a u{margin:0;padding:0;position:relative;left:-4px}
 /* Search */
 #search{float:right;padding-top:2px;width:260px;overflow:hidden}
 #search input{float:right}
@@ -63,7 +64,7 @@ body{color:#888;line-height:24px;font-family:Arial, Helvetica, sans-serif;font-s
 #menu a:hover{color:#09F;background-position:0px 0px}
 #menu a.active{background-position:0px -82px}
 #menu a img{float:left;margin-right:8px}
-#menu a b{font-weight:normal;position:relative;top:10px}
+#menu a b{font-weight:normal;position:relative;top:5px;left:2px}
 #menu .div{width:2px;height:82px;overflow:hidden;background:url(../img/menu_div.gif);float:left;position:relative;top:2px}
 /*Left colume*/
 #lcolum{width:695px;padding:15px 5px 5px 25px;clear:both;float:left;overflow:hidden}

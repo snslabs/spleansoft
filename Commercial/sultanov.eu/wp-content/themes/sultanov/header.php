@@ -18,7 +18,7 @@
 
 
 <div id="top"><a href="<?php bloginfo('url'); ?>" title="Home Page"><img src="<?php bloginfo( 'template_url' ); ?>/img/logo.jpg" align="left" alt="Sultanov ltd. logo" class="logo" /></a>
-      <div class="topmenu"><?php output_menu(get_menu_by_meta('top_menu'),'top_menu',get_bloginfo("template_url"));?></div>
+      <?php render_amenu(0);?>
       <form id="search" name="search" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <a href="#search" onclick="document.forms[0].submit()">Search</a>
         <input class="search" type="text" value="Search" name="s" id="s" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value =
@@ -26,4 +26,4 @@
         <input class="hsubmit" type="submit" value="Search" />
       </form>
     </div>
-    <div id="menu"><?php output_menu(get_menu_by_meta('sub_menu'),'sub_menu',get_bloginfo("template_url"));?></div>
+    <?php render_amenu(1);?>
