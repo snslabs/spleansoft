@@ -76,13 +76,19 @@ namespace Beton.Forms
         {
             if (row.Cells[1].Value != null && row.Cells[1].Value != DBNull.Value)
             {
-                Matherial matherial = Directories.getMatherialById((int) row.Cells[1].Value);
-                row.Cells[4].Value = matherial.OrderPricePerTonn*
-                                     ((decimal) (row.Cells[2].Value == DBNull.Value ? Decimal.Zero : row.Cells[2].Value));
+                var matherialId = (int) row.Cells[1].Value;
+                Matherial matherial = Directories.getMatherialById(matherialId);
+                decimal amountPerCube = (decimal) (row.Cells[2].Value == DBNull.Value ? Decimal.Zero : row.Cells[2].Value);
+                decimal amountPerTonn = (decimal) (row.Cells[3].Value == DBNull.Value ? Decimal.Zero : row.Cells[3].Value);
+                row.Cells[4].Value = matherial.OrderPricePerCube*
+                                     amountPerCube;
+                row.Cells[5].Value = matherial.OrderPricePerTonn*
+                                     amountPerTonn;
             }
             else
             {
-                row.Cells[4].Value = -1;
+                row.Cells[4].Value = 0;
+                row.Cells[5].Value = 0;
             }
         }
 

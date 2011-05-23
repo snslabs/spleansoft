@@ -16,10 +16,10 @@ namespace Beton.Model
     {
         private static int VERSION = 1;
 
+        #region properties
         private List<Matherial> matherials = new List<Matherial>();
         private List<TransportType> transportTypes = new List<TransportType>();
         private List<Product> products = new List<Product>();
-        
         public static List<Matherial> MATHERIALS
         {
             get
@@ -27,7 +27,6 @@ namespace Beton.Model
                 return instance.matherials;
             }
         } 
-
         public static List<TransportType> TRANSPORT_TYPES
         {
             get
@@ -35,7 +34,6 @@ namespace Beton.Model
                 return instance.transportTypes;
             }
         }
-        
         public static List<Product> PRODUCTS
         {
             get
@@ -43,14 +41,13 @@ namespace Beton.Model
                 return instance.products;
             }
         }
-
         private static Directories instance;
+        #endregion
 
+        #region constructors
         static Directories(){
             instance = new Directories();
             defaultData();
-
-
         }
 
         private static void defaultData()
@@ -87,7 +84,9 @@ namespace Beton.Model
                 }
                 ), 500));
         }
+        #endregion
 
+        #region lookup methods
         static public Matherial getMatherialById(int id)
         {
             foreach(var m in MATHERIALS)
@@ -96,13 +95,22 @@ namespace Beton.Model
             }
             return null;
         }
+        #endregion
 
+        #region update methods
         public static void UpdateMatherials(List<Matherial> matherials)
         {
             MATHERIALS.Clear();
             MATHERIALS.AddRange(matherials);
         }
+        public static void UpdateProducts(List<Product> products)
+        {
+            PRODUCTS.Clear();
+            PRODUCTS.AddRange(products);
+        }
+        #endregion
 
+        #region serializations
         public static void SaveToFile(string fileName)
         {
             Stream stream = null;
@@ -123,6 +131,10 @@ namespace Beton.Model
 
         public static void LoadFromFile(string fileName)
         {
+            if(!File.Exists(fileName))
+            {
+                return;
+            }
             Stream stream = null;
             Directories directories = null;
             try
@@ -145,5 +157,7 @@ namespace Beton.Model
             instance = directories;
 
         }
+        #endregion
+
     }
 }

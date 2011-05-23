@@ -30,7 +30,10 @@ namespace Beton
         private void btnProducts_Click(object sender, EventArgs e)
         {
             productsForm.Products = Directories.PRODUCTS;
-            productsForm.ShowDialog(this);
+            if(productsForm.ShowDialog(this) == DialogResult.OK)
+            {
+                Directories.UpdateProducts(productsForm.Products);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -39,6 +42,11 @@ namespace Beton
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
+        {
+            Directories.LoadFromFile("beton.dat");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
             Directories.LoadFromFile("beton.dat");
         }
