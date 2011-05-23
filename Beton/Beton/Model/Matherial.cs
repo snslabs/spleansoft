@@ -9,6 +9,7 @@ namespace Beton.Model
     /// Должно выполняться соотношение
     /// PricePerTonn * Density = PricePerCube
     /// </summary>
+    [Serializable]
     public class Matherial : ITransportable, IGridDispalyable<Matherial>
     {
         public Matherial(object[] data)
@@ -31,8 +32,17 @@ namespace Beton.Model
             Name = name;
             Density = density;
             Description = description;
-            OrderPricePerTonn = orderPricePerTonn;
             OrderPricePerCube = orderPricePerCube;
+        }
+
+        public Matherial(int id, string name, double density, string description, decimal orderPricePerCube)
+        {
+            Id = id;
+            Name = name;
+            Density = density;
+            Description = description;
+            OrderPricePerCube = orderPricePerCube;
+            OrderPricePerTonn = CalcPricePerTonn(density.ToString(), orderPricePerCube.ToString());
         }
 
         public int Id { set; get; }
@@ -51,7 +61,7 @@ namespace Beton.Model
         /// <summary>
         /// Закупочная цена за тонну
         /// </summary>
-        public Decimal OrderPricePerTonn { set; get; }
+        public Decimal OrderPricePerTonn { set; get;  }
         /// <summary>
         /// Закупочная цена за кубометр
         /// </summary>
@@ -82,6 +92,16 @@ namespace Beton.Model
             OrderPricePerTonn = (Decimal) data[4];
             OrderPricePerCube = (Decimal) data[5];
         }
+
+        public static decimal CalcPricePerTonn(string strDensity, string strPricePerCube)
+        {
+            return decimal.Round(decimal.Divide(decimal.Parse(strPricePerCube), decimal.Parse(strDensity)), 2, MidpointRounding.AwayFromZero);
+        }
+
+        public static decimal CalcPricePerCube(string strDensity, string strPricePerCube)
+        {
+            return decimal.Round(decimal.Multiply(decimal.Parse(strPricePerCube), decimal.Parse(strDensity)), 2, MidpointRounding.AwayFromZero);
+        }
     }
 
     /// <summary>
@@ -89,6 +109,7 @@ namespace Beton.Model
     /// Должно выполняться соотношение:
     /// AmountCube * Matherial.Density = AmountTonn
     /// </summary>
+    [Serializable]
     public class ProductComponent : IGridDispalyable<ProductComponent>
     {
         public int Id { get; set; }
@@ -131,7 +152,7 @@ namespace Beton.Model
             dataTable.Columns.Add(new DataColumn("AmountCube", typeof(Decimal)));
         }
     }
-
+    [Serializable]
     public class Product
     {
         public int Id { get; set; }
@@ -207,7 +228,8 @@ namespace Beton.Model
             dataTable.Columns.Add(new DataColumn("WorkPricePerCube", typeof(Decimal)));
         }
     }
-
+    
+    [Serializable]
     public class TransportPrice
     {
         public TransportType TransportType { get; set; }
@@ -225,6 +247,7 @@ namespace Beton.Model
     /// <summary>
     /// Тип транспортировки
     /// </summary>
+    [Serializable]
     public class TransportType
     {
         public TransportType(string name)

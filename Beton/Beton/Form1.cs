@@ -14,15 +14,14 @@ namespace Beton
             InitializeComponent();
             
             matherialsForm = new MatherialsForm();
-            matherialsForm.Matherials = Directories.MATHERIALS;
 
             productsForm = new ProductsForm();
-            productsForm.Products = Directories.PRODUCTS;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(matherialsForm.ShowDialog(this) == DialogResult.OK)
+            matherialsForm.Matherials = Directories.MATHERIALS;
+            if (matherialsForm.ShowDialog(this) == DialogResult.OK)
             {
                 Directories.UpdateMatherials(matherialsForm.Matherials);
             }
@@ -30,7 +29,18 @@ namespace Beton
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
+            productsForm.Products = Directories.PRODUCTS;
             productsForm.ShowDialog(this);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Directories.SaveToFile("beton.dat");
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            Directories.LoadFromFile("beton.dat");
         }
     }
 }

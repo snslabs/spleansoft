@@ -100,9 +100,10 @@
             this.matherialsGridView.Name = "matherialsGridView";
             this.matherialsGridView.Size = new System.Drawing.Size(879, 229);
             this.matherialsGridView.TabIndex = 0;
-            this.matherialsGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.matherialsGridView_RowEnter);
-            this.matherialsGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.matherialsGridView_RowsAdded);
             this.matherialsGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.matherialsGridView_UserAddedRow);
+            this.matherialsGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.matherialsGridView_RowEnter);
+            this.matherialsGridView.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.matherialsGridView_CellValidated);
+            this.matherialsGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.matherialsGridView_RowsAdded);
             // 
             // idDataGridViewTextBoxColumn
             // 
