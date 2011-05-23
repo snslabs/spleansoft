@@ -34,15 +34,16 @@ namespace Beton.Forms
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.componentsDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matherialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.matherialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.amountTonnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountCubeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productComponentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matherialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.amountTonnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountCubeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPriceForCube = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPriceForTonn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.componentsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matherialBindingSource)).BeginInit();
@@ -74,7 +75,8 @@ namespace Beton.Forms
             this.matherialDataGridViewTextBoxColumn,
             this.amountTonnDataGridViewTextBoxColumn,
             this.amountCubeDataGridViewTextBoxColumn,
-            this.colPrice});
+            this.colPriceForCube,
+            this.colPriceForTonn});
             this.componentsDataGridView.DataSource = this.productComponentBindingSource;
             this.componentsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.componentsDataGridView.Name = "componentsDataGridView";
@@ -83,47 +85,9 @@ namespace Beton.Forms
             this.componentsDataGridView.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.componentsDataGridView_CellValidated);
             this.componentsDataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.componentsDataGridView_RowValidated);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "#";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // matherialDataGridViewTextBoxColumn
-            // 
-            this.matherialDataGridViewTextBoxColumn.DataPropertyName = "Matherial";
-            this.matherialDataGridViewTextBoxColumn.DataSource = this.matherialBindingSource;
-            this.matherialDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.matherialDataGridViewTextBoxColumn.HeaderText = "Материал";
-            this.matherialDataGridViewTextBoxColumn.Name = "matherialDataGridViewTextBoxColumn";
-            this.matherialDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.matherialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.matherialDataGridViewTextBoxColumn.ValueMember = "Id";
-            // 
             // matherialBindingSource
             // 
             this.matherialBindingSource.DataSource = typeof(Beton.Model.Matherial);
-            // 
-            // amountTonnDataGridViewTextBoxColumn
-            // 
-            this.amountTonnDataGridViewTextBoxColumn.DataPropertyName = "AmountTonn";
-            this.amountTonnDataGridViewTextBoxColumn.HeaderText = "Количество на тонну";
-            this.amountTonnDataGridViewTextBoxColumn.Name = "amountTonnDataGridViewTextBoxColumn";
-            this.amountTonnDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // amountCubeDataGridViewTextBoxColumn
-            // 
-            this.amountCubeDataGridViewTextBoxColumn.DataPropertyName = "AmountCube";
-            this.amountCubeDataGridViewTextBoxColumn.HeaderText = "Количество на кубометр";
-            this.amountCubeDataGridViewTextBoxColumn.Name = "amountCubeDataGridViewTextBoxColumn";
-            this.amountCubeDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // colPrice
-            // 
-            this.colPrice.DataPropertyName = "Price";
-            this.colPrice.HeaderText = "Стоимость";
-            this.colPrice.Name = "colPrice";
-            this.colPrice.ReadOnly = true;
             // 
             // productComponentBindingSource
             // 
@@ -152,6 +116,51 @@ namespace Beton.Forms
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "#";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // matherialDataGridViewTextBoxColumn
+            // 
+            this.matherialDataGridViewTextBoxColumn.DataPropertyName = "Matherial";
+            this.matherialDataGridViewTextBoxColumn.DataSource = this.matherialBindingSource;
+            this.matherialDataGridViewTextBoxColumn.DisplayMember = "Name";
+            this.matherialDataGridViewTextBoxColumn.HeaderText = "Материал";
+            this.matherialDataGridViewTextBoxColumn.Name = "matherialDataGridViewTextBoxColumn";
+            this.matherialDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.matherialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.matherialDataGridViewTextBoxColumn.ValueMember = "Id";
+            // 
+            // amountTonnDataGridViewTextBoxColumn
+            // 
+            this.amountTonnDataGridViewTextBoxColumn.DataPropertyName = "AmountTonn";
+            this.amountTonnDataGridViewTextBoxColumn.HeaderText = "Количество на тонну";
+            this.amountTonnDataGridViewTextBoxColumn.Name = "amountTonnDataGridViewTextBoxColumn";
+            this.amountTonnDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // amountCubeDataGridViewTextBoxColumn
+            // 
+            this.amountCubeDataGridViewTextBoxColumn.DataPropertyName = "AmountCube";
+            this.amountCubeDataGridViewTextBoxColumn.HeaderText = "Количество на кубометр";
+            this.amountCubeDataGridViewTextBoxColumn.Name = "amountCubeDataGridViewTextBoxColumn";
+            this.amountCubeDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // colPriceForCube
+            // 
+            this.colPriceForCube.DataPropertyName = "Price";
+            this.colPriceForCube.HeaderText = "Стоимость на кубометр";
+            this.colPriceForCube.Name = "colPriceForCube";
+            this.colPriceForCube.ReadOnly = true;
+            this.colPriceForCube.Width = 150;
+            // 
+            // colPriceForTonn
+            // 
+            this.colPriceForTonn.HeaderText = "Стоимость на тонну";
+            this.colPriceForTonn.Name = "colPriceForTonn";
+            this.colPriceForTonn.ReadOnly = true;
+            // 
             // ComponentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,8 +169,8 @@ namespace Beton.Forms
             this.Controls.Add(this.panel1);
             this.Name = "ComponentsForm";
             this.Text = "ComponentsForm";
-            this.Activated += new System.EventHandler(this.ComponentsForm_Load);
             this.Load += new System.EventHandler(this.ComponentsForm_Load);
+            this.Activated += new System.EventHandler(this.ComponentsForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.componentsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matherialBindingSource)).EndInit();
@@ -182,6 +191,7 @@ namespace Beton.Forms
         private System.Windows.Forms.DataGridViewComboBoxColumn matherialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountTonnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountCubeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPriceForCube;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPriceForTonn;
     }
 }
