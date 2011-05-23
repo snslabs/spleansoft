@@ -30,17 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.productsGridView = new System.Windows.Forms.DataGridView();
-            this.colComponents = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricePerCubeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricePerTonnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workPricePerCubeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.colComponents = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -59,6 +58,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(965, 344);
             this.panel1.TabIndex = 0;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(0, 321);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Добавить";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
@@ -97,23 +106,19 @@
             this.nameDataGridViewTextBoxColumn,
             this.pricePerCubeDataGridViewTextBoxColumn,
             this.pricePerTonnDataGridViewTextBoxColumn,
-            this.workPricePerCubeDataGridViewTextBoxColumn,
             this.colComponents});
             this.productsGridView.DataSource = this.productBindingSource;
             this.productsGridView.Location = new System.Drawing.Point(0, 3);
             this.productsGridView.Name = "productsGridView";
             this.productsGridView.Size = new System.Drawing.Size(962, 297);
             this.productsGridView.TabIndex = 0;
-            this.productsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsGridView_CellContentClick);
             this.productsGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsGridView_RowEnter);
             this.productsGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsGridView_RowValidated);
+            this.productsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsGridView_CellContentClick);
             // 
-            // colComponents
+            // productBindingSource
             // 
-            this.colComponents.HeaderText = "Состав";
-            this.colComponents.Name = "colComponents";
-            this.colComponents.ReadOnly = true;
-            this.colComponents.Text = "Изменить";
+            this.productBindingSource.DataSource = typeof(Beton.Model.Product);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -144,26 +149,12 @@
             this.pricePerTonnDataGridViewTextBoxColumn.ReadOnly = true;
             this.pricePerTonnDataGridViewTextBoxColumn.Width = 140;
             // 
-            // workPricePerCubeDataGridViewTextBoxColumn
+            // colComponents
             // 
-            this.workPricePerCubeDataGridViewTextBoxColumn.DataPropertyName = "WorkPricePerCube";
-            this.workPricePerCubeDataGridViewTextBoxColumn.HeaderText = "Стоимость РБУ за кубометр";
-            this.workPricePerCubeDataGridViewTextBoxColumn.Name = "workPricePerCubeDataGridViewTextBoxColumn";
-            this.workPricePerCubeDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Beton.Model.Product);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(0, 321);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Добавить";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.colComponents.HeaderText = "Состав";
+            this.colComponents.Name = "colComponents";
+            this.colComponents.ReadOnly = true;
+            this.colComponents.Text = "Изменить";
             // 
             // ProductsForm
             // 
@@ -188,12 +179,11 @@
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricePerCubeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricePerTonnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn workPricePerCubeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn colComponents;
-        private System.Windows.Forms.Button btnAdd;
     }
 }
