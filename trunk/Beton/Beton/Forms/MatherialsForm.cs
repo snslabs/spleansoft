@@ -78,5 +78,33 @@ namespace Beton.Forms
                 cell.Value = GetNextMaterialId();
             }
         }
+
+        private void matherialsGridView_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = matherialsGridView.Rows[e.RowIndex];
+            object strDensity = row.Cells[2].Value;
+            try
+            {
+                if (e.ColumnIndex == 5 && strDensity != null && strDensity != DBNull.Value)
+                {
+                    // price per cube was changed
+                    row.Cells[4].Value = Matherial.CalcPricePerTonn(strDensity.ToString(), row.Cells[5].Value.ToString());
+                }
+                else if (e.ColumnIndex == 4 && strDensity != null && strDensity != DBNull.Value)
+                {
+                    // price per tonn was changed
+                    row.Cells[5].Value = Matherial.CalcPricePerCube(strDensity.ToString(), row.Cells[4].Value.ToString());
+                }
+                else if (e.ColumnIndex == 2)
+                {
+                    // density was changed
+                    row.Cells[4].Value = Matherial.CalcPricePerTonn(strDensity.ToString(), row.Cells[5].Value.ToString());
+                }
+            }
+            catch(Exception ex)
+            {
+                // ничего не делаем
+            }
+        }
     }
 }
