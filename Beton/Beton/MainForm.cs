@@ -5,11 +5,11 @@ using Beton.Model;
 
 namespace Beton
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private MatherialsForm matherialsForm;
         private ProductsForm productsForm;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             
@@ -49,6 +49,11 @@ namespace Beton
         private void Form1_Load(object sender, EventArgs e)
         {
             Directories.LoadFromFile("beton.dat");
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Directories.SaveToFile("beton.dat");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Beton
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             // 
             this.btnMatherials.Location = new System.Drawing.Point(12, 12);
             this.btnMatherials.Name = "btnMatherials";
-            this.btnMatherials.Size = new System.Drawing.Size(183, 23);
+            this.btnMatherials.Size = new System.Drawing.Size(265, 23);
             this.btnMatherials.TabIndex = 0;
             this.btnMatherials.Text = "Материалы";
             this.btnMatherials.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // 
             this.btnProducts.Location = new System.Drawing.Point(12, 41);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(183, 23);
+            this.btnProducts.Size = new System.Drawing.Size(265, 23);
             this.btnProducts.TabIndex = 1;
             this.btnProducts.Text = "Продукты";
             this.btnProducts.UseVisualStyleBackColor = true;
@@ -56,9 +56,10 @@
             // 
             // btnSave
             // 
+            this.btnSave.Enabled = false;
             this.btnSave.Location = new System.Drawing.Point(12, 216);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(183, 23);
+            this.btnSave.Size = new System.Drawing.Size(265, 23);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Сохранить данные";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -66,26 +67,31 @@
             // 
             // btnLoad
             // 
+            this.btnLoad.Enabled = false;
             this.btnLoad.Location = new System.Drawing.Point(12, 187);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(183, 23);
+            this.btnLoad.Size = new System.Drawing.Size(265, 23);
             this.btnLoad.TabIndex = 3;
             this.btnLoad.Text = "Загрузить данные";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 251);
+            this.ClientSize = new System.Drawing.Size(289, 251);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnProducts);
             this.Controls.Add(this.btnMatherials);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "MainForm";
+            this.Text = "Бетономешалка версия 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
 
         }

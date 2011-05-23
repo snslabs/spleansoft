@@ -72,7 +72,7 @@ namespace Beton.Model
                         new ProductComponent(0, Directories.getMatherialById(3), new decimal(0.3), new decimal(0.3)), 
                         new ProductComponent(0, Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
                 }
-                ), 500));
+                )));
 
             PRODUCTS.Add(new Product(2, "M200",
                 new List<ProductComponent>(
@@ -82,7 +82,7 @@ namespace Beton.Model
                         new ProductComponent(0, Directories.getMatherialById(4), new decimal(0.3), new decimal(0.3)), 
                         new ProductComponent(0, Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
                 }
-                ), 500));
+                )));
         }
         #endregion
 

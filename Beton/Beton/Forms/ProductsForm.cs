@@ -45,7 +45,8 @@ namespace Beton.Forms
         {
             DataGridViewRow row = productsGridView.Rows[e.RowIndex];
             //row.
-            if(e.ColumnIndex == 5)
+            int componentsColumnIndex = 4;
+            if(e.ColumnIndex == componentsColumnIndex)
             {
                 Product selectedProduct = products[e.RowIndex];
 
@@ -77,7 +78,6 @@ namespace Beton.Forms
                     if (p.Id == (int)row.ItemArray[0])
                     {
                         p.Name = row.ItemArray[1] as string;
-                        p.WorkPricePerCube = (decimal)row.ItemArray[4];
                     }
                 }
             }
@@ -106,7 +106,7 @@ namespace Beton.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            products.Add(new Product(GetNextMaterialId(), "", new List<ProductComponent>(), 0));
+            products.Add(new Product(GetNextMaterialId(), "", new List<ProductComponent>()));
             reloadCollection();
         }
 

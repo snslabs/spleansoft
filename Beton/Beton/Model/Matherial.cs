@@ -184,12 +184,6 @@ namespace Beton.Model
                 return sum;
             }
         }
-        /// <summary>
-        /// Стоимость работы РБУ для выработки 1 кубометра бетона по заданному рецепту
-        /// </summary>
-        public Decimal WorkPricePerCube { get; set; }
-        //public Decimal WorkPricePerTonn { get; set; }
-        
         
         public Product(object[] data)
         {
@@ -197,17 +191,16 @@ namespace Beton.Model
             Components = new List<ProductComponent>();
         }
 
-        public Product(int id, string name, List<ProductComponent> components, decimal workPricePerCube)
+        public Product(int id, string name, List<ProductComponent> components)
         {
             Id = id;
             Name = name;
             Components = components;
-            WorkPricePerCube = workPricePerCube;
         }
 
         public object[] ToObjectArray()
         {
-            return new object[] { Id, Name, PricePerTonn, PricePerCube, WorkPricePerCube};
+            return new object[] { Id, Name, PricePerTonn, PricePerCube};
         }
 
         public void UpdateFromObjectArray(object[] data)
@@ -216,7 +209,7 @@ namespace Beton.Model
             Name = ((string)data[1]);
             // PricePerCube = (Decimal)data[2];
             // PricePerTonn = (Decimal)data[3];
-            WorkPricePerCube = (Decimal)data[4];
+            // WorkPricePerCube = (Decimal)data[4];
         }
 
         public static void PopulateDataTableSchema(DataTable dataTable)
