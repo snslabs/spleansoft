@@ -60,9 +60,9 @@ namespace Beton.Model
             MATHERIALS.Add(new Matherial(6, "Вода", 1, "Вода", 10));
             MATHERIALS.Add(new Matherial(7, "Работа РБУ", 1, "Работа РБУ", 20));
 
-            TRANSPORT_TYPES.Add(new TransportType("Тягач"));
-            TRANSPORT_TYPES.Add(new TransportType("Ж/Д"));
-            TRANSPORT_TYPES.Add(new TransportType("АвтоМиксер"));
+            TRANSPORT_TYPES.Add(new TransportType(1,"Авто тягач, 20т", 10, 10, 8000, 20, 20));
+            TRANSPORT_TYPES.Add(new TransportType(2, "Ж/Д сыпуч. 80т", 5, 5, 26000, 80, 80));
+            TRANSPORT_TYPES.Add(new TransportType(3, "АвтоМиксер, 5куб", 20, 20, 6000, 5, 5));
 
             PRODUCTS.Add(new Product(1, "M50",
                 new List<ProductComponent>(

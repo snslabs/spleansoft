@@ -32,6 +32,7 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.btnFinalCalculation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMatherials
@@ -76,11 +77,22 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // btnFinalCalculation
+            // 
+            this.btnFinalCalculation.Location = new System.Drawing.Point(12, 70);
+            this.btnFinalCalculation.Name = "btnFinalCalculation";
+            this.btnFinalCalculation.Size = new System.Drawing.Size(265, 23);
+            this.btnFinalCalculation.TabIndex = 4;
+            this.btnFinalCalculation.Text = "Финальный расчёт";
+            this.btnFinalCalculation.UseVisualStyleBackColor = true;
+            this.btnFinalCalculation.Click += new System.EventHandler(this.btnFinalCalculation_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 251);
+            this.Controls.Add(this.btnFinalCalculation);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnProducts);
@@ -90,8 +102,8 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Бетономешалка версия 1.0";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -102,6 +114,7 @@
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnFinalCalculation;
     }
 }
 
