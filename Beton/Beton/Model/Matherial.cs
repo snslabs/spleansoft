@@ -114,7 +114,7 @@ namespace Beton.Model
             return decimal.Round(decimal.Multiply(decimal.Parse(strPricePerCube), decimal.Parse(strDensity)), 2, MidpointRounding.AwayFromZero);
         }
     }
-
+    /*
     
     [Serializable]
     public class TransportPrice
@@ -130,12 +130,14 @@ namespace Beton.Model
         public Decimal PricePerCubeKm { get; set; }
         
     }
-
+     * */
+    /*
     public class ITransportable
     {
         public virtual string Name { get; set; }
         public virtual decimal PricePerTonn { get; set; }
         public virtual decimal PricePerCube { get; set; }
     }
+     * */
 
 }

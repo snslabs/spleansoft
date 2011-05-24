@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using Beton.Model;
 
 namespace Beton.Forms
 {
@@ -13,6 +10,17 @@ namespace Beton.Forms
         public ContractForm()
         {
             InitializeComponent();
+        }
+
+        private void ContractForm_Load(object sender, EventArgs e)
+        {
+            var dataTable = new DataTable("Products");
+            Product.PopulateDataTableSchema(dataTable);
+            foreach (var product in Directories.PRODUCTS)
+            {
+                dataTable.Rows.Add(product.ToObjectArray());
+            }
+            productBindingSource.DataSource = dataTable;
         }
     }
 }
