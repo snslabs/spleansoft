@@ -5,12 +5,12 @@ using System.Data;
 namespace Beton.Model
 {
     [Serializable]
-    public class Product : ITransportable
+    public class Product
     {
         public int Id { get; set; }
-        override public string Name { get; set; }
+        public string Name { get; set; }
         public List<ProductComponent> Components { get; set; }
-        override public Decimal PricePerTonn
+        public Decimal PricePerTonn
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Beton.Model
                 return sum;
             }
         }
-        override public Decimal PricePerCube
+        public Decimal PricePerCube
         {
             get
             {
