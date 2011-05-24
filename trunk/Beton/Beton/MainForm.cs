@@ -9,13 +9,15 @@ namespace Beton
     {
         private MatherialsForm matherialsForm;
         private ProductsForm productsForm;
+        private ContractForm contractForm;
+        
         public MainForm()
         {
             InitializeComponent();
             
             matherialsForm = new MatherialsForm();
-
             productsForm = new ProductsForm();
+            contractForm = new ContractForm();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,6 +56,11 @@ namespace Beton
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Directories.SaveToFile("beton.dat");
+        }
+
+        private void btnFinalCalculation_Click(object sender, EventArgs e)
+        {
+            contractForm.ShowDialog(this);
         }
     }
 }
