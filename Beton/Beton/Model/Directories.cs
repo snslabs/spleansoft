@@ -175,5 +175,16 @@ namespace Beton.Model
         }
         #endregion
 
+        public static Product FindProductById(int id)
+        {
+            foreach (var product in ALL_PRODUCTS)
+            {
+                if(product.Id == id)
+                {
+                    return product;
+                }
+            }
+            return null;
+        }
     }
 }
