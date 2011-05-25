@@ -105,6 +105,7 @@
     <Compile Include="Model\ObjectDataAdapter.cs" />
     <Compile Include="Model\Directories.cs" />
     <Compile Include="Model\Matherial.cs" />
+    <Compile Include="Model\Position.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\ProductComponent.cs" />
     <Compile Include="Model\TransportType.cs" />
