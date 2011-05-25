@@ -16,7 +16,7 @@ namespace Beton.Forms
         {
             var dataTable = new DataTable("Products");
             Product.PopulateDataTableSchema(dataTable);
-            foreach (var product in Directories.PRODUCTS)
+            foreach (var product in Directories.ALL_PRODUCTS)
             {
                 dataTable.Rows.Add(product.ToObjectArray());
             }

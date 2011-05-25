@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -41,6 +42,21 @@ namespace Beton.Model
                 return instance.products;
             }
         }
+
+        public static List<Product> ALL_PRODUCTS
+        {
+            get
+            {
+                var list = new List<Product>(instance.products);
+                int id = 9000;
+                foreach(var m in instance.matherials)
+                {
+                    list.Add(new Product(id++, m.Name, new List<ProductComponent>(new ProductComponent[]{ new ProductComponent(0, m, new decimal(m.Density), 1),  })));
+                }
+                return list;
+            }
+        }
+
         private static Directories instance;
         #endregion
 
