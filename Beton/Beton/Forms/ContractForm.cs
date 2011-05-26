@@ -61,19 +61,30 @@ namespace Beton.Forms
             positions.Clear();
             foreach (DataGridViewRow row in positionsDataGrid.Rows)
             {
-                positions.Add(new Position(
-                    (int)(row.Cells[0].Value), 
-                    Directories.FindProductById((int) row.Cells[1].Value), 
-                    (decimal) row.Cells[2].Value, 
-                    (decimal) row.Cells[3].Value, 
-                    (decimal) row.Cells[4].Value
-                    ));
+                if (row.Cells[1].Value != null)
+                {
+                    positions.Add(new Position(
+                                      (int) (row.Cells[0].Value),
+                                      Directories.FindProductById((int) row.Cells[1].Value),
+                                      decimal.Parse ((row.Cells[2].Value ?? "0").ToString()),
+                                      decimal.Parse ((row.Cells[3].Value ?? "0").ToString()),
+                                      decimal.Parse ((row.Cells[4].Value ?? "0").ToString())
+                                      ));
+                }
             }
         }
 
         private void CalculateTotals()
         {
-            throw new NotImplementedException();
+            decimal totalVolume = 0;
+            decimal totalSumm = 0;
+            foreach (var position in positions)
+            {
+                totalVolume += position.Volume;
+                totalSumm += position.TotalPrice;
+            }
+            tbTotalVolume.Text = totalVolume.ToString("N2");
+            tbTotalSum.Text = totalSumm.ToString("N2");
         }
 
         private void label2_Click(object sender, EventArgs e)
