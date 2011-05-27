@@ -10,8 +10,23 @@ namespace Beton.Model
     /// PricePerTonn * Density = PricePerCube
     /// </summary>
     [Serializable]
-    public class Matherial
+    public class Matherial : ICloneable
     {
+        public Matherial()
+        {
+        }
+
+        public Matherial(Matherial m)
+        {
+            this.Id = m.Id;
+            Name = m.Name;
+            Density = m.Density;
+            Description = m.Description;
+            OrderPricePerCube = m.OrderPricePerCube;
+            OrderPricePerTonn = m.OrderPricePerTonn;
+
+        }
+
         public Matherial(object[] data)
         {
             UpdateFromObjectArray(data);
@@ -50,16 +65,6 @@ namespace Beton.Model
         /// Наименование
         /// </summary>
         public string Name { set; get; }
-
-        public decimal PricePerTonn
-        {
-            get { return OrderPricePerTonn; }
-        }
-
-        public decimal PricePerCube
-        {
-            get { return OrderPricePerCube; }
-        }
 
         /// <summary>
         /// Плотность тонн/кубометр
@@ -113,31 +118,10 @@ namespace Beton.Model
         {
             return decimal.Round(decimal.Multiply(decimal.Parse(strPricePerCube), decimal.Parse(strDensity)), 2, MidpointRounding.AwayFromZero);
         }
-    }
-    /*
-    
-    [Serializable]
-    public class TransportPrice
-    {
-        public TransportType TransportType { get; set; }
-        /// <summary>
-        /// продукт
-        /// </summary>
-        public Product Product {get; set;}
-        /// <summary>
-        /// цена транспортировки за 1 кубометр на 1 километр
-        /// </summary>
-        public Decimal PricePerCubeKm { get; set; }
-        
-    }
-     * */
-    /*
-    public class ITransportable
-    {
-        public virtual string Name { get; set; }
-        public virtual decimal PricePerTonn { get; set; }
-        public virtual decimal PricePerCube { get; set; }
-    }
-     * */
 
+        public object Clone()
+        {
+            return new Matherial(this);
+        }
+    }
 }

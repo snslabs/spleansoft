@@ -59,7 +59,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.mainPanel);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(767, 399);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1131, 520);
             this.splitContainerControl1.SplitterPosition = 195;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -80,7 +80,7 @@
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 155;
-            this.navBarControl1.Size = new System.Drawing.Size(195, 395);
+            this.navBarControl1.Size = new System.Drawing.Size(195, 516);
             this.navBarControl1.SmallImages = this.menuTreeImageList;
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "Главное меню";
@@ -121,11 +121,13 @@
             // 
             this.products.Caption = "Продукты";
             this.products.Name = "products";
+            this.products.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.products_LinkClicked);
             // 
             // matherials
             // 
             this.matherials.Caption = "Материалы";
             this.matherials.Name = "matherials";
+            this.matherials.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.matherials_LinkClicked);
             // 
             // menuTreeImageList
             // 
@@ -149,18 +151,18 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(563, 395);
+            this.mainPanel.Size = new System.Drawing.Size(927, 516);
             this.mainPanel.TabIndex = 0;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // DxMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 423);
+            this.ClientSize = new System.Drawing.Size(1155, 544);
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "DxMainForm";
             this.Text = "DxMainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DxMainForm_FormClosing);
             this.Load += new System.EventHandler(this.DxMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);

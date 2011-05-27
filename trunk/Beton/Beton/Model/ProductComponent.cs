@@ -17,6 +17,10 @@ namespace Beton.Model
         public Decimal AmountTonn { get; set; }
         public Decimal AmountCube { get; set; }
 
+        public ProductComponent()
+        {
+        }
+
         public ProductComponent(object[] data)
         {
             this.UpdateFromObjectArray(data);
