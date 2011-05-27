@@ -55,6 +55,14 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -72,6 +80,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DxForms\DxMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DxForms\DxMainForm.Designer.cs">
+      <DependentUpon>DxMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DxForms\MatherialsUIComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DxForms\MatherialsUIComponent.Designer.cs">
+      <DependentUpon>MatherialsUIComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ContractForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,9 +128,16 @@
     <Compile Include="Model\Position.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\ProductComponent.cs" />
+    <Compile Include="Model\TransportPosition.cs" />
     <Compile Include="Model\TransportType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DxForms\DxMainForm.resx">
+      <DependentUpon>DxMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DxForms\MatherialsUIComponent.resx">
+      <DependentUpon>MatherialsUIComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ContractForm.resx">
       <DependentUpon>ContractForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +153,7 @@
     <EmbeddedResource Include="Forms\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -139,8 +167,12 @@
     <None Include="app.config" />
     <None Include="Properties\DataSources\Beton.Model.ITransportable.datasource" />
     <None Include="Properties\DataSources\Beton.Model.Matherial.datasource" />
+    <None Include="Properties\DataSources\Beton.Model.Position.datasource" />
+    <None Include="Properties\DataSources\Beton.Model.Position1.datasource" />
     <None Include="Properties\DataSources\Beton.Model.Product.datasource" />
     <None Include="Properties\DataSources\Beton.Model.ProductComponent.datasource" />
+    <None Include="Properties\DataSources\Beton.Model.TransportPosition.datasource" />
+    <None Include="Properties\DataSources\Beton.Model.TransportType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

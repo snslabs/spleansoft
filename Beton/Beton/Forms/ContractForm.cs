@@ -9,20 +9,16 @@ namespace Beton.Forms
     public partial class ContractForm : Form
     {
         private List<Position> positions = new List<Position>();
+        private DataTable positionsDataTable;
         public ContractForm()
         {
             InitializeComponent();
+            positionsDataTable = new DataTable("Positions");
+            Position.PopulateDataTableSchema(positionsDataTable);
         }
 
         private void ContractForm_Load(object sender, EventArgs e)
         {
-            var dataTable = new DataTable("Products");
-            Product.PopulateDataTableSchema(dataTable);
-            foreach (var product in Directories.ALL_PRODUCTS)
-            {
-                dataTable.Rows.Add(product.ToObjectArray());
-            }
-            productBindingSource.DataSource = dataTable;
         }
 
         private void positionsDataGrid_CellValidated(object sender, DataGridViewCellEventArgs e)
@@ -63,14 +59,33 @@ namespace Beton.Forms
             {
                 if (row.Cells[1].Value != null)
                 {
-                    positions.Add(new Position(
-                                      (int) (row.Cells[0].Value),
-                                      Directories.FindProductById((int) row.Cells[1].Value),
-                                      decimal.Parse ((row.Cells[2].Value ?? "0").ToString()),
-                                      decimal.Parse ((row.Cells[3].Value ?? "0").ToString()),
-                                      decimal.Parse ((row.Cells[4].Value ?? "0").ToString())
-                                      ));
+                    if (positions.Count <= row.Index)
+                    {
+                        Position position = new Position(
+                            (int) (row.Cells[0].Value),
+                            Directories.FindProductById((int) row.Cells[1].Value),
+                            decimal.Parse((row.Cells[2].Value ?? "0").ToString()),
+                            decimal.Parse((row.Cells[3].Value ?? "0").ToString()),
+                            decimal.Parse((row.Cells[4].Value ?? "0").ToString())
+                            );
+                        positions.Add(position);
+                        // positionsDataTable.Rows.Add(position.ToObjectArray());
+                    }
+                    else
+                    {
+                        positions[row.Index].Update(
+                            (int) (row.Cells[0].Value),
+                            Directories.FindProductById((int) row.Cells[1].Value),
+                            decimal.Parse((row.Cells[2].Value ?? "0").ToString()),
+                            decimal.Parse((row.Cells[3].Value ?? "0").ToString()),
+                            decimal.Parse((row.Cells[4].Value ?? "0").ToString())
+                            );
+                    }
                 }
+            }
+            while(positionsDataGrid.Rows.Count < positions.Count)
+            {
+                positions.RemoveAt(positions.Count - 1);
             }
         }
 
