@@ -10,6 +10,12 @@ namespace Beton.Model
         public int Id { get; set; }
         public string Name { get; set; }
         public List<ProductComponent> Components { get; set; }
+
+        public Product()
+        {
+            Components = new List<ProductComponent>();
+        }
+
         public Decimal PricePerTonn
         {
             get
