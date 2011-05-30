@@ -63,8 +63,10 @@
             // 
             // grid
             // 
+            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.DataSource = this.positionBindingSource;
-            this.grid.Dock = System.Windows.Forms.DockStyle.Top;
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.MainView = this.gridView1;
             this.grid.Name = "grid";
@@ -74,6 +76,7 @@
             this.grid.TabIndex = 0;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grid.Validated += new System.EventHandler(this.grid_Validated);
             // 
             // positionBindingSource
             // 
@@ -92,6 +95,7 @@
             this.gridView1.GridControl = this.grid;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // colId
             // 
@@ -205,16 +209,18 @@
             // 
             // teTotalVolume
             // 
+            this.teTotalVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.teTotalVolume.Enabled = false;
-            this.teTotalVolume.Location = new System.Drawing.Point(94, 253);
+            this.teTotalVolume.Location = new System.Drawing.Point(64, 275);
             this.teTotalVolume.Name = "teTotalVolume";
             this.teTotalVolume.Size = new System.Drawing.Size(100, 20);
             this.teTotalVolume.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 256);
+            this.label1.Location = new System.Drawing.Point(14, 278);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 2;
@@ -222,8 +228,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 256);
+            this.label2.Location = new System.Drawing.Point(169, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 4;
@@ -231,16 +238,18 @@
             // 
             // teSelfSum
             // 
+            this.teSelfSum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.teSelfSum.Enabled = false;
-            this.teSelfSum.Location = new System.Drawing.Point(331, 253);
+            this.teSelfSum.Location = new System.Drawing.Point(258, 275);
             this.teSelfSum.Name = "teSelfSum";
             this.teSelfSum.Size = new System.Drawing.Size(100, 20);
             this.teSelfSum.TabIndex = 3;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(477, 256);
+            this.label3.Location = new System.Drawing.Point(364, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 13);
             this.label3.TabIndex = 6;
@@ -248,8 +257,9 @@
             // 
             // teTotalSum
             // 
+            this.teTotalSum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.teTotalSum.Enabled = false;
-            this.teTotalSum.Location = new System.Drawing.Point(597, 253);
+            this.teTotalSum.Location = new System.Drawing.Point(484, 275);
             this.teTotalSum.Name = "teTotalSum";
             this.teTotalSum.Size = new System.Drawing.Size(100, 20);
             this.teTotalSum.TabIndex = 5;
