@@ -59,14 +59,14 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.mainPanel);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1131, 520);
+            this.splitContainerControl1.Size = new System.Drawing.Size(842, 475);
             this.splitContainerControl1.SplitterPosition = 195;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.calculations;
+            this.navBarControl1.ActiveGroup = this.directories;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.directories,
@@ -80,7 +80,7 @@
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 155;
-            this.navBarControl1.Size = new System.Drawing.Size(195, 516);
+            this.navBarControl1.Size = new System.Drawing.Size(195, 471);
             this.navBarControl1.SmallImages = this.menuTreeImageList;
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "Главное меню";
@@ -107,8 +107,8 @@
             this.directories.Expanded = true;
             this.directories.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.transportTypes),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.products),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.matherials)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.matherials),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.products)});
             this.directories.LargeImageIndex = 2;
             this.directories.Name = "directories";
             // 
@@ -152,17 +152,18 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(927, 516);
+            this.mainPanel.Size = new System.Drawing.Size(638, 471);
             this.mainPanel.TabIndex = 0;
             // 
             // DxMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 544);
+            this.ClientSize = new System.Drawing.Size(866, 499);
             this.Controls.Add(this.splitContainerControl1);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "DxMainForm";
-            this.Text = "DxMainForm";
+            this.Text = "Бетономешалка v.0.2";
             this.Load += new System.EventHandler(this.DxMainForm_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DxMainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();

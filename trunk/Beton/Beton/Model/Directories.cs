@@ -21,9 +21,18 @@ namespace Beton.Model
         #region properties
         private List<Matherial> matherials = new List<Matherial>();
         private List<TransportType> transportTypes = new List<TransportType>();
+        private List<TransportPosition> transportPositions = new List<TransportPosition>();
         private List<Product> products = new List<Product>();
         private List<Position> positions = new List<Position>();
 
+
+        public static List<TransportPosition> TRANSPORT_POSITIONS
+        {
+            get
+            {
+                return instance.transportPositions;
+            }
+        }
         public static List<Position> POSITIONS
         {
             get
