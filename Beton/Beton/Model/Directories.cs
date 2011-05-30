@@ -51,7 +51,7 @@ namespace Beton.Model
                 int id = 9000;
                 foreach(var m in instance.matherials)
                 {
-                    list.Add(new Product(id++, m.Name, new List<ProductComponent>(new ProductComponent[]{ new ProductComponent(0, m, new decimal(m.Density), 1),  })));
+                    list.Add(new Product(id++, m.Name, new List<ProductComponent>(new ProductComponent[]{ new ProductComponent( m, new decimal(m.Density), 1),  })));
                 }
                 return list;
             }
@@ -83,20 +83,20 @@ namespace Beton.Model
             PRODUCTS.Add(new Product(1, "M50",
                 new List<ProductComponent>(
                 new ProductComponent[]{
-                        new ProductComponent(0, Directories.getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent(0, Directories.getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent(0, Directories.getMatherialById(3), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent(0, Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
+                        new ProductComponent( Directories.getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( Directories.getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( Directories.getMatherialById(3), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
                 }
                 )));
 
             PRODUCTS.Add(new Product(2, "M200",
                 new List<ProductComponent>(
                 new ProductComponent[]{
-                        new ProductComponent(0, Directories.getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent(0, Directories.getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent(0, Directories.getMatherialById(4), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent(0, Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
+                        new ProductComponent( Directories.getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( Directories.getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( Directories.getMatherialById(4), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
                 }
                 )));
         }

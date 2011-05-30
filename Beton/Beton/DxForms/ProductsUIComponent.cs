@@ -68,5 +68,16 @@ namespace Beton.DxForms
             product.Id = max + 1;
 
         }
+
+        private void gridView2_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            gridView2.SetRowCellValue(e.RowHandle, gridView2.Columns[0], 1);
+            
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
