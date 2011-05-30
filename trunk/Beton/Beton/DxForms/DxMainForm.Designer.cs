@@ -99,6 +99,7 @@
             // 
             this.contractCalculation.Caption = "Расчёт контракта";
             this.contractCalculation.Name = "contractCalculation";
+            this.contractCalculation.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.contractCalculation_LinkClicked);
             // 
             // directories
             // 
@@ -162,8 +163,8 @@
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "DxMainForm";
             this.Text = "DxMainForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DxMainForm_FormClosing);
             this.Load += new System.EventHandler(this.DxMainForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DxMainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();

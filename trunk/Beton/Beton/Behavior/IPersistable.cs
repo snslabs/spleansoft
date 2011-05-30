@@ -1,6 +1,6 @@
 ﻿namespace Beton.Behavior
 {
-    interface Persistable
+    interface IPersistable
     {
         bool SaveData();
         void LoadData();

@@ -17,8 +17,23 @@ namespace Beton.Model
             set { }
         }
         public decimal AddedPrice { get; set; }
-        public decimal FinalPrice { get; set; }
-        public decimal TotalPrice { get; set; }
+        public decimal FinalPrice { 
+            get
+            {
+                return SelfPricePerCube + AddedPrice;
+            } 
+            set
+            {
+                
+            } 
+        }
+        public decimal TotalPrice { 
+            get
+            {
+                return FinalPrice*Volume;
+            }
+            set { } 
+        }
         public string PositionDisplayName { 
             get
             {
