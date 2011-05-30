@@ -99,6 +99,8 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.NewItemRowText = "Введите новую транспортную позицию";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // colId
             // 
@@ -127,6 +129,7 @@
             this.repositoryItemGridLookUpEdit1.DataSource = this.positionBindingSource;
             this.repositoryItemGridLookUpEdit1.DisplayMember = "PositionDisplayName";
             this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
+            this.repositoryItemGridLookUpEdit1.NullText = "<Выберите позицию контракта>";
             this.repositoryItemGridLookUpEdit1.View = this.repositoryItemGridLookUpEdit1View;
             // 
             // positionBindingSource
@@ -189,6 +192,7 @@
             this.repositoryItemGridLookUpEdit2.DataSource = this.transportTypeBindingSource;
             this.repositoryItemGridLookUpEdit2.DisplayMember = "Name";
             this.repositoryItemGridLookUpEdit2.Name = "repositoryItemGridLookUpEdit2";
+            this.repositoryItemGridLookUpEdit2.NullText = "<Выберите тип транспортировки>";
             this.repositoryItemGridLookUpEdit2.View = this.repositoryItemGridLookUpEdit2View;
             // 
             // transportTypeBindingSource
@@ -254,6 +258,7 @@
             this.colPositionPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPositionPrice.FieldName = "PositionPrice";
             this.colPositionPrice.Name = "colPositionPrice";
+            this.colPositionPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colPositionPrice.Visible = true;
             this.colPositionPrice.VisibleIndex = 8;
             // 

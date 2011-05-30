@@ -11,9 +11,12 @@ using DevExpress.XtraEditors;
 
 namespace Beton.DxForms
 {
+    public delegate void DataRefreshedEventHandler();
+
     public partial class ContractCalculationUIComponent : DevExpress.XtraEditors.XtraUserControl, IPersistable
     {
         private IList<Position> positions;
+
         public ContractCalculationUIComponent()
         {
             positions = new BindingList<Position>();
@@ -32,11 +35,15 @@ namespace Beton.DxForms
             positions = Directories.POSITIONS;
             productBindingSource.DataSource = Directories.ALL_PRODUCTS;
             positionBindingSource.DataSource = Directories.POSITIONS;
+            RefreshData();
+        }
+
+        public void RefreshData()
+        {
             positionBindingSource.ResetBindings(false);
             productBindingSource.ResetBindings(false);
             CalculateTotals();
         }
-
 
         private void grid_Validated(object sender, EventArgs e)
         {
@@ -64,6 +71,15 @@ namespace Beton.DxForms
             teTotalVolume.Text = totalVolume.ToString("N2");
             teSelfSum.Text = totalSelfSum.ToString("N2");
             teTotalSum.Text = totalFinalSum.ToString("N2");
+
+            // dataRefreshed();
+
+        }
+
+        private void positionBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            e.NewObject = new Position();
+            ((Position) e.NewObject).Id = Directories.POSITIONS.Count +1;
 
         }
     }
