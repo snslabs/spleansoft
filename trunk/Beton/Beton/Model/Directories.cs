@@ -59,10 +59,9 @@ namespace Beton.Model
             get
             {
                 var list = new List<Product>(instance.products);
-                int id = 9000;
                 foreach(var m in instance.matherials)
                 {
-                    list.Add(new Product(id++, m.Name, new List<ProductComponent>(new ProductComponent[]{ new ProductComponent( m, new decimal(m.Density), 1),  })));
+                    list.Add(m.DefaultProduct);
                 }
                 return list;
             }
@@ -101,7 +100,11 @@ namespace Beton.Model
                 }
                 )));
 
-            PRODUCTS.Add(new Product(2, "M200",
+            PRODUCTS.Add(new Product(2, "M150", new List<ProductComponent>(
+                new[] { new ProductComponent(getMatherialById(6), new decimal(0.1), new decimal(0.1)) }
+                )));
+
+            PRODUCTS.Add(new Product(3, "M200",
                 new List<ProductComponent>(
                 new[]{
                         new ProductComponent( getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
@@ -125,21 +128,23 @@ namespace Beton.Model
         #endregion
 
         #region update methods
+        /*
         public static void UpdateMatherials(IEnumerable<Matherial> matherials)
         {
-            MATHERIALS.Clear();
-            MATHERIALS.AddRange(matherials);
+            // MATHERIALS.Clear();
+            // MATHERIALS.AddRange(matherials);
         }
         public static void UpdateProducts(IEnumerable<Product> products)
         {
-            PRODUCTS.Clear();
-            PRODUCTS.AddRange(products);
+            // PRODUCTS.Clear();
+            // PRODUCTS.AddRange(products);
         }
         public static void UpdatePositions(IEnumerable<Position> list)
         {
-            POSITIONS.Clear();
-            POSITIONS.AddRange(list);
+            // POSITIONS.Clear();
+            // POSITIONS.AddRange(list);
         }
+         * */
         #endregion
 
         #region serializations
