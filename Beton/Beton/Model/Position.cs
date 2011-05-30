@@ -37,7 +37,7 @@ namespace Beton.Model
         public string PositionDisplayName { 
             get
             {
-                return this.Product == null ? "" : this.Product.Name + ", " + Volume.ToString("N2");
+                return Product == null ? "" : string.Format("#{0} {1}, {2} куб.м.", Id, Product.Name, Volume.ToString("N2"));
             }
             set { }
         }

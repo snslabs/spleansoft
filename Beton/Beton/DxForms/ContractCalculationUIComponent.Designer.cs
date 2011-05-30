@@ -72,7 +72,7 @@
             this.grid.Name = "grid";
             this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1});
-            this.grid.Size = new System.Drawing.Size(751, 247);
+            this.grid.Size = new System.Drawing.Size(751, 261);
             this.grid.TabIndex = 0;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -211,7 +211,7 @@
             // 
             this.teTotalVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.teTotalVolume.Enabled = false;
-            this.teTotalVolume.Location = new System.Drawing.Point(64, 275);
+            this.teTotalVolume.Location = new System.Drawing.Point(64, 289);
             this.teTotalVolume.Name = "teTotalVolume";
             this.teTotalVolume.Size = new System.Drawing.Size(100, 20);
             this.teTotalVolume.TabIndex = 1;
@@ -220,7 +220,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 278);
+            this.label1.Location = new System.Drawing.Point(14, 292);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 2;
@@ -230,7 +230,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 278);
+            this.label2.Location = new System.Drawing.Point(169, 292);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 4;
@@ -240,7 +240,7 @@
             // 
             this.teSelfSum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.teSelfSum.Enabled = false;
-            this.teSelfSum.Location = new System.Drawing.Point(258, 275);
+            this.teSelfSum.Location = new System.Drawing.Point(258, 289);
             this.teSelfSum.Name = "teSelfSum";
             this.teSelfSum.Size = new System.Drawing.Size(100, 20);
             this.teSelfSum.TabIndex = 3;
@@ -249,7 +249,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(364, 278);
+            this.label3.Location = new System.Drawing.Point(364, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 13);
             this.label3.TabIndex = 6;
@@ -259,7 +259,7 @@
             // 
             this.teTotalSum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.teTotalSum.Enabled = false;
-            this.teTotalSum.Location = new System.Drawing.Point(484, 275);
+            this.teTotalSum.Location = new System.Drawing.Point(484, 289);
             this.teTotalSum.Name = "teTotalSum";
             this.teTotalSum.Size = new System.Drawing.Size(100, 20);
             this.teTotalSum.TabIndex = 5;
@@ -276,7 +276,7 @@
             this.Controls.Add(this.teTotalVolume);
             this.Controls.Add(this.grid);
             this.Name = "ContractCalculationUIComponent";
-            this.Size = new System.Drawing.Size(751, 298);
+            this.Size = new System.Drawing.Size(751, 312);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
