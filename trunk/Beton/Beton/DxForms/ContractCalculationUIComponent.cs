@@ -44,7 +44,13 @@ namespace Beton.DxForms
         {
             // 
             productBindingSource.DataSource = Directories.ALL_PRODUCTS;
+            positions.Clear();
+            foreach (Position pos in Directories.POSITIONS)
+            {
+                positions.Add(pos);
+            }
             positionBindingSource.DataSource = positions;
+
         }
 
 
