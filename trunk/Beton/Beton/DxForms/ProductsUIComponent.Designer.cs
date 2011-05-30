@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMatherial1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.matherialBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,6 +45,7 @@
             this.colPricePerTonn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPricePerCube = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.componentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMatherial = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,12 +59,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId2,
             this.colMatherial1,
             this.colAmountTonn1,
             this.colAmountCube1});
@@ -72,15 +72,8 @@
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridView2.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // colId2
-            // 
-            this.colId2.FieldName = "Id";
-            this.colId2.Name = "colId2";
-            this.colId2.OptionsColumn.AllowEdit = false;
-            this.colId2.OptionsColumn.ReadOnly = true;
-            this.colId2.Visible = true;
-            this.colId2.VisibleIndex = 0;
+            this.gridView2.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridView2.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView2_InitNewRow);
             // 
             // colMatherial1
             // 
@@ -89,7 +82,7 @@
             this.colMatherial1.FieldName = "Matherial";
             this.colMatherial1.Name = "colMatherial1";
             this.colMatherial1.Visible = true;
-            this.colMatherial1.VisibleIndex = 1;
+            this.colMatherial1.VisibleIndex = 0;
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -99,6 +92,7 @@
             this.repositoryItemGridLookUpEdit1.DataSource = this.matherialBindingSource;
             this.repositoryItemGridLookUpEdit1.DisplayMember = "Name";
             this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
+            this.repositoryItemGridLookUpEdit1.NullText = "<Выберите материал>";
             this.repositoryItemGridLookUpEdit1.View = this.repositoryItemGridLookUpEdit1View;
             // 
             // matherialBindingSource
@@ -114,19 +108,19 @@
             // 
             // colAmountTonn1
             // 
-            this.colAmountTonn1.Caption = "Количество тонн";
+            this.colAmountTonn1.Caption = "Вес (тонн)";
             this.colAmountTonn1.FieldName = "AmountTonn";
             this.colAmountTonn1.Name = "colAmountTonn1";
             this.colAmountTonn1.Visible = true;
-            this.colAmountTonn1.VisibleIndex = 2;
+            this.colAmountTonn1.VisibleIndex = 1;
             // 
             // colAmountCube1
             // 
-            this.colAmountCube1.Caption = "Объём куб";
+            this.colAmountCube1.Caption = "Объём (куб)";
             this.colAmountCube1.FieldName = "AmountCube";
             this.colAmountCube1.Name = "colAmountCube1";
             this.colAmountCube1.Visible = true;
-            this.colAmountCube1.VisibleIndex = 3;
+            this.colAmountCube1.VisibleIndex = 2;
             // 
             // gridControl1
             // 
@@ -148,6 +142,7 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.gridView2});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // productBindingSource
             // 
@@ -211,6 +206,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
+            // componentsBindingSource
+            // 
+            this.componentsBindingSource.DataMember = "Components";
+            this.componentsBindingSource.DataSource = this.productBindingSource;
+            // 
             // gridBand1
             // 
             this.gridBand1.Caption = "gridBand1";
@@ -259,6 +259,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -278,13 +279,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAmountTonn;
         private DevExpress.XtraGrid.Columns.GridColumn colAmountCube;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn colId2;
-        private DevExpress.XtraGrid.Columns.GridColumn colMatherial1;
-        private DevExpress.XtraGrid.Columns.GridColumn colAmountTonn1;
-        private DevExpress.XtraGrid.Columns.GridColumn colAmountCube1;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private System.Windows.Forms.BindingSource matherialBindingSource;
+        private System.Windows.Forms.BindingSource componentsBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colMatherial1;
+        private DevExpress.XtraGrid.Columns.GridColumn colAmountTonn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colAmountCube1;
     }
 }

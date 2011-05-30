@@ -49,7 +49,7 @@ namespace Beton.Forms
             if(e.ColumnIndex == componentsColumnIndex)
             {
                 Product selectedProduct = products[e.RowIndex];
-
+                /*
                 componentsForm.Text = "Состав продукта: " + selectedProduct.Name;
                 componentsForm.ProductComponents = selectedProduct.Components;
                 if(componentsForm.ShowDialog(this) == DialogResult.OK)
@@ -59,6 +59,7 @@ namespace Beton.Forms
                     selectedProduct.Components = componentsForm.ProductComponents;
                     reloadCollection();
                 }
+                 * */
                 
             }
         }

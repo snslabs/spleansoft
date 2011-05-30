@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 
 namespace Beton.Model
@@ -9,11 +10,11 @@ namespace Beton.Model
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<ProductComponent> Components { get; set; }
+        public BindingList<ProductComponent> Components { get; set; }
 
         public Product()
         {
-            Components = new List<ProductComponent>();
+            Components = new BindingList<ProductComponent>();
         }
 
         public Decimal PricePerTonn
@@ -46,14 +47,14 @@ namespace Beton.Model
         public Product(object[] data)
         {
             this.UpdateFromObjectArray(data);
-            Components = new List<ProductComponent>();
+            Components = new BindingList<ProductComponent>();
         }
 
         public Product(int id, string name, List<ProductComponent> components)
         {
             Id = id;
             Name = name;
-            Components = components;
+            Components = new BindingList<ProductComponent>(components);
         }
 
         public object[] ToObjectArray()
