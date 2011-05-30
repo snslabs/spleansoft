@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using Beton.Behavior;
 using Beton.Model;
@@ -11,7 +7,7 @@ using DevExpress.XtraEditors;
 
 namespace Beton.DxForms
 {
-    public partial class MatherialsUIComponent : DevExpress.XtraEditors.XtraUserControl, Persistable
+    public partial class MatherialsUIComponent : XtraUserControl, IPersistable
     {
         private readonly List<Matherial> matherials;
         public List<Matherial> Matherials

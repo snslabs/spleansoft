@@ -80,7 +80,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behavior\Persistable.cs" />
+    <Compile Include="Behavior\IPersistable.cs" />
+    <Compile Include="DxForms\ContractCalculationUIComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DxForms\ContractCalculationUIComponent.Designer.cs">
+      <DependentUpon>ContractCalculationUIComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="DxForms\DxMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     <Compile Include="Model\TransportType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DxForms\ContractCalculationUIComponent.resx">
+      <DependentUpon>ContractCalculationUIComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DxForms\DxMainForm.resx">
       <DependentUpon>DxMainForm.cs</DependentUpon>
     </EmbeddedResource>

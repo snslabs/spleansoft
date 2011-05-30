@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace Beton.DxForms
 {
-    public partial class ProductsUIComponent : DevExpress.XtraEditors.XtraUserControl, Persistable
+    public partial class ProductsUIComponent : DevExpress.XtraEditors.XtraUserControl, IPersistable
     {
         private readonly List<Product> products;
         private readonly List<Matherial> matherials;

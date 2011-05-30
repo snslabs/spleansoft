@@ -15,11 +15,13 @@ namespace Beton.DxForms
     {
         private MatherialsUIComponent matherialsComponent;
         private ProductsUIComponent productsComponent;
+        private ContractCalculationUIComponent contractCalculationComponent;
         public DxMainForm()
         {
             InitializeComponent();
             matherialsComponent = new MatherialsUIComponent();
             productsComponent = new ProductsUIComponent();
+            contractCalculationComponent = new ContractCalculationUIComponent();
         }
 
         private void navBarControl1_Click(object sender, EventArgs e)
@@ -62,9 +64,9 @@ namespace Beton.DxForms
         {
             foreach (var control in mainPanel.Controls)
             {
-                if(control as Persistable != null)
+                if(control as IPersistable != null)
                 {
-                    if(!((Persistable)control).SaveData())
+                    if(!((IPersistable)control).SaveData())
                     {
                         return false;
                     }
@@ -77,13 +79,18 @@ namespace Beton.DxForms
                 mainPanel.Controls.Clear(); // removing all controls from the form
 
                 // if new control can be reinitialized with data - do it
-                if (viewComponent as Persistable != null)
-                    ((Persistable)viewComponent).LoadData();
+                if (viewComponent as IPersistable != null)
+                    ((IPersistable)viewComponent).LoadData();
 
                 mainPanel.Controls.Add(viewComponent);
                 viewComponent.Dock = DockStyle.Fill;
             }
             return true;
+        }
+
+        private void contractCalculation_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            SwitchView(contractCalculationComponent);
         }
 
     }

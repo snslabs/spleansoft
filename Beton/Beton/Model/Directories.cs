@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.Serialization;
@@ -21,6 +22,16 @@ namespace Beton.Model
         private List<Matherial> matherials = new List<Matherial>();
         private List<TransportType> transportTypes = new List<TransportType>();
         private List<Product> products = new List<Product>();
+        private List<Position> positions = new List<Position>();
+
+        public static List<Position> POSITIONS
+        {
+            get
+            {
+                return instance.positions;
+            }
+        }
+
         public static List<Matherial> MATHERIALS
         {
             get
@@ -82,21 +93,21 @@ namespace Beton.Model
 
             PRODUCTS.Add(new Product(1, "M50",
                 new List<ProductComponent>(
-                new ProductComponent[]{
-                        new ProductComponent( Directories.getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent( Directories.getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent( Directories.getMatherialById(3), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent( Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
+                new[]{
+                        new ProductComponent( getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( getMatherialById(3), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
                 }
                 )));
 
             PRODUCTS.Add(new Product(2, "M200",
                 new List<ProductComponent>(
-                new ProductComponent[]{
-                        new ProductComponent( Directories.getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent( Directories.getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent( Directories.getMatherialById(4), new decimal(0.3), new decimal(0.3)), 
-                        new ProductComponent( Directories.getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
+                new[]{
+                        new ProductComponent( getMatherialById(1), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( getMatherialById(2), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( getMatherialById(4), new decimal(0.3), new decimal(0.3)), 
+                        new ProductComponent( getMatherialById(6), new decimal(0.1), new decimal(0.1)), 
                 }
                 )));
         }
@@ -114,15 +125,20 @@ namespace Beton.Model
         #endregion
 
         #region update methods
-        public static void UpdateMatherials(List<Matherial> matherials)
+        public static void UpdateMatherials(IEnumerable<Matherial> matherials)
         {
             MATHERIALS.Clear();
             MATHERIALS.AddRange(matherials);
         }
-        public static void UpdateProducts(List<Product> products)
+        public static void UpdateProducts(IEnumerable<Product> products)
         {
             PRODUCTS.Clear();
             PRODUCTS.AddRange(products);
+        }
+        public static void UpdatePositions(IEnumerable<Position> list)
+        {
+            POSITIONS.Clear();
+            POSITIONS.AddRange(list);
         }
         #endregion
 
@@ -186,5 +202,6 @@ namespace Beton.Model
             }
             return null;
         }
+
     }
 }
