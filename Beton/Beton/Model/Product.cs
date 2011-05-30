@@ -10,7 +10,7 @@ namespace Beton.Model
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public BindingList<ProductComponent> Components { get; set; }
+        public BindingList<ProductComponent> Components { get; set;}
 
         public Product()
         {

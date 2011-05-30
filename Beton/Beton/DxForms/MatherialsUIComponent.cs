@@ -9,23 +9,7 @@ namespace Beton.DxForms
 {
     public partial class MatherialsUIComponent : XtraUserControl, IPersistable
     {
-        private readonly List<Matherial> matherials;
-        public List<Matherial> Matherials
-        {
-            get
-            {
-                return matherials;
-            }
-            set
-            {
-                matherials.Clear();
-                foreach(var m in value)
-                {
-                    matherials.Add(new Matherial(m));
-                }
-            }
-        }
-
+        private List<Matherial> matherials;
 
         public MatherialsUIComponent()
         {
@@ -48,26 +32,14 @@ namespace Beton.DxForms
 
         public bool SaveData()
         {
-            DialogResult dialogResult = MessageBox.Show("Сохранить изменения?", "Изменения", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-
-            switch(dialogResult)
-            {
-                case DialogResult.Yes:
-                    Directories.UpdateMatherials(matherials);
-                    return true;
-                case DialogResult.No:
-                    LoadData();
-                    return true;
-                case DialogResult.Cancel:
-                    return false;
-                default:
-                    return false;
-            }
+            // Directories.UpdateMatherials(matherials);
+            return true;
         }
 
         public void LoadData()
         {
-            Matherials = Directories.MATHERIALS;
+            matherials = Directories.MATHERIALS;
+            matherialBindingSource.DataSource = matherials;
         }
     }
 }

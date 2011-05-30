@@ -83,6 +83,21 @@ namespace Beton.Model
         /// </summary>
         public Decimal OrderPricePerCube { set; get; }
 
+        private Product defaultProduct;
+        public Product DefaultProduct
+        {
+            get {
+                if(defaultProduct == null)
+                {
+                    defaultProduct = new Product(-1, "", new List<ProductComponent>(new []{ new ProductComponent(this, 1, 1),  }));
+                    
+                }
+                defaultProduct.Id = 9000 + Id;
+                defaultProduct.Name = Name;
+                return defaultProduct;
+            }
+        }
+
         public static void PopulateDataTableSchema(DataTable dataTable)
         {
             dataTable.Columns.Add(new DataColumn("Id", typeof(int)));

@@ -13,21 +13,7 @@ namespace Beton.DxForms
 {
     public partial class ContractCalculationUIComponent : DevExpress.XtraEditors.XtraUserControl, IPersistable
     {
-        private BindingList<Position> positions;
-        public BindingList<Position> Positions { 
-            get
-            {
-                return positions;
-            } 
-            set
-            {
-                positions.Clear();
-                foreach (Position pos in value)
-                {
-                    positions.Add(pos);
-                }
-            } 
-        }
+        private IList<Position> positions;
         public ContractCalculationUIComponent()
         {
             positions = new BindingList<Position>();
@@ -36,21 +22,19 @@ namespace Beton.DxForms
 
         public bool SaveData()
         {
-            Directories.UpdatePositions(positions);
+            //Directories.UpdatePositions(positions);
             return true;
         }
 
         public void LoadData()
         {
             // 
+            positions = Directories.POSITIONS;
             productBindingSource.DataSource = Directories.ALL_PRODUCTS;
-            positions.Clear();
-            foreach (Position pos in Directories.POSITIONS)
-            {
-                positions.Add(pos);
-            }
-            positionBindingSource.DataSource = positions;
-
+            positionBindingSource.DataSource = Directories.POSITIONS;
+            positionBindingSource.ResetBindings(false);
+            productBindingSource.ResetBindings(false);
+            CalculateTotals();
         }
 
 

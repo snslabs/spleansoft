@@ -13,37 +13,9 @@ namespace Beton.DxForms
 {
     public partial class ProductsUIComponent : DevExpress.XtraEditors.XtraUserControl, IPersistable
     {
-        private readonly List<Product> products;
-        private readonly List<Matherial> matherials;
-        private List<Matherial> Matherials
-        {
-            get { return matherials; }
-            set
-            {
-                matherials.Clear();
-                matherials.AddRange(value);
-            }
-        }
-        public List<Product> Products
-        {
-            get
-            {
-                return products;
-            }
-            set
-            {
-                products.Clear();
-                products.AddRange(value);
-            }
-        }
-
         public ProductsUIComponent()
         {
             InitializeComponent();
-            products = new List<Product>();
-            matherials = new List<Matherial>();
-            productBindingSource.DataSource = products;
-            matherialBindingSource.DataSource = matherials;
         }
 
         public bool SaveData()
@@ -53,15 +25,15 @@ namespace Beton.DxForms
 
         public void LoadData()
         {
-            Products = Directories.PRODUCTS;
-            Matherials = Directories.MATHERIALS;
+            productBindingSource.DataSource = Directories.PRODUCTS;
+            matherialBindingSource.DataSource = Directories.MATHERIALS;
         }
 
         private void productBindingSource_AddingNew(object sender, AddingNewEventArgs e)
         {
             var product = (Product)(e.NewObject = new Product());
             int max = -1;
-            foreach (var m in products)
+            foreach (var m in Directories.PRODUCTS)
             {
                 max = m.Id > max ? m.Id : max;
             }
