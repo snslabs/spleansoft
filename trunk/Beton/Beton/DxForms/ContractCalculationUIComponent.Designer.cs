@@ -44,6 +44,8 @@
             this.colAddedPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFinalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTransportExpense = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTransportedAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.teTotalVolume = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,6 +83,7 @@
             // positionBindingSource
             // 
             this.positionBindingSource.DataSource = typeof(Beton.Model.Position);
+            this.positionBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.positionBindingSource_AddingNew);
             // 
             // gridView1
             // 
@@ -91,10 +94,13 @@
             this.colSelfPricePerCube,
             this.colAddedPrice,
             this.colFinalPrice,
-            this.colTotalPrice});
+            this.colTotalPrice,
+            this.colTransportExpense,
+            this.colTransportedAmount});
             this.gridView1.GridControl = this.grid;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // colId
@@ -162,6 +168,7 @@
             this.colVolume.Caption = "Объём (куб)";
             this.colVolume.FieldName = "Volume";
             this.colVolume.Name = "colVolume";
+            this.colVolume.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colVolume.Visible = true;
             this.colVolume.VisibleIndex = 2;
             // 
@@ -204,8 +211,34 @@
             this.colTotalPrice.Name = "colTotalPrice";
             this.colTotalPrice.OptionsColumn.AllowEdit = false;
             this.colTotalPrice.OptionsColumn.ReadOnly = true;
+            this.colTotalPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colTotalPrice.Visible = true;
             this.colTotalPrice.VisibleIndex = 6;
+            // 
+            // colTransportExpense
+            // 
+            this.colTransportExpense.Caption = "Транспортные расходы";
+            this.colTransportExpense.DisplayFormat.FormatString = "N2";
+            this.colTransportExpense.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTransportExpense.FieldName = "TransportExpenses";
+            this.colTransportExpense.Name = "colTransportExpense";
+            this.colTransportExpense.OptionsColumn.AllowEdit = false;
+            this.colTransportExpense.OptionsColumn.ReadOnly = true;
+            this.colTransportExpense.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colTransportExpense.Visible = true;
+            this.colTransportExpense.VisibleIndex = 7;
+            // 
+            // colTransportedAmount
+            // 
+            this.colTransportedAmount.Caption = "Объём перевозки (куб*км)";
+            this.colTransportedAmount.DisplayFormat.FormatString = "N0";
+            this.colTransportedAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTransportedAmount.FieldName = "TransportedAmount";
+            this.colTransportedAmount.Name = "colTransportedAmount";
+            this.colTransportedAmount.OptionsColumn.AllowEdit = false;
+            this.colTransportedAmount.OptionsColumn.ReadOnly = true;
+            this.colTransportedAmount.Visible = true;
+            this.colTransportedAmount.VisibleIndex = 8;
             // 
             // teTotalVolume
             // 
@@ -314,5 +347,7 @@
         private DevExpress.XtraEditors.TextEdit teSelfSum;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit teTotalSum;
+        private DevExpress.XtraGrid.Columns.GridColumn colTransportExpense;
+        private DevExpress.XtraGrid.Columns.GridColumn colTransportedAmount;
     }
 }

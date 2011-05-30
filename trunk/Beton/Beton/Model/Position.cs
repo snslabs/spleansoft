@@ -42,6 +42,17 @@ namespace Beton.Model
             set { }
         }
 
+        public decimal TransportExpenses
+        {
+            get; set;
+        }
+
+        public decimal TransportedAmount
+        {
+            get; set;
+        }
+
+
         public Position()
         {
         }

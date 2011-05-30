@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using Beton.Behavior;
 using Beton.Model;
 
@@ -6,6 +7,15 @@ namespace Beton.DxForms
 {
     public partial class TransportCalculationUIControl : DevExpress.XtraEditors.XtraUserControl, IPersistable
     {
+        private DataRefreshedEventHandler dataRefreshed;
+        public DataRefreshedEventHandler DataRefreshedEventHandler
+        {
+            set
+            {
+                dataRefreshed += value;
+            }
+        }
+
         public TransportCalculationUIControl()
         {
             InitializeComponent();
@@ -32,6 +42,32 @@ namespace Beton.DxForms
         private void grid_Click(object sender, System.EventArgs e)
         {
 
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            // recalculating remainings
+            RecalculateTrnasportExpenses();
+        }
+
+        private void RecalculateTrnasportExpenses()
+        {
+            foreach (Position position in Directories.POSITIONS)
+            {
+                position.TransportExpenses = 0;
+                position.TransportedAmount = 0;
+                foreach (TransportPosition transPos in Directories.TRANSPORT_POSITIONS)
+                {
+                    if(transPos.Position == position)
+                    {
+                        position.TransportExpenses += transPos.PositionPrice;
+                        position.TransportedAmount += transPos.Distance*transPos.Volume;
+
+                    }
+
+                }
+            }
+            dataRefreshed();
         }
     }
 }
