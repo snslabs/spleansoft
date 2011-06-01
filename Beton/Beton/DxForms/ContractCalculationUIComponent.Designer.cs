@@ -52,6 +52,7 @@
             this.teSelfSum = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.teTotalSum = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -69,12 +70,12 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.DataSource = this.positionBindingSource;
-            this.grid.Location = new System.Drawing.Point(0, 0);
+            this.grid.Location = new System.Drawing.Point(0, 30);
             this.grid.MainView = this.gridView1;
             this.grid.Name = "grid";
             this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1});
-            this.grid.Size = new System.Drawing.Size(751, 261);
+            this.grid.Size = new System.Drawing.Size(751, 231);
             this.grid.TabIndex = 0;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -99,8 +100,10 @@
             this.colTransportedAmount});
             this.gridView1.GridControl = this.grid;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsCustomization.AllowGroup = false;
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
@@ -298,10 +301,20 @@
             this.teTotalSum.Size = new System.Drawing.Size(100, 20);
             this.teTotalSum.TabIndex = 5;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(80, 23);
+            this.labelControl1.TabIndex = 7;
+            this.labelControl1.Text = "Контракт";
+            // 
             // ContractCalculationUIComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.teTotalSum);
             this.Controls.Add(this.label2);
@@ -350,5 +363,6 @@
         private DevExpress.XtraEditors.TextEdit teTotalSum;
         private DevExpress.XtraGrid.Columns.GridColumn colTransportExpense;
         private DevExpress.XtraGrid.Columns.GridColumn colTransportedAmount;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

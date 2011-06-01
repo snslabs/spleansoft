@@ -49,6 +49,7 @@
             this.colRatePerTrip = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTripCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPositionPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportPositionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -66,13 +67,13 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.DataSource = this.transportPositionBindingSource;
-            this.grid.Location = new System.Drawing.Point(0, 0);
+            this.grid.Location = new System.Drawing.Point(0, 30);
             this.grid.MainView = this.gridView1;
             this.grid.Name = "grid";
             this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.repositoryItemGridLookUpEdit2});
-            this.grid.Size = new System.Drawing.Size(834, 236);
+            this.grid.Size = new System.Drawing.Size(834, 239);
             this.grid.TabIndex = 0;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -100,11 +101,14 @@
             this.gridView1.NewItemRowText = "Введите новую транспортную позицию";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
             // colId
             // 
+            this.colId.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colId.AppearanceCell.Options.UseBackColor = true;
             this.colId.Caption = "#";
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
@@ -112,6 +116,7 @@
             this.colId.OptionsColumn.ReadOnly = true;
             this.colId.Visible = true;
             this.colId.VisibleIndex = 0;
+            this.colId.Width = 30;
             // 
             // colPosition
             // 
@@ -121,6 +126,7 @@
             this.colPosition.Name = "colPosition";
             this.colPosition.Visible = true;
             this.colPosition.VisibleIndex = 1;
+            this.colPosition.Width = 200;
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -175,6 +181,7 @@
             this.colVolume.Name = "colVolume";
             this.colVolume.Visible = true;
             this.colVolume.VisibleIndex = 2;
+            this.colVolume.Width = 50;
             // 
             // colTransportType
             // 
@@ -184,6 +191,7 @@
             this.colTransportType.Name = "colTransportType";
             this.colTransportType.Visible = true;
             this.colTransportType.VisibleIndex = 3;
+            this.colTransportType.Width = 200;
             // 
             // repositoryItemGridLookUpEdit2
             // 
@@ -216,9 +224,12 @@
             this.colDistance.Name = "colDistance";
             this.colDistance.Visible = true;
             this.colDistance.VisibleIndex = 7;
+            this.colDistance.Width = 65;
             // 
             // colRatePerKm
             // 
+            this.colRatePerKm.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colRatePerKm.AppearanceCell.Options.UseBackColor = true;
             this.colRatePerKm.Caption = "Цена (руб / куб*км)";
             this.colRatePerKm.DisplayFormat.FormatString = "N2";
             this.colRatePerKm.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -228,9 +239,12 @@
             this.colRatePerKm.OptionsColumn.ReadOnly = true;
             this.colRatePerKm.Visible = true;
             this.colRatePerKm.VisibleIndex = 4;
+            this.colRatePerKm.Width = 65;
             // 
             // colRatePerTrip
             // 
+            this.colRatePerTrip.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colRatePerTrip.AppearanceCell.Options.UseBackColor = true;
             this.colRatePerTrip.Caption = "Цена за рейс";
             this.colRatePerTrip.DisplayFormat.FormatString = "N2";
             this.colRatePerTrip.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -240,9 +254,12 @@
             this.colRatePerTrip.OptionsColumn.ReadOnly = true;
             this.colRatePerTrip.Visible = true;
             this.colRatePerTrip.VisibleIndex = 5;
+            this.colRatePerTrip.Width = 65;
             // 
             // colTripCount
             // 
+            this.colTripCount.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colTripCount.AppearanceCell.Options.UseBackColor = true;
             this.colTripCount.Caption = "Рейсов";
             this.colTripCount.DisplayFormat.FormatString = "N0";
             this.colTripCount.FieldName = "TripCount";
@@ -251,9 +268,12 @@
             this.colTripCount.OptionsColumn.ReadOnly = true;
             this.colTripCount.Visible = true;
             this.colTripCount.VisibleIndex = 6;
+            this.colTripCount.Width = 65;
             // 
             // colPositionPrice
             // 
+            this.colPositionPrice.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPositionPrice.AppearanceCell.Options.UseBackColor = true;
             this.colPositionPrice.Caption = "Стоимость";
             this.colPositionPrice.DisplayFormat.FormatString = "N2";
             this.colPositionPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -262,11 +282,22 @@
             this.colPositionPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colPositionPrice.Visible = true;
             this.colPositionPrice.VisibleIndex = 8;
+            this.colPositionPrice.Width = 76;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(206, 23);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Транспортные расходы";
             // 
             // TransportCalculationUIControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.grid);
             this.Name = "TransportCalculationUIControl";
             this.Size = new System.Drawing.Size(834, 269);
@@ -280,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.transportTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit2View)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -305,5 +337,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPositionDisplayName;
         private DevExpress.XtraGrid.Columns.GridColumn colTripCount;
         private DevExpress.XtraGrid.Columns.GridColumn colPositionPrice;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

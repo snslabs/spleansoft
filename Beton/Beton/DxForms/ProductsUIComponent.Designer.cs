@@ -35,6 +35,9 @@
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.matherialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrderPricePerCube = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmountTonn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmountCube1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -51,6 +54,7 @@
             this.colMatherial = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmountTonn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmountCube = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matherialBindingSource)).BeginInit();
@@ -70,9 +74,13 @@
             this.colAmountCube1});
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
+            this.gridView2.NewItemRowText = "Добавить новый компонент";
             this.gridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridView2.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView2.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridView2.OptionsCustomization.AllowGroup = false;
+            this.gridView2.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.ViewCaption = "Компоненты";
             this.gridView2.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView2_InitNewRow);
             // 
             // colMatherial1
@@ -101,10 +109,59 @@
             // 
             // repositoryItemGridLookUpEdit1View
             // 
+            this.repositoryItemGridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId2,
+            this.colName1,
+            this.colOrderPricePerCube});
             this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId2
+            // 
+            this.colId2.Caption = "#";
+            this.colId2.FieldName = "Id";
+            this.colId2.Name = "colId2";
+            this.colId2.OptionsColumn.AllowEdit = false;
+            this.colId2.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colId2.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colId2.OptionsColumn.AllowMove = false;
+            this.colId2.OptionsColumn.ReadOnly = true;
+            this.colId2.OptionsColumn.ShowInCustomizationForm = false;
+            this.colId2.Visible = true;
+            this.colId2.VisibleIndex = 0;
+            this.colId2.Width = 55;
+            // 
+            // colName1
+            // 
+            this.colName1.Caption = "Наименование";
+            this.colName1.FieldName = "Name";
+            this.colName1.Name = "colName1";
+            this.colName1.OptionsColumn.AllowEdit = false;
+            this.colName1.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colName1.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colName1.OptionsColumn.AllowMove = false;
+            this.colName1.OptionsColumn.ReadOnly = true;
+            this.colName1.OptionsColumn.ShowInCustomizationForm = false;
+            this.colName1.Visible = true;
+            this.colName1.VisibleIndex = 1;
+            this.colName1.Width = 100;
+            // 
+            // colOrderPricePerCube
+            // 
+            this.colOrderPricePerCube.Caption = "Цена за куб";
+            this.colOrderPricePerCube.FieldName = "OrderPricePerCube";
+            this.colOrderPricePerCube.Name = "colOrderPricePerCube";
+            this.colOrderPricePerCube.OptionsColumn.AllowEdit = false;
+            this.colOrderPricePerCube.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colOrderPricePerCube.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colOrderPricePerCube.OptionsColumn.AllowMove = false;
+            this.colOrderPricePerCube.OptionsColumn.ReadOnly = true;
+            this.colOrderPricePerCube.OptionsColumn.ShowInCustomizationForm = false;
+            this.colOrderPricePerCube.Visible = true;
+            this.colOrderPricePerCube.VisibleIndex = 2;
+            this.colOrderPricePerCube.Width = 50;
             // 
             // colAmountTonn1
             // 
@@ -124,20 +181,22 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataMember = null;
             this.gridControl1.DataSource = this.productBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             gridLevelNode1.LevelTemplate = this.gridView2;
             gridLevelNode1.RelationName = "Components";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.Location = new System.Drawing.Point(0, 30);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemGridLookUpEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1131, 458);
+            this.gridControl1.Size = new System.Drawing.Size(1131, 428);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -159,20 +218,25 @@
             this.colPricePerCube});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsCustomization.AllowGroup = false;
             this.gridView1.OptionsDetail.AllowExpandEmptyDetails = true;
             this.gridView1.OptionsDetail.AllowOnlyOneMasterRowExpanded = true;
             this.gridView1.OptionsDetail.SmartDetailExpandButtonMode = DevExpress.XtraGrid.Views.Grid.DetailExpandButtonMode.AlwaysEnabled;
             this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colId
             // 
+            this.colId.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colId.AppearanceCell.Options.UseBackColor = true;
             this.colId.Caption = "#";
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.Visible = true;
             this.colId.VisibleIndex = 0;
+            this.colId.Width = 50;
             // 
             // colName
             // 
@@ -181,9 +245,12 @@
             this.colName.Name = "colName";
             this.colName.Visible = true;
             this.colName.VisibleIndex = 1;
+            this.colName.Width = 400;
             // 
             // colPricePerTonn
             // 
+            this.colPricePerTonn.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPricePerTonn.AppearanceCell.Options.UseBackColor = true;
             this.colPricePerTonn.Caption = "Цена за тонну";
             this.colPricePerTonn.FieldName = "PricePerTonn";
             this.colPricePerTonn.Name = "colPricePerTonn";
@@ -191,9 +258,12 @@
             this.colPricePerTonn.OptionsColumn.ReadOnly = true;
             this.colPricePerTonn.Visible = true;
             this.colPricePerTonn.VisibleIndex = 2;
+            this.colPricePerTonn.Width = 329;
             // 
             // colPricePerCube
             // 
+            this.colPricePerCube.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPricePerCube.AppearanceCell.Options.UseBackColor = true;
             this.colPricePerCube.Caption = "Цена за куб";
             this.colPricePerCube.FieldName = "PricePerCube";
             this.colPricePerCube.Name = "colPricePerCube";
@@ -201,6 +271,7 @@
             this.colPricePerCube.OptionsColumn.ReadOnly = true;
             this.colPricePerCube.Visible = true;
             this.colPricePerCube.VisibleIndex = 3;
+            this.colPricePerCube.Width = 334;
             // 
             // repositoryItemComboBox1
             // 
@@ -247,10 +318,20 @@
             this.colAmountCube.Visible = true;
             this.colAmountCube.VisibleIndex = 3;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(85, 23);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Продукты";
+            // 
             // ProductsUIComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "ProductsUIComponent";
             this.Size = new System.Drawing.Size(1131, 458);
@@ -264,6 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -290,5 +372,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMatherial1;
         private DevExpress.XtraGrid.Columns.GridColumn colAmountTonn1;
         private DevExpress.XtraGrid.Columns.GridColumn colAmountCube1;
+        private DevExpress.XtraGrid.Columns.GridColumn colId2;
+        private DevExpress.XtraGrid.Columns.GridColumn colName1;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderPricePerCube;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
