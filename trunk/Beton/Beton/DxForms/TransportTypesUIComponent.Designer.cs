@@ -50,9 +50,11 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.grid);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 31);
+            this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(792, 224);
             this.panelControl1.TabIndex = 0;
@@ -88,10 +90,13 @@
             this.gridView.Name = "gridView";
             this.gridView.NewItemRowText = "Добавить новый тип транспортировки";
             this.gridView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridView.OptionsView.ShowGroupPanel = false;
             this.gridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             // 
             // colId
             // 
+            this.colId.AppearanceCell.BackColor = System.Drawing.Color.Gainsboro;
+            this.colId.AppearanceCell.Options.UseBackColor = true;
             this.colId.Caption = "#";
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
