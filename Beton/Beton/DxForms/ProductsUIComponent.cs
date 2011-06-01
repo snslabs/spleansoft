@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
 using Beton.Behavior;
 using Beton.Model;
-using DevExpress.XtraEditors;
 
 namespace Beton.DxForms
 {
-    public partial class ProductsUIComponent : DevExpress.XtraEditors.XtraUserControl, IPersistable
+    public partial class ProductsUIComponent : DevExpress.XtraEditors.XtraUserControl, IBetonComponent
     {
         public ProductsUIComponent()
         {
@@ -27,6 +21,11 @@ namespace Beton.DxForms
         {
             productBindingSource.DataSource = Directories.PRODUCTS;
             matherialBindingSource.DataSource = Directories.MATHERIALS;
+        }
+
+        public string FormCaption
+        {
+            get { return "Продукты"; }
         }
 
         private void productBindingSource_AddingNew(object sender, AddingNewEventArgs e)

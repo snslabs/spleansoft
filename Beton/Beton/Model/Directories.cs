@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.Serialization;
@@ -16,7 +14,7 @@ namespace Beton.Model
     [Serializable]
     public class Directories
     {
-        private static int VERSION = 1;
+        private const int VERSION = 1;
 
         #region properties
         private List<Matherial> matherials = new List<Matherial>();
@@ -30,14 +28,14 @@ namespace Beton.Model
         {
             get
             {
-                return instance.transportPositions;
+                return _instance.transportPositions;
             }
         }
         public static List<Position> POSITIONS
         {
             get
             {
-                return instance.positions;
+                return _instance.positions;
             }
         }
 
@@ -45,21 +43,21 @@ namespace Beton.Model
         {
             get
             {
-                return instance.matherials;
+                return _instance.matherials;
             }
         } 
         public static List<TransportType> TRANSPORT_TYPES
         {
             get
             {
-                return instance.transportTypes;
+                return _instance.transportTypes;
             }
         }
         public static List<Product> PRODUCTS
         {
             get
             {
-                return instance.products;
+                return _instance.products;
             }
         }
 
@@ -67,8 +65,8 @@ namespace Beton.Model
         {
             get
             {
-                var list = new List<Product>(instance.products);
-                foreach(var m in instance.matherials)
+                var list = new List<Product>(_instance.products);
+                foreach(var m in _instance.matherials)
                 {
                     list.Add(m.DefaultProduct);
                 }
@@ -76,12 +74,12 @@ namespace Beton.Model
             }
         }
 
-        private static Directories instance;
+        private static Directories _instance;
         #endregion
 
         #region constructors
         static Directories(){
-            instance = new Directories();
+            _instance = new Directories();
             defaultData();
         }
 
@@ -164,9 +162,11 @@ namespace Beton.Model
                 IFormatter formatter = new BinaryFormatter();
                 stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter.Serialize(stream, VERSION);
-                formatter.Serialize(stream, instance);
-            } catch {
-                // do nothing, just ignore any possible errors
+                formatter.Serialize(stream, _instance);
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Невозможно сохранить в файл!\n" + ex.Message, "Ошибка при сохранении в файл", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } finally {
                 if (null != stream)
                     stream.Close();
@@ -193,14 +193,14 @@ namespace Beton.Model
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message, "Error loading data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Ошибка при загрузке из файла", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 if (null != stream)
                     stream.Close();
             }
-            instance = directories;
+            _instance = directories;
 
         }
         #endregion

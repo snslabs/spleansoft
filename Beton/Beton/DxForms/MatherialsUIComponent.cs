@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Windows.Forms;
 using Beton.Behavior;
 using Beton.Model;
 using DevExpress.XtraEditors;
 
 namespace Beton.DxForms
 {
-    public partial class MatherialsUIComponent : XtraUserControl, IPersistable
+    public partial class MatherialsUIComponent : XtraUserControl, IBetonComponent
     {
         private List<Matherial> matherials;
 
@@ -40,6 +39,11 @@ namespace Beton.DxForms
         {
             matherials = Directories.MATHERIALS;
             matherialBindingSource.DataSource = matherials;
+        }
+
+        public string FormCaption
+        {
+            get { return "Материалы"; }
         }
     }
 }

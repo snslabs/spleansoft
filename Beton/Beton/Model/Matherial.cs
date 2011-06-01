@@ -10,44 +10,10 @@ namespace Beton.Model
     /// PricePerTonn * Density = PricePerCube
     /// </summary>
     [Serializable]
-    public class Matherial : ICloneable
+    public class Matherial
     {
         public Matherial()
         {
-        }
-
-        public Matherial(Matherial m)
-        {
-            this.Id = m.Id;
-            Name = m.Name;
-            Density = m.Density;
-            Description = m.Description;
-            OrderPricePerCube = m.OrderPricePerCube;
-            OrderPricePerTonn = m.OrderPricePerTonn;
-
-        }
-
-        public Matherial(object[] data)
-        {
-            UpdateFromObjectArray(data);
-        }
-
-        public Matherial(string name, double density, string description, decimal orderPricePerTonn, decimal orderPricePerCube)
-        {
-            Name = name;
-            Density = density;
-            Description = description;
-            OrderPricePerTonn = orderPricePerTonn;
-            OrderPricePerCube = orderPricePerCube;
-        }
-
-        public Matherial(int id, string name, double density, string description, decimal orderPricePerTonn, decimal orderPricePerCube)
-        {
-            Id = id;
-            Name = name;
-            Density = density;
-            Description = description;
-            OrderPricePerCube = orderPricePerCube;
         }
 
         public Matherial(int id, string name, double density, string description, decimal orderPricePerCube)
@@ -132,11 +98,6 @@ namespace Beton.Model
         public static decimal CalcPricePerCube(string strDensity, string strPricePerCube)
         {
             return decimal.Round(decimal.Multiply(decimal.Parse(strPricePerCube), decimal.Parse(strDensity)), 2, MidpointRounding.AwayFromZero);
-        }
-
-        public object Clone()
-        {
-            return new Matherial(this);
         }
     }
 }

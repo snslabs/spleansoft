@@ -1,11 +1,10 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Beton.Behavior;
 using Beton.Model;
 
 namespace Beton.DxForms
 {
-    public partial class TransportCalculationUIControl : DevExpress.XtraEditors.XtraUserControl, IPersistable
+    public partial class TransportCalculationUIControl : DevExpress.XtraEditors.XtraUserControl, IBetonComponent
     {
         private DataRefreshedEventHandler dataRefreshed;
         public DataRefreshedEventHandler DataRefreshedEventHandler
@@ -31,6 +30,11 @@ namespace Beton.DxForms
             positionBindingSource.DataSource = Directories.POSITIONS;
             transportTypeBindingSource.DataSource = Directories.TRANSPORT_TYPES;
             transportPositionBindingSource.DataSource = Directories.TRANSPORT_POSITIONS;
+        }
+
+        public string FormCaption
+        {
+            get { return "Расчет транспортных расходов"; }
         }
 
         private void transportPositionBindingSource_AddingNew(object sender, AddingNewEventArgs e)

@@ -8,6 +8,10 @@ namespace Beton.Model
     [Serializable]
     public class TransportType
     {
+        public TransportType()
+        {
+        }
+
         public TransportType(int id, string name, decimal pricePerCube, decimal pricePerTonn, decimal pricePerTrip, decimal maxVolume, decimal maxWeight)
         {
             Id = id;

@@ -3,7 +3,7 @@ using DevExpress.XtraEditors;
 
 namespace Beton.DxForms
 {
-    public partial class CompleteCalculationUIComponent : XtraUserControl, IPersistable
+    public partial class CompleteCalculationUIComponent : XtraUserControl, IBetonComponent
     {
         public CompleteCalculationUIComponent()
         {
@@ -22,6 +22,11 @@ namespace Beton.DxForms
         {
             contractCalculationUIComponent1.LoadData();
             transportCalculationUIControl1.LoadData();
+        }
+
+        public string FormCaption
+        {
+            get { return "Расчет контракта"; }
         }
     }
 }
