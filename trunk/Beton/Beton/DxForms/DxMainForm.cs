@@ -10,12 +10,14 @@ namespace Beton.DxForms
         private readonly MatherialsUIComponent matherialsComponent;
         private readonly ProductsUIComponent productsComponent;
         private readonly CompleteCalculationUIComponent completeCalculationComponent;
+        private readonly TransportTypesUIComponent transportTypesUIComponent;
         public DxMainForm()
         {
             InitializeComponent();
             matherialsComponent = new MatherialsUIComponent();
             productsComponent = new ProductsUIComponent();
             completeCalculationComponent = new CompleteCalculationUIComponent();
+            transportTypesUIComponent = new TransportTypesUIComponent();
         }
 
         private void navBarControl1_Click(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace Beton.DxForms
 
         private void transportTypes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            
+            SwitchView(transportTypesUIComponent);
         }
 
         private void DxMainForm_FormClosing(object sender, FormClosingEventArgs e)
