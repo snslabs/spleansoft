@@ -33,12 +33,12 @@
             this.lookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.calculations = new DevExpress.XtraNavBar.NavBarGroup();
-            this.contractCalculation = new DevExpress.XtraNavBar.NavBarItem();
             this.directories = new DevExpress.XtraNavBar.NavBarGroup();
             this.transportTypes = new DevExpress.XtraNavBar.NavBarItem();
-            this.products = new DevExpress.XtraNavBar.NavBarItem();
             this.matherials = new DevExpress.XtraNavBar.NavBarItem();
+            this.products = new DevExpress.XtraNavBar.NavBarItem();
+            this.calculations = new DevExpress.XtraNavBar.NavBarGroup();
+            this.contractCalculation = new DevExpress.XtraNavBar.NavBarItem();
             this.menuTreeImageList = new System.Windows.Forms.ImageList(this.components);
             this.mainPanel = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -86,6 +86,35 @@
             this.navBarControl1.Text = "Главное меню";
             this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
             // 
+            // directories
+            // 
+            this.directories.Caption = "Справочники";
+            this.directories.Expanded = true;
+            this.directories.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.transportTypes),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.matherials),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.products)});
+            this.directories.LargeImageIndex = 2;
+            this.directories.Name = "directories";
+            // 
+            // transportTypes
+            // 
+            this.transportTypes.Caption = "Типы транспортировки";
+            this.transportTypes.Name = "transportTypes";
+            this.transportTypes.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.transportTypes_LinkClicked);
+            // 
+            // matherials
+            // 
+            this.matherials.Caption = "Материалы";
+            this.matherials.Name = "matherials";
+            this.matherials.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.matherials_LinkClicked);
+            // 
+            // products
+            // 
+            this.products.Caption = "Продукты";
+            this.products.Name = "products";
+            this.products.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.products_LinkClicked);
+            // 
             // calculations
             // 
             this.calculations.Caption = "Расчеты";
@@ -100,35 +129,6 @@
             this.contractCalculation.Caption = "Расчёт контракта";
             this.contractCalculation.Name = "contractCalculation";
             this.contractCalculation.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.contractCalculation_LinkClicked);
-            // 
-            // directories
-            // 
-            this.directories.Caption = "Справочники";
-            this.directories.Expanded = true;
-            this.directories.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.transportTypes),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.matherials),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.products)});
-            this.directories.LargeImageIndex = 2;
-            this.directories.Name = "directories";
-            // 
-            // transportTypes
-            // 
-            this.transportTypes.Caption = "Способы транспортировки";
-            this.transportTypes.Name = "transportTypes";
-            this.transportTypes.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.transportTypes_LinkClicked);
-            // 
-            // products
-            // 
-            this.products.Caption = "Продукты";
-            this.products.Name = "products";
-            this.products.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.products_LinkClicked);
-            // 
-            // matherials
-            // 
-            this.matherials.Caption = "Материалы";
-            this.matherials.Name = "matherials";
-            this.matherials.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.matherials_LinkClicked);
             // 
             // menuTreeImageList
             // 

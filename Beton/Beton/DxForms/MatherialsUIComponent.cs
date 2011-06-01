@@ -8,13 +8,10 @@ namespace Beton.DxForms
 {
     public partial class MatherialsUIComponent : XtraUserControl, IBetonComponent
     {
-        private List<Matherial> matherials;
 
         public MatherialsUIComponent()
         {
             InitializeComponent();
-            matherials = new List<Matherial>();
-            matherialBindingSource.DataSource = matherials;
         }
 
 
@@ -22,7 +19,7 @@ namespace Beton.DxForms
         {
             var newMatherial = (Matherial)(e.NewObject = new Matherial());
             int max = -1;
-            foreach(var m in matherials)
+            foreach (var m in Directories.MATHERIALS)
             {
                 max = m.Id > max ? m.Id : max;
             }
@@ -37,8 +34,7 @@ namespace Beton.DxForms
 
         public void LoadData()
         {
-            matherials = Directories.MATHERIALS;
-            matherialBindingSource.DataSource = matherials;
+            matherialBindingSource.DataSource = Directories.MATHERIALS;
         }
 
         public string FormCaption

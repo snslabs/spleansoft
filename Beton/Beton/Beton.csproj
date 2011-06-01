@@ -133,6 +133,12 @@
     <Compile Include="DxForms\TransportCalculationUIControl.Designer.cs">
       <DependentUpon>TransportCalculationUIControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DxForms\TransportTypesUIComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DxForms\TransportTypesUIComponent.Designer.cs">
+      <DependentUpon>TransportTypesUIComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Directories.cs" />
     <Compile Include="Model\Matherial.cs" />
     <Compile Include="Model\Position.cs" />
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DxForms\TransportCalculationUIControl.resx">
       <DependentUpon>TransportCalculationUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DxForms\TransportTypesUIComponent.resx">
+      <DependentUpon>TransportTypesUIComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
