@@ -38,6 +38,14 @@ namespace Beton.DxForms
             get { return "Расчет транспортных расходов"; }
         }
 
+        public void RefreshData()
+        {
+            transportPositionBindingSource.ResetBindings(false);
+            positionBindingSource.ResetBindings(false);
+            transportTypeBindingSource.ResetBindings(false);
+            RecalculateTransportExpenses();
+        }
+
         private void transportPositionBindingSource_AddingNew(object sender, AddingNewEventArgs e)
         {
             e.NewObject = new TransportPosition();

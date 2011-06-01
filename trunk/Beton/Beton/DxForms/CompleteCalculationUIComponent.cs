@@ -9,6 +9,7 @@ namespace Beton.DxForms
         {
             InitializeComponent();
             transportCalculationUIControl1.DataRefreshedEventHandler = contractCalculationUIComponent1.RefreshData;
+            contractCalculationUIComponent1.DataRefreshedEventHandler = transportCalculationUIControl1.RefreshData;
         }
 
         public bool SaveData()
