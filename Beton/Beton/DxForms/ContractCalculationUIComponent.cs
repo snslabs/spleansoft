@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Windows.Forms;
 using Beton.Behavior;
 using Beton.Model;
 using DevExpress.XtraEditors;
@@ -11,6 +12,15 @@ namespace Beton.DxForms
 
     public partial class ContractCalculationUIComponent : XtraUserControl, IBetonComponent
     {
+        private DataRefreshedEventHandler dataRefreshed;
+        public DataRefreshedEventHandler DataRefreshedEventHandler
+        {
+            set
+            {
+                dataRefreshed += value;
+            }
+        }
+
         private IList<Position> positions;
 
         public ContractCalculationUIComponent()
@@ -81,6 +91,21 @@ namespace Beton.DxForms
         {
             e.NewObject = new Position();
             ((Position) e.NewObject).Id = Directories.POSITIONS.Count +1;
+
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Вы уверены что хотите удалить строку?", "Удаление строки", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    var position = gridView1.GetRow(gridView1.FocusedRowHandle);
+                    Directories.TRANSPORT_POSITIONS.RemoveAll(transportPosition => transportPosition.Position == position);
+                    gridView1.DeleteRow(gridView1.FocusedRowHandle);
+                    dataRefreshed();
+                }
+            }
 
         }
     }
