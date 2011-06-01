@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows.Forms;
 using Beton.Behavior;
 using Beton.Model;
 
@@ -51,10 +52,10 @@ namespace Beton.DxForms
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             // recalculating remainings
-            RecalculateTrnasportExpenses();
+            RecalculateTransportExpenses();
         }
 
-        private void RecalculateTrnasportExpenses()
+        private void RecalculateTransportExpenses()
         {
             foreach (Position position in Directories.POSITIONS)
             {
@@ -72,6 +73,18 @@ namespace Beton.DxForms
                 }
             }
             dataRefreshed();
+        }
+
+        private void gridView1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Вы уверены что хотите удалить строку?", "Удаление строки", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    gridView1.DeleteRow(gridView1.FocusedRowHandle);
+                    RecalculateTransportExpenses();
+                }
+            }
         }
     }
 }
