@@ -77,6 +77,7 @@
             // 
             // colId
             // 
+            this.colId.Caption = "#";
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             this.colId.Visible = true;
@@ -84,6 +85,7 @@
             // 
             // colName
             // 
+            this.colName.Caption = "Наименование";
             this.colName.FieldName = "Name";
             this.colName.Name = "colName";
             this.colName.Visible = true;
@@ -91,6 +93,7 @@
             // 
             // colDensity
             // 
+            this.colDensity.Caption = "Плотность (т/куб)";
             this.colDensity.FieldName = "Density";
             this.colDensity.Name = "colDensity";
             this.colDensity.Visible = true;
@@ -98,6 +101,7 @@
             // 
             // colDescription
             // 
+            this.colDescription.Caption = "Описание";
             this.colDescription.FieldName = "Description";
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
@@ -105,6 +109,7 @@
             // 
             // colOrderPricePerTonn
             // 
+            this.colOrderPricePerTonn.Caption = "Цена за тонну";
             this.colOrderPricePerTonn.FieldName = "OrderPricePerTonn";
             this.colOrderPricePerTonn.Name = "colOrderPricePerTonn";
             this.colOrderPricePerTonn.Visible = true;
@@ -112,6 +117,7 @@
             // 
             // colOrderPricePerCube
             // 
+            this.colOrderPricePerCube.Caption = "Цена за куб";
             this.colOrderPricePerCube.FieldName = "OrderPricePerCube";
             this.colOrderPricePerCube.Name = "colOrderPricePerCube";
             this.colOrderPricePerCube.Visible = true;
