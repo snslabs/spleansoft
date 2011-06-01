@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Beton</RootNamespace>
     <AssemblyName>Beton</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -96,7 +96,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behavior\IPersistable.cs" />
+    <Compile Include="Behavior\IBetonComponent.cs" />
     <Compile Include="DxForms\CompleteCalculationUIComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,7 +133,6 @@
     <Compile Include="DxForms\TransportCalculationUIControl.Designer.cs">
       <DependentUpon>TransportCalculationUIControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ObjectDataAdapter.cs" />
     <Compile Include="Model\Directories.cs" />
     <Compile Include="Model\Matherial.cs" />
     <Compile Include="Model\Position.cs" />

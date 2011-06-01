@@ -1,8 +1,9 @@
 ﻿namespace Beton.Behavior
 {
-    interface IPersistable
+    interface IBetonComponent
     {
         bool SaveData();
         void LoadData();
+        string FormCaption { get; }
     }
 }

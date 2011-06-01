@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 
 namespace Beton.Model
 {
@@ -44,40 +43,12 @@ namespace Beton.Model
             }
         }
 
-        public Product(object[] data)
-        {
-            this.UpdateFromObjectArray(data);
-            Components = new BindingList<ProductComponent>();
-        }
-
-        public Product(int id, string name, List<ProductComponent> components)
+        public Product(int id, string name, IList<ProductComponent> components)
         {
             Id = id;
             Name = name;
             Components = new BindingList<ProductComponent>(components);
         }
 
-        public object[] ToObjectArray()
-        {
-            return new object[] { Id, Name, PricePerTonn, PricePerCube };
-        }
-
-        public void UpdateFromObjectArray(object[] data)
-        {
-            Id = (int)data[0];
-            Name = ((string)data[1]);
-            // PricePerCube = (Decimal)data[2];
-            // PricePerTonn = (Decimal)data[3];
-            // WorkPricePerCube = (Decimal)data[4];
-        }
-
-        public static void PopulateDataTableSchema(DataTable dataTable)
-        {
-            dataTable.Columns.Add(new DataColumn("Id", typeof(int)));
-            dataTable.Columns.Add(new DataColumn("Name", typeof(string)));
-            dataTable.Columns.Add(new DataColumn("PricePerTonn", typeof(Decimal)));
-            dataTable.Columns.Add(new DataColumn("PricePerCube", typeof(Decimal)));
-            dataTable.Columns.Add(new DataColumn("WorkPricePerCube", typeof(Decimal)));
-        }
     }
 }

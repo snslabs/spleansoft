@@ -5,7 +5,7 @@ using Beton.Model;
 
 namespace Beton.DxForms
 {
-    public partial class DxMainForm : DevExpress.XtraEditors.XtraForm
+    public partial class DxMainForm : DevExpress.XtraEditors.XtraForm, IBetonComponent
     {
         private readonly MatherialsUIComponent matherialsComponent;
         private readonly ProductsUIComponent productsComponent;
@@ -58,9 +58,9 @@ namespace Beton.DxForms
         {
             foreach (var control in mainPanel.Controls)
             {
-                if(control as IPersistable != null)
+                if(control as IBetonComponent != null)
                 {
-                    if(!((IPersistable)control).SaveData())
+                    if(!((IBetonComponent)control).SaveData())
                     {
                         return false;
                     }
@@ -73,12 +73,21 @@ namespace Beton.DxForms
                 mainPanel.Controls.Clear(); // removing all controls from the form
 
                 // if new control can be reinitialized with data - do it
-                if (viewComponent as IPersistable != null)
-                    ((IPersistable)viewComponent).LoadData();
-
+                if (viewComponent as IBetonComponent != null)
+                {
+                    IBetonComponent component = (viewComponent as IBetonComponent);
+                    component.LoadData();
+                    Text = FormCaption + " :: " + component.FormCaption;
+                }
                 mainPanel.Controls.Add(viewComponent);
                 viewComponent.Dock = DockStyle.Fill;
             }
+            else
+            {
+                Text = FormCaption;                
+            }
+
+
             return true;
         }
 
@@ -87,5 +96,19 @@ namespace Beton.DxForms
             SwitchView(completeCalculationComponent);
         }
 
+        public bool SaveData()
+        {
+            return true;
+        }
+
+        public void LoadData()
+        {
+            //
+        }
+
+        public string FormCaption
+        {
+            get { return "Бетономешалка версия 0.2 "; }
+        }
     }
 }

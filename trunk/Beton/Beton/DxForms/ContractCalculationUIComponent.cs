@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
 using Beton.Behavior;
 using Beton.Model;
 using DevExpress.XtraEditors;
@@ -13,7 +9,7 @@ namespace Beton.DxForms
 {
     public delegate void DataRefreshedEventHandler();
 
-    public partial class ContractCalculationUIComponent : DevExpress.XtraEditors.XtraUserControl, IPersistable
+    public partial class ContractCalculationUIComponent : XtraUserControl, IBetonComponent
     {
         private IList<Position> positions;
 
@@ -36,6 +32,11 @@ namespace Beton.DxForms
             productBindingSource.DataSource = Directories.ALL_PRODUCTS;
             positionBindingSource.DataSource = Directories.POSITIONS;
             RefreshData();
+        }
+
+        public string FormCaption
+        {
+            get { return "Расчёт позиций контракта"; }
         }
 
         public void RefreshData()
